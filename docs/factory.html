@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chart Runners - 1&nbsp; Factory of Taste</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./recipes.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZWLGMSWT14"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZWLGMSWT14');
+</script>
+
+
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Factory of Taste</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Chart Runners</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./factory.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Factory of Taste</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recipes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tried and Tested</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cherries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cherries</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./holes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Holes…</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mutant.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beware: Mutant!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code_it.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Code It Yourself</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#why-do-we-need-charts" id="toc-why-do-we-need-charts" class="nav-link active" data-scroll-target="#why-do-we-need-charts"><span class="toc-section-number">1.1</span>  Why do we need charts?</a></li>
+  <li><a href="#musical-notation" id="toc-musical-notation" class="nav-link" data-scroll-target="#musical-notation"><span class="toc-section-number">1.2</span>  Musical notation</a></li>
+  <li><a href="#technical-drawing" id="toc-technical-drawing" class="nav-link" data-scroll-target="#technical-drawing"><span class="toc-section-number">1.3</span>  Technical drawing</a></li>
+  <li><a href="#uml-diagrams" id="toc-uml-diagrams" class="nav-link" data-scroll-target="#uml-diagrams"><span class="toc-section-number">1.4</span>  UML Diagrams</a></li>
+  <li><a href="#electrical-diagram" id="toc-electrical-diagram" class="nav-link" data-scroll-target="#electrical-diagram"><span class="toc-section-number">1.5</span>  Electrical diagram</a></li>
+  <li><a href="#what-happens-when-there-are-no-standards" id="toc-what-happens-when-there-are-no-standards" class="nav-link" data-scroll-target="#what-happens-when-there-are-no-standards"><span class="toc-section-number">1.6</span>  What happens when there are no standards?</a></li>
+  <li><a href="#communication-standards-concerning-charts-a-case-study-on-the-polish-national-statistical-office" id="toc-communication-standards-concerning-charts-a-case-study-on-the-polish-national-statistical-office" class="nav-link" data-scroll-target="#communication-standards-concerning-charts-a-case-study-on-the-polish-national-statistical-office"><span class="toc-section-number">1.7</span>  Communication standards concerning charts, a case study on the Polish National Statistical Office</a></li>
+  <li><a href="#communication-standards-a-case-study-based-on-the-economist-newspaper" id="toc-communication-standards-a-case-study-based-on-the-economist-newspaper" class="nav-link" data-scroll-target="#communication-standards-a-case-study-based-on-the-economist-newspaper"><span class="toc-section-number">1.8</span>  Communication standards, a case study based on “The Economist” newspaper</a></li>
+  <li><a href="#communication-standards-a-case-study-based-on-the-ibcs" id="toc-communication-standards-a-case-study-based-on-the-ibcs" class="nav-link" data-scroll-target="#communication-standards-a-case-study-based-on-the-ibcs"><span class="toc-section-number">1.9</span>  Communication standards, a case study based on the IBCS</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks"><span class="toc-section-number">1.10</span>  Tasks</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Factory of Taste</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!-- # Fabryka smaku -->
+<p><img src="grafiki/okladka_fabryka.jpg" class="img-fluid"></p>
+<p>In this chapter, we will talk about standards used to create statistical charts. Why are standards so important? Let’s imagine that we’re preparing a number of reports, containing hundreds of charts. If each chart is completely different from the rest, then the reader will have to guess how to read that plot each time. The fatigue coming from deciphering the already complicated data will set in much quicker. The risk of misreading the chart will be greater and so will be the time necessary to parse the entire image. Professionals cannot commit such mistakes.</p>
+<!-- W tym rozdziale porozmawiamy o standardach wykorzystywanych przy tworzeniu wykresów statystycznych. Dlaczego standardy są tak ważne? Wyobraźmy sobie, że przygotowujemy serię raportów, w których znajdzie się kilkadziesiąt lub kilkaset wykresów. Jeżeli każdy wykres będzie rządził się innymi prawami, to czytelnik za każdym razem będzie musiał zgadywać, jak dany wykres czytać. Znacznie szybciej pojawi się zmęczenie wywołane koniecznością odcyfrowywania zapisu dla i tak bardzo złożonych zależności. Zwiększy się ryzyko złego odczytania danych i czas potrzebny na zrozumienie całości. Profesjonaliści nie mogą sobie na takie błędy pozwolić. -->
+<div class="page-columns page-full"><p>During my work in OECD I’ve seen how a team consisting of over ten analysts works on a report from the PISA study. The report prepared by this team was seen by thousands of people, ranging from specialists working on educational studies, through journalists, to parents interested in the diversity of teens’ skills in over 65 countries taking part in the PISA studies. Vital decisions concerning the educational system are often based on these results. For these results to be readable for such a wide audience, standardizing the charts is necessary.</p><div class="no-row-height column-margin column-container"><span class="">OECD: Organization for Economic Cooperation and Development, an international organization gathering 38 highly developed and democratic countries.</span><span class="">PISA: Programme for International Student Assessment, an international study with the goal to collect comparable data about 15-year-old students’ skills in order to improve the quality of teaching and organization of educational systems.</span></div></div>
+<!-- Podczas pracy w OECD[OECD: Organizacja Współpracy Gospodarczej i Rozwoju, organizacja międzynarodowa skupiająca 38 wysoko rozwiniętych i demokratycznych państw.]{.aside} obserwowałem, jak nad raportem z badania PISA [PISA: Programme for International Student Assessment, międzynarodowe badanie, którego celem jest uzyskanie porównywalnych danych o umiejętnościach uczniów, którzy ukończyli 15. rok życia w celu poprawy jakości nauczania i organizacji systemów edukacyjnych.]{.aside} pracuje liczny, kilkunastoosobowy zespół analityków. Wyniki prac tego zespołu trafiły do tysięcy odbiorców, począwszy od specjalistów od badań edukacyjnych, przez dziennikarzy, po rodziców zainteresowanych zróżnicowaniem umiejętności nastolatków w ponad 65 krajach uczestniczących w badaniach PISA. Na bazie tych wyników podejmowane są często istotne decyzje dotyczące systemu edukacji. Aby te wyniki były czytelne dla szerokiego grona odbiorców, niezbędna jest standaryzacja wykresów.  -->
+<section id="why-do-we-need-charts" class="level2 page-columns page-full" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="why-do-we-need-charts"><span class="header-section-number">1.1</span> Why do we need charts?</h2>
+<!-- ## Do czego nam są potrzebne wykresy? -->
+<p>We create charts, to show the stories hidden in the data. The stories might be straightforward (e.g., in 2014 more children were born than in 2013) or complex (the number of children born is connected with the demographic structure, one of the important factors is the fact that people from the demographic boom are in the reproductive period, additionally the negative migration balance comes to play). The more complex the story is, the more effort is needed to present it in a readable way.</p>
+<!-- Wykresy tworzymy po to, aby pokazywać historie obecne w danych. Historie mogą być proste (np. w roku 2014 urodziło się więcej dzieci niż w roku 2013) lub złożone (liczba urodzonych dzieci jest związana ze strukturą demograficzną, jeden z czynników to boom demograficzny w okresie reprodukcyjnym wyżu demograficznego, do tego dochodzi ujemne saldo migracyjne). Im bardziej złożona historia, tym więcej wysiłku trzeba włożyć, by ją czytelnie przedstawić. -->
+<p>To express a simple story no chart is needed, in the case of a complex one - it is. Let’s illustrate it using data from the Polish National Census of Population and Housing from 2011.</p>
+<!-- Do wyrażenia prostej historii nie potrzeba wykresu, w przypadku złożonej – już tak. Zilustrujmy to na przykładzie danych z Narodowego Spisu Powszechnego z roku 2011.  -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-fabryka_GUS2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_GUS2.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.1: 38,511,800 people live in Poland. 48,1% of whom are men, and 51,6% of whom are women. Polish National Census of Population and Housing 2011</figcaption><p></p>
+</figure>
+</div>
+<p>Source: Gazeta Wyborcza.</p>
+</div></div><p>Let’s compare three ways of telling the story about the number and structure of Polish population: a diagram on the margin, the table below and the description of the table below.</p>
+<!-- Porównajmy trzy sposoby przedstawienia historii o liczebności i strukturze populacji w Polsce: rysunek na marginesie, tabelę poniżej i opis słowny poniżej tabeli. -->
+<p><img src="grafiki/fabryka_GUStab.png" class="img-fluid" alt="Results from the Polish National Census of Population and Housing 2011"> <!-- ![Wyniki z Narodowego Spisu Powszechnego z roku 2011](grafiki/fabryka_GUStab.png) --></p>
+<blockquote class="blockquote">
+<p>The Polish National Census of Population and Housing 2011 established that 38 511 800 people live in Poland, 51.6% of whom are women, and 48,4% of whom are men.</p>
+</blockquote>
+<!-- > W wyniku przeprowadzenia Narodowego Spisu Powszechnego w roku 2011 ustalono, że w Polsce mieszka 38 511 800 osób, z czego 51,6\% to mężczyźni, a 48,4\% to kobiety. -->
+<p>The whole story can be concluded with the statement that there are more women than men in the Polish population. Do we need a chart to show three numbers? Would a chart make them more understandable or provide some additional information? No and no. The table has a clear and simple to read structure. One sentence of description communicates the relevant information. And the chart? We like pictures but when it comes to showing information, this plot doesn’t show anything relevant.</p>
+<!-- Cała historia to stwierdzenie, że w populacji jest więcej kobiet niż mężczyzn. Czy potrzebujemy wykresu, aby pokazać trzy liczby? Czy wykres ułatwia ich zrozumienie lub wnosi dodatkową informację? Po dwakroć nie. Tabela ma wyraźną i łatwą do odczytania strukturę. Jedno zdanie słownego opisu komunikuje całą istotną informację. A wykres? Lubimy obrazki, ale jeżeli chodzi o przedstawianie informacji, to ten wykres niczego nie wnosi. -->
+<div class="page-columns page-full"><p>The situation is different, when we have a complex announcement to convey, based on a large dataset. We will see a story of Polish final high-school exams in the years 2013-2014. Let’s compare the three ways of presenting this story: a text description, the table below and a picture.</p><div class="no-row-height column-margin column-container"><span class="">We will use the data made available by the Team of Educational Surveys of the Educational Studies Institute in Poland</span></div></div>
+<!-- Inaczej wygląda sytuacja, gdy mamy do przekazania złożony komunikat oparty na dużym zbiorze danych. [Wykorzystamy dane udostępniane przez Zespół Pomiaru Dydaktycznego Instytutu Badań Edukacyjnych.]{.aside} Zobaczmy historię wyników polskich matur z lat 2013-2014. Porównajmy trzy sposoby prezentowania tej historii: opis tekstowy, poniżej tabela i rysunek. -->
+<blockquote class="blockquote">
+<p>The Polish Language exam scores have a distribution similar to a normal distribution. In the compared years the means of the distribution differ slightly. The distribution is disturbed in the neighborhood of 21-22 points, so near the values that is considered a passing grade (30/% of the possible score). There are hardly any students who scored one point below the passing grade, but there are many students, who passed the exam by scoring one point over. This suggests, that the teachers grading the exam decided to “find” the missing points for students who were just one point below the passing grade. When it comes to Math exam scores, the distributions are different in different years and they are very far from a normal distribution. Near the passing grade, there also is some irregularity, however, it is much smaller than for the Polish language exam.</p>
+</blockquote>
+<!-- > Wyniki matury z języka polskiego mają rozkład zbliżony do normalnego. W poszczególnych latach średnie tego rozkładu nieznacznie się różnią. Rozkład ten jest zaburzony w okolicy 21-22 punktów, czyli w pobliżu wartości stanowiących granicę zaliczenia (30\% możliwych do uzyskania punktów). Praktycznie nie ma uczniów, którzy uzyskaliby jeden punkt poniżej progu zaliczenia, jest za to bardzo dużo osób, które zdały egzamin, otrzymując punkt więcej. -->
+<!-- > Sugeruje to, że dosyć często osoby oceniające maturę, widząc, że do zaliczenia brakuje jednego–dwóch punktów, brakujące punkty ,,znajdowały''. -->
+<!-- > W przypadku egzaminu z matematyki rozkłady są różne w różnych rocznikach i zdecydowanie nie przypominają rozkładu normalnego. W pobliżu progu zaliczenia również widzimy pewną nieregularność, największą w roku 2014. Jest ona jednak mniejsza niż w przypadku egzaminu z języka polskiego. -->
+<p><img src="grafiki/fabryka_maturatab.png" class="img-fluid" alt="Percent of students who scored a given number of points each year. We see a greater percentage of students just above the passing grade and a very small percentage just below. The passing grade is 30%. Due to the volume only one twelfth of the data is shown. The entire table has over 220 numbers."> <!-- ![Procent maturzystów, którzy uzyskali określoną liczbę punktów w danym roku. Widzimy większy odsetek uczniów tuż nad progiem i bardzo niski tuż poniżej progu zaliczenia. Próg zaliczenia to 30\%. Z uwagi na objętość przedstawiono tylko wycinek jednej dwunastej danych. Cała tabela ma ponad 220 liczb](grafiki/fabryka_maturatab.png) --></p>
+<p><img src="grafiki/fabryka_maturafig.png" id="fig-maturafig" class="img-fluid" alt="Scores from final Polish language and Math exams on the basic level in the years 2013-2014"> <!-- ![Wyniki z matury na poziomie podstawowym z języka polskiego i z matematyki w latach 2013-2014](grafiki/fabryka_maturafig.png){#fig-maturafig} --></p>
+<p>The second story is based on over 220 numbers collected in an enormous table. In such a situation, the precision and structure of a table overfilled with data doesn’t give us any insight. There are too many numbers to quickly notice any kind of dependency, and the excerpt presented here is just a twelfth of the entire table. When it comes to the text description, the less focused readers can lose track of the conclusion. The description isn’t complete, and reading takes more than 10 seconds. For this story, the chart presents the data with almost the same accuracy as the table, but can be read much quicker. Illustrating the story skillfully allows for its more readable and fuller presentation.</p>
+<!-- Druga historia jest oparta na ponad 220 liczbach zebranych w gigantycznej tabeli. W tej sytuacji precyzja i struktura przepełnionej liczbami tabeli niewiele wnosi. Liczb jest zbyt wiele, by móc łatwo zauważyć jakąś zależność, a i tak w tabeli ujęto zaledwie jedną dwunastą danych. Z kolei w opisie słownym mniej skupieni odbiorcy mogą się pogubić. Nie jest on też kompletny, a zapoznanie się z nim trwa kilka–kilkanaście sekund. W tej historii wykres przedstawia dane z praktycznie tą samą dokładnością co tabela, ale można go szybciej odczytać. Umiejętne zilustrowanie złożonej historii za pomocą wykresu pozwala na czytelniejsze i pełniejsze jej przekazanie.   -->
+<p>How to create such memorable charts? You need two things. A knowledge of the basic principles of creating charts and lots and lots of practice in preparing plots yourself. The principles will be described in the following chapters of this book. In each chapter, there are tasks allowing you to actively practice the topics from the book. Abiding by these rules, you will be able to repeatably create readable and standardized charts. And standards are very important.</p>
+<!-- Jak tworzyć takie wykresy zapadające w pamięć? Potrzebne są dwie rzeczy. Znajomość podstawowych reguł sporządzania wykresów i praktyka polegająca na tworzeniu kolejnych i kolejnych wykresów. Podstawowe reguły poznacie w kolejnych rozdziałach tej książki. W każdym rozdziale znajdują się zadania pozwalające na dodatkowe aktywne ćwiczenie omawianych koncepcji. Stosując się do tych reguł, będziecie w powtarzalny sposób tworzyć czytelne i ustandaryzowane wykresy. A standardy są bardzo ważne. -->
+</section>
+<section id="musical-notation" class="level2 page-columns page-full" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="musical-notation"><span class="header-section-number">1.2</span> Musical notation</h2>
+<!-- ## Notacja muzyczna -->
+<p><em>Musical notation - a symbolic language, using which almost all characteristics of musical sounds, rythms, melodies, harmonies, dynamics and articulation can be written</em></p>
+<!-- *Notacja muzyczna – symboliczny język, za pomocą którego można zapisać niemal wszystkie cechy dźwięków muzycznych, rytmiki, melodii, harmonii, dynamiki oraz artykulacji.* -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-fabryka_01" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.2: A fragment of Chopin’s Prelude No 7</figcaption><p></p>
+</figure>
+</div>
+<p>Source: Wikipedia.</p>
+</div></div><p>An excelent example of a standard notation used by professionals is musical notation. The figure in the margin shows a fragment of Chopin’s Prelude No 7. It can be read by anyone who knows the notation, the basics of which we’re introduced to in primary school.</p>
+<!-- Świetnym przykładem standaryzacji zapisu stosowanego przez zawodowców jest notacja muzyczna i zapis nutowy. Rysunek na marginesie przedstawia zapis fragmentu preludium nr 7 Chopina. Zapis ten może odczytać każda osoba znająca zapis nutowy, którego podstawy poznajemy już w szkole podstawowej. -->
+<p>Why do composers stick to the musical notation, instead of creating their own ways to write music? Why don’t they color in the notes of draw pictures on the staff? Why aren’t there any suns, or cats or anything else?</p>
+<!-- Dlaczego kompozytorzy trzymają się zapisu nutowego, zamiast samemu wymyślać własne sposoby zapisu muzyki? Dlaczego nie kolorują nut lub nie stosują ozdobników na pięciolinii, nie ma tam żadnych słoneczek, kotków ani innych umilaczy? -->
+<p>It’s not the matter of print costs. The price of colored ink is not so high as to force everybody to use black-and-white musical notation. The reason is obviously the standard, which needs to be read consistently by the composer and the performer. Playing an instrument is a challenging task in itself so no musician wants to be distracted by additional stimuli such as colorful notes, perspective or staff decoration.</p>
+<!-- To nie jest kwestia kosztów druku. Cena kolorowego tuszu nie jest aż tak wysoka, by wymuszać czarno-biały zapis nutowy. Powodem jest oczywiście standaryzacja zapisu, który musi być jednoznacznie i szybko odczytywany zarówno przez kompozytora, jak i wykonawcę. Granie na instrumentach jest wystarczająco angażującym procesem, więc żaden muzyk nie chce być w jego trakcie rozpraszany dodatkowymi bodźcami typu kolorowe nuty, perspektywa czy ozdobniki pięciolinii. -->
+</section>
+<section id="technical-drawing" class="level2 page-columns page-full" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="technical-drawing"><span class="header-section-number">1.3</span> Technical drawing</h2>
+<!-- ## Rysunek techniczny -->
+<p>*Technical drawing - a convention for graphical representation of machines, mechanisms, devices, constructions, circuits, systems etc., providing full information about the operation and production of elements as well as the installation of the depicted object.</p>
+<!-- *Rysunek techniczny – konwencja graficznego przedstawiania maszyn, mechanizmów, urządzeń, konstrukcji, układów, systemów itp., dostarczająca pełnej informacji o działaniu, wykonaniu elementów oraz montażu przedstawianego obiektu.* -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-fabryka_03" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_03.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.3: Technical drawing of a shed</figcaption><p></p>
+</figure>
+</div>
+<p>Source: Wikipedia.</p>
+</div></div><p>Dear Reader, have you ever wondered, why constructors adhere to a rigid framework of the technical drawing, instead of coloring and beautifying various elements of the project to graphically diversify their creations? Does that sound like heresy? Why doesn’t one constructor want to stand out from the others by drawing colorful three-dimensional arrows?</p>
+<!-- Czytelniku, czy zastanawiałeś się kiedyś, dlaczego konstruktorzy trzymają się sztywnych ram rysunku technicznego, zamiast kolorować i upiększać różne elementy projektu w celu urozmaicenia graficznego swoich dzieł? Brzmi jak herezja? Dlaczego jeden konstruktor nie chce się wyróżnić na tle innych przez stosowanie kolorowych trójwymiarowych strzałek? -->
+<p>Similar to the example with musical notation, here the recipient of one project can be a large group of different people. In the municipal office, the drawing will be the basis for issuing the construction approval documents, the construction crew will use it to construct the building. Nobody wants communication errors. Misunderstood symbols might lead to the creation of non-functional buildings, and in the worst case to a disaster.</p>
+<!-- Podobnie jak w przykładzie z notacją muzyczną, tak i tutaj odbiorcą jednego projektu może być duża grupa osób. W urzędzie gminy rysunek będzie podstawą wydania zgody na budowę, a ekipa budowalna będzie go oglądała po to, by tę budowę wykonać. W niczyim interesie są błędy w komunikacji. Źle zrozumiane oznaczenia mogłyby doprowadzić do powstania niefunkcjonalnych budynków, a w skrajnym przypadku do katastrofy budowanej. -->
+<p>The constructor must think about many aspects connected with the functionality, safety and durability of devised constructions concurrently. But nobody expects them to come up with an original way to write their project. Creativity is needed for the project and not for the way of writing it down.</p>
+<!-- Konstruktor musi jednocześnie myśleć o wielu aspektach związanych z funkcjonalnością, bezpieczeństwem i trwałością opracowanych konstrukcji. Ale nikt nie oczekuje od niego, że na swój unikalny sposób wymyśli, jak zapisać projekt budynku. Kreatywność dotyczy projektu, ale nie sposobu zapisu. -->
+</section>
+<section id="uml-diagrams" class="level2 page-columns page-full" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="uml-diagrams"><span class="header-section-number">1.4</span> UML Diagrams</h2>
+<!-- ## Diagramy UML -->
+<ul>
+<li>Unified Modeling Language (UML) – semi-formalized language used to model different kinds of IT systems. <!-- *Unified Modeling Language (UML, zunifikowany język modelowania) – język półformalny wykorzystywany do modelowania różnego rodzaju systemów informatycznych.* --></li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-fabryka_02" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_02.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.4: Exemplary UML diagram for a computer system connecting to a server</figcaption><p></p>
+</figure>
+</div>
+<p>Source: Wikipedia.</p>
+</div></div><p>Similar to the previous examples, an IT system designer needs to describe their project in such a way that it is made according to the specification. There is simply no place for ambiguity.</p>
+<!-- Podobnie jak w poprzednich przypadkach projektant systemów informatycznych musi tak opisać swój projekt, by został on wykonany zgodnie z jego intencją. Nie ma tutaj miejsca na dowolność i wieloznaczność.  -->
+<p>An IT project will be made by a numerous group of programmers and then verified by a large group of testers. They all need to be able to read the designer’s intentions to build the designed software. For this purpose special languages were developed (see the example in the margin) allowing their users to write down even the most complex systems visually, in a readable way.</p>
+<!-- Projekt informatyczny będzie wytwarzany przez liczną grupę programistów, a następnie weryfikowany przez liczbą grupę testerów. Wszyscy oni muszą umieć odczytać zamysł projektanta, by zbudować zaprojektowane oprogramowanie. W tym celu powstały specjalne języki (patrz przykład na marginesie dla języka Unified Modeling Language), pozwalające w wizualny i zrozumiały sposób zapisać najbardziej złożone systemy.  -->
+<p>Software engineering is a relatively young field, so there are numerous badly designed and described system which then stopped working. But issues with costly fixes of non-functioning software caused the standardization of processes, as well as the language for describing IT systems.</p>
+<!-- Inżynieria oprogramowania jest relatywnie młodą dyscypliną, więc wciąż bogata jest w historie źle zaprojektowanych i źle opisanych systemów, które później nie działały. Ale problemy z kosztownymi naprawami niedziałającego poprawnie oprogramowania spowodowały, że zestandaryzowano zarówno procesy, jak i sam język opisu systemów.  -->
+</section>
+<section id="electrical-diagram" class="level2 page-columns page-full" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="electrical-diagram"><span class="header-section-number">1.5</span> Electrical diagram</h2>
+<!-- ## Schemat elektryczny -->
+<p><em>Electrical diagram – a graphical construction document, on which using graphical symbols, parts of an electrical circuit and connections between them are represented.</em></p>
+<!-- *Rysunek techniczny elektryczny -- graficzny dokument konstrukcyjny, na którym za pomocą symboli graficznych przedstawia się części składowe obiektu elektrycznego oraz połączenia między nimi.* -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-fabryka_04" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_04.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.5: An exemplary diagram of an amplifier</figcaption><p></p>
+</figure>
+</div>
+<p>Source: Wikipedia.</p>
+</div></div><p>You can create examples of many industries, for which standardization was necessary for a effective and faultless communication between creators and their audiences. The figure in the margin depicts an electrical diagram, on which standardized symbols illustrate inductors, resistors, switches and other elements. Each of those symbols has an unambiguous and strictly regulated meaning. Without this standardization, the effective production of developed circuits, based on a clear communication between designers of circuits and their creators and users, would not be possible.</p>
+<!-- Można mnożyć przykłady branż, w których standaryzacja była niezbędna do tego, by umożliwić efektywną i bezbłędną komunikację twórców z odbiorcami. Rysunek na marginesie przedstawia schemat elektryczny, na którym znajdują się ustandaryzowane symbole oznaczające cewki, oporniki, przełączniki i inne elementy. Każdy z tych symboli ma jednoznaczne, ściśle uregulowane znaczenie. Bez tej standaryzacji nie byłaby możliwa efektywna produkcja opracowanych rozwiązań oparta na bezbłędnej komunikacji pomiędzy projektantami układów elektrycznych a wykonawcami i użytkownikami. -->
+<p>In each of the above cases, standardization allowed for a wider reception of the developed solution. It made the unambiguous reception easier. These pictures are made by professionals and for professionals. A composer writes down melodies for a musician. A constructor describes a building for the building crew. An IT system designer characterizes the project for programmers etc.</p>
+<!-- W każdym z powyższych przypadków standaryzacja umożliwiła szerszy odbiór opracowanego rozwiązania. Ułatwiła bezbłędny odczyt. Te rysunki tworzone są przez profesjonalistów dla profesjonalistów. Kompozytor opisuje melodie dla muzyka. Konstruktor opisuje budynek dla kierownika budowy. Projektant systemu opisuje projekt dla programistów itp. -->
+</section>
+<section id="what-happens-when-there-are-no-standards" class="level2 page-columns page-full" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="what-happens-when-there-are-no-standards"><span class="header-section-number">1.6</span> What happens when there are no standards?</h2>
+<!-- ## Co się dzieje, gdy nie ma standardów? -->
+<p>The creation of charts is a relatively young field and until now it was rarely taught on a large scale. In the primary school we learn notes, in high school we learn electrical diagrams, but there are few places, where you can learn how to create plots. Maybe this will change, and <em>Data Literacy</em> classes will be brought to primary schools, but for now only a narrow group of universities offered such a course. Still, most plot creators are self-taught, which sadly doesn’t do well for consistency in data presentation.</p>
+<!-- Tworzenie wykresów jest wciąż dosyć młodą dziedziną i dotąd rzadko było nauczane na szeroką skalę. W podstawówce uczymy się nut, w liceum uczymy się schematów elektrycznych, ale wciąż niewiele jest miejsc, gdzie można nauczyć się tworzenia wykresów. Być może to się zmieni i zajęcia z *Data Literacy* pojawią się w szkole podstawowej, ale jak do tej pory jedynie bardzo wąska grupa uczelni przygotowywała do tego. Nadal większość twórców wykresów jest samoukami, co niestety nie sprzyja spójności w prezentacji danych. -->
+<div class="column-screen-inset-right">
+<div id="fig-fabryka_NSP2021" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_NSP2021.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.6: Selected bar charts from the Polish National Census of Population and Housing 2011 report. The plots are grouped in rows by their size and background color</figcaption><p></p>
+</figure>
+</div>
+</div>
+<!-- 
+::: {.column-screen-inset-right}
+![Wybrane wykresy słupkowe z raportu podsumowującego Narodowy Spis Powszechny 2011. Wykresy pogrupowano wierszami z uwagi na ich wielkość i kolor tła](grafiki/fabryka_NSP2021.png){#fig-fabryka_NSP2021}
+::: -->
+<p>And the lack of standardization can lead to a mess. As an example we can study the report from the Polish Statistical Office concerning the Polish National Census of Population and Housing of 2011. The report is relatively short but it contains a lot of graphically represented data, often using bar charts <span class="citation" data-cites="NSP2011GUS">(<a href="references.html#ref-NSP2011GUS" role="doc-biblioref">Główny Urząd Statystyczny 2012</a>)</span>. Despite the fact that the same kind of plot is used, on different pages they are presented in very different ways. The figure above showcases 15 various examples from this report (and that’s not all of them). The plots differ in nearly every aspect. Sometimes the data is represented vertically, sometimes horizontally. Sometimes a 3D perspective is used, and sometimes it isn’t. Sometimes the bars have shadows, and sometimes they don’t. Sometimes they are red and blue, sometimes a gradient of navy blue is used, and sometimes they’re orange, yellow and green. It’s difficult to believe that they come from the same publication.</p>
+<!-- A brak standaryzacji może prowadzić do bałaganu. Jako przykład można wskazać raport Głównego Urzędu Statystycznego dotyczący spisu powszechnego z roku 2011. Raport jest dosyć krótki, ale znajduje się w nim wiele danych zaprezentowanych w sposób graficzny, często z użyciem wykresów słupkowych [@NSP2011GUS]. Pomimo iż użyty jest ten sam typ wykresu, to na różnych stronach są one pokazywane na bardzo różne sposoby. Rysunek powyżej przedstawia 15 różnych przykładów z tego raportu (a to jeszcze nie wszystkie). Wykresy te różnią się praktycznie każdym elementem. Raz dane przedstawiane są poziomo, raz pionowo. Raz stosowana jest perspektywa 3D a raz nie. Czasem słupki są cieniowane, czasem nie. Czasem są czerwono-niebieskie, czasem mają różne odcienie granatu, a czasem są pomarańczowo-żółto-zielone. Trudno uwierzyć, że pochodzą z jednej publikacji.  -->
+<div class="no-row-height column-margin column-container"><div id="ref-NSP2011GUS" class="csl-entry" role="doc-biblioentry">
+Główny Urząd Statystyczny. 2012. <em>Narodowy Spis Powszechny Ludności i Mieszkań 2011. Raport z Wyników</em>.
+</div></div></section>
+<section id="communication-standards-concerning-charts-a-case-study-on-the-polish-national-statistical-office" class="level2 page-columns page-full" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="communication-standards-concerning-charts-a-case-study-on-the-polish-national-statistical-office"><span class="header-section-number">1.7</span> Communication standards concerning charts, a case study on the Polish National Statistical Office</h2>
+<!-- ## Standardy komunikacji wykresów na przykładzie Głównego Urzędu Statystycznego -->
+<p>In the previous section, we’ve presented a report of the Polish National Statistical Office full of inconsistent charts. However, there has been a lot of development in the manner of creating data reports in this institution since 2011.</p>
+<!-- W poprzedniej sekcji przedstawiliśmy raport GUS pełen niespójnych wykresów. Wiele się jednak zmieniło od 2011 roku w sposobie raportowania danych w tej instytucji. Wykresy są bardziej spójne graficznie. GUS prowadzi też szereg inicjatyw mających na celu spopularyzowanie wnioskowania statystycznego. -->
+<p>An example of such activity is a set of rules concerning creating reports of maps <span class="citation" data-cites="GUSstandards">(<a href="references.html#ref-GUSstandards" role="doc-biblioref">Główny Urząd Statystyczny 2017</a>)</span>. The developed handbook depicts a lot of aspects of statistical communication and is full of specific and very practical advice, what to do and what not to do in data communication.</p>
+<!-- Przykładem takiej działalności jest zbiór standardów dotyczących raportowania statystyk na mapach [@GUSstandards]. Opracowany podręcznik przedstawia bardzo wiele aspektów komunikacji statystycznej i pełen jest konkretnych i bardzo praktycznych porad, co robić, a czego nie robić w komunikacji danych.  -->
+<div class="no-row-height column-margin column-container"><div id="ref-GUSstandards" class="csl-entry" role="doc-biblioentry">
+———. 2017. <em>Mapy Statystyczne. Opracowanie i Prezentacja Danych</em>. Zakład Wydawnictw Statystycznych. <a href="https://stat.gov.pl">https://stat.gov.pl</a>.
+</div></div><p><img src="grafiki/fabryka_gus_01.png" id="fig-GUSodwzorowania" class="img-fluid" alt="What projection should we choose to depict data on the map of Europe? A good projection would be, for example the conic projection maintaining area. The Mercator projection and the cylindrical projection are not advised. Source: Statistical maps, Polish National Statistical Office."> <!-- ![Jaką projekcję wybrać do przedstawiania danych na mapie Europy? Dobra projekcja to np. odwzorowanie Lamberta zachowujące powierzchnię przedstawianych obszarów. Niewskazany jest wybór odwzorowania Merkatora zachowującego kąty lub odwzorowania kwadratowego zachowującego odległości. Źródło: Mapy statystyczne, GUS.](grafiki/fabryka_gus_01.png){#fig-GUSodwzorowania} --></p>
+<p>From this handbook the Figure 1.8 is sourced, explaining which projection should be used for presenting data on the map of Europe, and which projections should be avoided. The reports developed in conformance with these standards will be more consistent and it will be easier to compare results between the reports from various years, created by different people.</p>
+<!-- Z tego opracowania pochodzi Rysunek 1.8, wyjaśniający, jakie odwzorowanie wykorzystać do prezentacji danych na mapie Europy, a z jakich nie korzystać.  Raporty opracowane zgodnie z tymi standardami będą bardziej jednolite i łatwiej będzie porównywać wyniki pomiędzy raportami z różnych lat i różnego autorstwa. -->
+
+<!-- ::: {.column-margin}
+![Dwa przykładowe rysunki wskazujące, z jakich kształtów korzystać, a z jakich nie korzystać przy komunikacji z użyciem wykresów. Źródło: Mapy statystyczne, GUS.](grafiki/fabryka_gus_03.png){#fig-GUSkształty}
+
+<br>
+
+![Kartogram przedstawiający dwie zmienne za pomocą koloru. Pomysłowe kodowanie zwiększa ilość informacji przedstawionych na wykresie. Źródło: Mapy statystyczne, GUS.](grafiki/fabryka_gus_02.png){#fig-GUSmapa}
+::: -->
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-GUSkształty" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_gus_03.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.7: Two exemplary pictures showing which shapes to use and which to avoid while communicating using plots. Source: Statistical maps, Polish National Statistical Office.</figcaption><p></p>
+</figure>
+</div>
+<p><br></p>
+<div id="fig-GUSmapa" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_gus_02.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.8: Choropleth depicting two variables using color. A clever encoding increases the amount of information presented on the plot. Source: Statistical maps, Polish National Statistical Office.</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>The Polish National Statistical Office is not only about choropleths, but also contains many useful and practical pieces of advice about the creation of charts. There are also recommendations for using different shapes (Figure 1.9). The use of shading, perspective, unnecessary gradients and other visual effects is discouraged.</p>
+<!-- Opracowanie GUS omawia nie tylko kartogramy, ale też znajduje się w nim wiele użytecznych i praktycznych porad dotyczących tworzenia wykresów. Na Rysunku 1.9 przedstawione są rekomendacje dotyczące używanych kształtów. Odradza się korzystanie z cieniowania, perspektywy, zbędnych gradientów czy innych wizualnych efektów. -->
+<p>The aforementioned standards additionally contain a set of interesting visual solutions for data presentation. An example is the choropleth from Figure 1.10, where the colors encode two variables – a percentage of people with higher education and the GDP per capita. The use of appropriate color scales allows for a significant compression of data presented on the chart.</p>
+<!-- Wspomniane standardy zawierają również zbiór ciekawych rozwiązań wizualnych do prezentowania danych. Przykładem jest kartogram z Rysunku 1.10, gdzie kolory kodują dwie zmienne -- odsetek osób z wykształceniem wyższym oraz wyprodukowane PKB na osobę. Użycie odpowiednich skal kolorystycznych pozwala na taką znaczną kompresję danych prezentowanych na wykresie.  -->
+</section>
+<section id="communication-standards-a-case-study-based-on-the-economist-newspaper" class="level2 page-columns page-full" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="communication-standards-a-case-study-based-on-the-economist-newspaper"><span class="header-section-number">1.8</span> Communication standards, a case study based on “The Economist” newspaper</h2>
+<!-- ## Standardy komunikacji wykresów na przykładzie gazety ,,The Economist'' -->
+<p>Not only the reports of statistical offices are full of charts. Increasingly, advanced visualizations are included in newspapers and other information outlets. “The Economist”, “The Guardian”, “The New York Times” are some of the first large newspapers that have treated the data visualization standards in a serious way. Out of respect for their readers, the biggest and best newspapers came up with unified, readable and characteristic standards of data presentation and some of them even shared these standards publicly. An example of a newspaper which publicized their standards is “The Economist”.</p>
+<!-- Nie tylko raporty urzędów statystycznych są bogate w wykresy. Coraz częściej zaawansowane wizualizacje danych goszczą na łamach gazet i portali informacyjnych. ,,The Economist'', ,,The Guardian'', ,,The New York Times'' to jedne z pierwszych dużych gazet, które poważnie potraktowały temat prezentacji danych w sposób wizualny. Z szacunku do czytelnika największe i najlepsze gazety wypracowały jednolite, czytelne i charakterystyczne standardy prezentacji danych, a niektóre z nich nawet udostępniły te standardy publicznie. Przykładem gazety, która zdecydowała się na taki krok, jest ,,The Economist''. -->
+<p>The standards of “The Economist” <span class="citation" data-cites="Economiststandards">(<a href="references.html#ref-Economiststandards" role="doc-biblioref">McLean 2017</a>)</span> contain very precise information on how large the graphical elements should be, both in the computer, as well as cell phone version. On one page of the newspaper, very often you can find a few diagrams. No wonder, that they need to be consistent.</p>
+<!-- W zestawie standardów ,,The Economist'' [@Economiststandards] znajdują się bardzo precyzyjne informacje, jak duże powinny być poszczególne elementy graficzne zarówno w wydaniu na komputery stacjonarne, jak i na telefony komórkowe. Na jednej stronie tej gazety często znaleźć można kilka wykresów, nic dziwnego, że muszą one być ze sobą maksymalnie spójne. -->
+<div class="no-row-height column-margin column-container"><div id="ref-Economiststandards" class="csl-entry" role="doc-biblioentry">
+McLean, Matt. 2017. <em>The Economist Visual Styleguide</em>. <a href="https://design-system.economist.com/">https://design-system.economist.com/</a>.
+</div><div class="">
+<div id="fig-GUSmapa" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_economist_01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.9: Detailed rules concerning the size of titles, legends and colors on the presented charts. Source: <em>The Economist visual styleguide</em>.</figcaption><p></p>
+</figure>
+</div>
+</div></div>
+<!-- ::: {.column-margin}
+![Szczegółowe wytyczne dotyczące wielkości tytułów, legend i kolorów na przedstawianych wykresach. Źródło: *The Economist visual styleguide*.](grafiki/fabryka_economist_01.png){#fig-GUSmapa}
+::: -->
+<p>The visual communication of “The Economist” is very coherent. In the standards, five kinds of charts are described: two types of bar charts, one of which contains overlaid bars, a scatter plot, a line plot and a temperature graph. For each of them very strict rules defining colors, typefaces, line thicknesses and what sizes of elements should be used to get a unified visual effect.</p>
+<!-- Komunikacja wizualna prowadzona przez ,,The Economist'' jest bardzo spójna. W standardach opisane jest pięć typów wykresów: dwa słupkowe, z czego jeden ze słupkami nałożonymi na siebie, a drugi z słupkami obok siebie, jeden wykres kropkowy, jeden wykres liniowy i jeden wykres temperaturowy. Dla każdego z tych wykresów przedstawione są bardzo szczegółowe reguły, jakie kolory, jakie kroje pisma, grubości linii, jakie wielkości elementów stosować, by uzyskać spójny efekt. -->
+</section>
+<section id="communication-standards-a-case-study-based-on-the-ibcs" class="level2 page-columns page-full" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="communication-standards-a-case-study-based-on-the-ibcs"><span class="header-section-number">1.9</span> Communication standards, a case study based on the IBCS</h2>
+<!-- ## Standardy komunikacji biznesowej na przykładzie IBCS -->
+<p>The standards presented in the two previous subsections were developed for the internal purposes of the institutions. Both, the Polish National Statistical Office, as well as “The Economist” created a set of standards so that their reports, newspapers, websites would be more visually consistent. But there are also standards developed for external organizations, with the same goal of making the communication more coherent. An example would be the International Business Communication Standards <span class="citation" data-cites="IBCSstandards">(<a href="references.html#ref-IBCSstandards" role="doc-biblioref">2022</a>)</span>. This set of rules was developed as a result of a cooperation of Rolf Hichert and Jürgen Faisst. Currently it is being developed in a very transparent manner by the IBCS organization. Most materials can be found for fre on the website of this organization.</p>
+<!-- Standardy zaprezentowane w poprzednich dwóch podrozdziałach zostały opracowane na własne potrzeby poszczególnych instytucji. Zarówno GUS, jak i ,,The Economist'' przygotowały zbiór standardów, by ich raporty, gazety, strony były bardziej spójne wizualnie. Ale dostępne są też standardy opracowywane dla zewnętrznych organizacji, mające uczynić ich komunikację bardziej spójną.  Przykładem są Międzynarodowe Standardy Komunikacji Biznesowej (ang. *The International Business Communication Standards*) [@IBCSstandards]. Ten zbiór reguł powstał w wyniku współpracy Rolfa Hicherta i Jürgena Faissta i jest obecnie rozwijany w bardzo transparentny sposób  przez stowarzyszenie IBCS-A. Większość materiałów można przeczytać bezpłatnie na stronie tego stowarzyszenia.  -->
+<div class="no-row-height column-margin column-container"><div id="ref-IBCSstandards" class="csl-entry" role="doc-biblioentry">
+The IBCS Institute. 2022. <em>The International Business Communication Standards (IBCS)</em>. <a href="https://www.ibcs.com/">https://www.ibcs.com/</a>.
+</div></div><div class="column-screen-inset-right">
+<div id="fig-IBCSexamples" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_IBCSexamples.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.10: Examples of rules from IBCS standards. Source: IBCS Standards.</figcaption><p></p>
+</figure>
+</div>
+</div>
+<!-- ::: {.column-screen-inset-right}
+![Przykłady reguł ze standardów IBCS. Źródło: Standardy IBSC.](grafiki/fabryka_IBCSexamples.png){#fig-IBCSexamples}
+::: -->
+<p>In <a href="#fig-IBCSexamples">Figure&nbsp;<span>1.10</span></a> we’ve shown six chosen recommendations present in the IBCS standards. They correspond to a very operational tips: Don’t use irregular symbols to show data. Rely on standard shapes. Make sure that the intervals on the axes are of the same length. Start the bars at zero. Instead of pie charts, use the more informative bar charts. Do not use perspective, shadows and 3D effects – ever. Don’t use colors if they don’t bare any meaning.</p>
+<!-- Na rysunku @fig-IBCSexamples przedstawiliśmy sześć wybranych rekomendacji obecnych w standardach IBCS. Odpowiadają one bardzo operacyjnym wskazówkom: Nie używaj nieregularnych symboli do przedstawiania danych. Oprzyj się na sprawdzonych kształtach. Upewnij się, że wartości na osiach przedstawiają przedziały o równej długości. Zaczynaj słupki od zera na wykresach słupkowych. Zamiast wykresów kołowych stosuj bardziej czytelne wykresy słupkowe. Nie używaj perspektywy, cieni i efektów 3D -- nigdy. Nie używaj kolorów, jeżeli nie niosą żadnej informacji.  -->
+<p>Standards contain many very detailed tips and recommendation which are grouped into 7 rules of good communication. The rules with a short description are presented in the Table below.</p>
+<!-- Standardy składają się z wielu bardzo szczegółowych wskazówek i rekomendacji, które są pogrupowane w siedem reguł udanej komunikacji. Reguły te wraz z krótkim komentarzem przedstawione są w tabeli poniżej. -->
+<table class="table">
+<caption>The essential seven rules of IBCS. For each of the rules on the website <a href="http://www.ibcs-a.org">http://www.ibcs-a.org</a> detailed examples are presented, showcasing what to avoid and what to use.</caption>
+<thead>
+<tr class="header">
+<th>Rule</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Say</td>
+<td>Convey a specific, relevant message.</td>
+</tr>
+<tr class="even">
+<td>Unify</td>
+<td>Use unified markings.</td>
+</tr>
+<tr class="odd">
+<td>Condense</td>
+<td>Increase the amount of information in the smallest possible form factor.</td>
+</tr>
+<tr class="even">
+<td>Check</td>
+<td>Make sure the charts and tables are coherent.</td>
+</tr>
+<tr class="odd">
+<td>Express</td>
+<td>Choose the right manner of presentation (description, plot, table) for the data.</td>
+</tr>
+<tr class="even">
+<td>Simplify</td>
+<td>Avoid unnecessary decorations.</td>
+</tr>
+<tr class="odd">
+<td>Structure</td>
+<td>Make sure there is a readable structure.</td>
+</tr>
+</tbody>
+</table>
+<!-- | Reguła | Komunikat     |
+|--------|---------------|
+| Say |  Przekazuj konkretny, istotny komunikat.  |
+| Unify | Stosuj jednolite oznaczenia i wyróżnienia.  |
+| Condence | Zwiększaj ilość informacji, dbaj o treściwość.  |
+| Check | Zapewnij wizualną spójność wykresów i tabel.  |
+| Express | Wybierz odpowiednią formę (opis, tabelę, wykres) dla prezentowanych danych.    |
+| Simplify | Unikaj bałaganu i zbędnych ozdobników.   | 
+| Structure | Zadbaj o czytelną strukturę.   | -->
+<!-- : Podstawowe siedem reguł IBCS. Dla każdej reguły na stronie [http://www.ibcs-a.org](http://www.ibcs-a.org) przedstawione są szczegółowe przykłady, czego unikać, a co stosować. -->
+<div id="fig-icbsFig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/fabryka_schematICBS.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1.11: The IBCS rules can be applied in an iterative manner. Some of the rules enrich the plot or report by adding more information, and some are connected to the organization of elements to make finding information and reading easier.</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Reguły IBCS można stosować w sposób iteracyjny. Część reguł służy wzbogaceniu wykresu lub raportu w dodatkowe informacje, a część związana jest z organizacją elementów, by ułatwić ich odszukanie i odczytywanie](grafiki/fabryka_schematICBS.png){#fig-icbsFig} -->
+</section>
+<section id="tasks" class="level2 page-columns page-full" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="tasks"><span class="header-section-number">1.10</span> Tasks</h2>
+<!-- ## Zadania -->
+<p>Find an article, book or information outlet, which conveys information based on data. For example, you can use the <a href="https://biqdata.wyborcza.pl/biqdata/0,0.html">BiQdata.pl</a> portal, <a href="https://informationisbeautiful.net/beautifulnews/">BeautifulNews</a> or <a href="https://www.nytimes.com/spotlight/graphics">The New York Times</a>. Based on this, perform the following tasks.</p>
+<!-- Znajdź artykuł, książkę lub portal informacyjny, w którym przekazywane są informacje oparte na danych. Możesz np. skorzystać z portalu [BiQdata.pl](https://biqdata.wyborcza.pl/biqdata/0,0.html), [BeautifulNews](https://informationisbeautiful.net/beautifulnews/) lub [The New York Times](https://www.nytimes.com/spotlight/graphics). Na tej podstawie wykonaj poniższe zadania. -->
+<ol type="1">
+<li>Think about how complex the conveyed story is. How would it look like in the form of a table or text description? How long would a description conveying the same information be?</li>
+<li>Choose a chart and look at the SUCCESS rules. Does this chart conform to all seven rules?</li>
+<li>In this chapter, we’ve talked about four domains in which standardized symbols are used for visual communication. Find another domain/area of use in which standardized communication schemas are used.</li>
+</ol>
+<!-- 1. Zastanów się, jak złożona jest przekazywana historia. Jak wyglądałaby w postaci tabeli lub opisu słownego? Jak długi byłby opis słowny, który przekazuje tę samą informację. 
+2. Na przykładzie wybranego wykresu spójrz na reguły SUCCESS. Czy ten wykres jest zgodny z każdą z tych siedmiu reguł? 
+3. W tym rozdziale omawialiśmy cztery dziedziny, w których ustandaryzowane symbole są wykorzystywane w komunikacji wizualnej. Znajdź jeszcze inną dziedzinę/obszar zastosowań, w których również stosuje się ustandaryzowane schematy komunikacji.  -->
+<p>If you would like to know more about IBCS standards and other solutions to the problem of chart consistency, you might be interested in the <em>Perełki z historii</em> and <em>Droga</em> essays from the book <em>Odkrywać! Ujawniać! Objaśniać!</em> <span class="citation" data-cites="eseje">(<a href="references.html#ref-eseje" role="doc-biblioref">Biecek 2016</a>)</span> (<strong>only available in Polish</strong>).</p>
+<!-- Jeżeli chciałbyś dowiedzieć się więcej o standardach IBCS i innych rozwiązaniach problemu uspójnienia wykresów, to mogą zainteresować Cię eseje *Perełki z historii* i *Droga* z książki *Odkrywać! Ujawniać! Objaśniać!* [@eseje] -->
+
+
+<div class="no-row-height column-margin column-container"><div id="ref-eseje" class="csl-entry" role="doc-biblioentry">
+Biecek, Przemysław. 2016. <em>Odkrywać! Ujawniać! Objaśniać! Zbiór Esejów o&nbsp;Sztuce Przedstawiania Danych</em>. Fundacja Naukowa SmarterPoland.pl. <a href="http://biecek.pl/Eseje/">http://biecek.pl/Eseje/</a>.
+</div></div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./recipes.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tried and Tested</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

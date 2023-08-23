@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Przemysław Biecek (concept)">
+<meta name="author" content="Iker Bengoetxea Arruti (illustrations)">
+<meta name="author" content="Mateusz Krzyziński, Mikołaj Spytek (translation)">
+<meta name="author" content="Łukasz Rajkowski (review)">
+<meta name="dcterms.date" content="2023-08-23">
+
+<title>Chart Runners</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./factory.html" rel="next">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZWLGMSWT14"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZWLGMSWT14');
+</script>
+
+
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Chart Runners</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Chart Runners</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./factory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Factory of Taste</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recipes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tried and Tested</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cherries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cherries</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./holes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Holes…</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mutant.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beware: Mutant!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code_it.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Code It Yourself</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Chart Runners</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Przemysław Biecek (concept) </p>
+             <p>Iker Bengoetxea Arruti (illustrations) </p>
+             <p>Mateusz Krzyziński, Mikołaj Spytek (translation) </p>
+             <p>Łukasz Rajkowski (review) </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 23, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level1 unnumbered page-columns page-full">
+<h1 class="unnumbered">Introduction</h1>
+<p><img src="cover_bw.jpg" class="img-fluid"></p>
+<p>How can you create good plots? Good ones, meaning ones that are viewed with pleasure, that are informative, that are understood by a wide audience but that still can be appreciated by connoisseurs.</p>
+<!-- Jak tworzyć dobre wykresy? Dobre, czyli takie, które z przyjemnością się ogląda, z których można wyciągnąć wiele informacji, które są zrozumiałe dla szerokiego kręgu odbiorców, a jednocześnie docenią je smakosze. -->
+<p>It requires some training and knowledge of some principles but it is a skill that can be learned. And it’s not just idle chatter, I have proof. Since 2013 I’ve been teaching a Data Visualization Techniques course at the University of Warsaw and Warsaw University of Technology. During this time I’ve had the pleasure of working with hundreds of STEM students, most of whom were able to create amazing, clear and often exceptional visualizations, right after learning about the rules of communication via plots.</p>
+<!-- Wymaga to pewnego treningu i znajomości kilku zasad, ale jest to umiejętność, której można się nauczyć. Nie jest to czcze gadanie, mam na to dowód! Od 2013 roku prowadzę zajęcia z wizualizacji danych na Uniwersytecie Warszawskim i Politechnice Warszawskiej. W tym czasie miałem przyjemność pracować z setkami studentów kierunków matematyczno-informatycznych, z których większość, gdy tylko poznała podstawowe reguły komunikacji przez wykresy, bardzo szybko była w stanie tworzyć wspaniałe, czytelne, często wyjątkowe wizualizacje.  -->
+<p>Based on the experience from these classes, <em>Chart Runners</em> were created. This is a collection of brief lectures on different aspects useful for better understanding, how communication with the use of statistical charts works. On the following pages, many analogies to preparing dishes will be presented because both in the kitchen, as well as when preparing statistical charts, you need practice, the knowledge of some basic principles, a bunch of trusted recipes and lots of enthusiasm for experimentation. With this arsenal, any student of culinary arts is destined for success.</p>
+<!-- Na bazie doświadczeń z prowadzenia tych zajęć powstały *Wykresy od kuchni*. To zbiór krótkich wykładów omawiających różne wątki przydatne w lepszym zrozumieniu tego, jak działa komunikacja z użyciem wykresów statystycznych. Na kolejnych stronach pojawi się wiele analogii do przyrządzania posiłków, ponieważ zarówno w kuchni, jak i w przygotowaniu wykresów statystycznych potrzebna jest praktyka, znajomość pewnych fundamentalnych prawideł, garść sprawdzonych przepisów i dużo zapału do eksperymentowania. Będąc tak uzbrojonym, każdy adept sztuki kulinarnej jest skazany na sukces. -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="illustrations/soup_mini.png" width="70%"></p>
+</div></div><p>In the <em>Factory of Taste</em> chapter, the role of coherence and standardization when creating statistical charts. We will reference standards used in other domains, where very complex projects are communicated between the creator and a diverse audience. As examples, we will use musical notation, UML diagrams, and technical drawings. Statistical charts are not billboards, they don’t have to scream and stand out from other plots. Quite the contrary. Good charts complete each other, are easy to read and the “eureka!” moment comes from the presented data not the form of the chart. In the second part, we will show the standards proposed by the Polish Central Statistical Office (<em>pl. GUS</em>), “The Economist” magazine and the IBCS organization, which develops international business communication standards.</p>
+<!-- W rozdziale *Fabryka smaku* omówiona jest rola spójności i standaryzacji przy tworzeniu wykresów statystycznych. Odniesiemy się do standardów stosowanych w innych dziedzinach, w których bardzo złożone projekty są komunikowane pomiędzy twórcą a szeroką grupą odbiorców. Jako przykład posłuży nam notacja muzyczna, diagramy UML czy szkice techniczne. Wykresy statystyczne to nie banery reklamowe, nie muszą krzyczeć, odróżniać się od sąsiednich wykresów. Wręcz przeciwnie. Dobre wykresy uzupełniają się nawzajem, są łatwe do odczytania, a moment ,,aha!'' wynika z prezentowanych treści, a nie z formy. W drugiej części rozdziału pokażemy standardy proponowane przez Główny Urząd Statystyczny, gazetę ,,The Economist'' czy organizację IBCS, rozwijającą międzynarodowe standardy komunikacji biznesowej. -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="illustrations/cake_mini.png" width="70%"></p>
+</div></div><p>In the <em>Tried and Tested</em> chapter, we will discuss the most popular kinds of charts – solutions worth knowing and worth using to present the most common stories hidden in the data. How to show the distribution of qualitative or quantitative variables? How to compare two or more groups of observations? How to present the relationship between two or more variables? Learn about 14 charts, that will satiate any data hunger.</p>
+<!-- W rozdziale *Sprawdzone przepisy* omówimy najpopularniejsze typy wykresów -- rozwiązania, które warto znać i wykorzystywać, by przedstawiać najczęściej spotykane historie w danych. Jak pokazać rozkład zmiennych ilościowych lub jakościowych? Jak porównać dwie lub więcej grup obserwacji? Jak zaprezentować zależność pomiędzy dwiema lub większą liczbą zmiennych? Poznaj 14 wykresów, które zaspokoją każdy głód danych.  -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="illustrations/cheese_mini.png" width="70%"></p>
+</div></div><p>Are you tired of traditional dishes? Would you like to experiment a bit? Fantastic! Still, before you set sail into the unknown, read about three reefs, that you need to know how to avoid. In the <em>Holes…</em> chapter, we will talk about the difficulties with the perception of colors on charts, difficulties with shape perception and difficulties with the composition of the chart. But we won’t simply complain. Many of these problems can be avoided if you comply with some simple advice. You will find these pieces of advice at the end of each section.</p>
+<!-- Znudziły Ci się klasyczne dania? Masz ochotę na eksperymenty? Fantastycznie! Zanim jednak wypłyniesz na nieznane wody, przeczytaj o trzech rafach, które trzeba umieć omijać. W rozdziale *Dziury...* opowiemy  o problemach z percepcją kolorów na wykresach, problemach z odczytywaniem kształtów i problemach z kompozycją wykresu. Ale nie będziemy tylko narzekać, wielu z omawianych problemów można uniknąć, stosując się do prostych rad. Znajdziesz te rady na końcu każdego podrozdziału. -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="illustrations/biscuits_mini.png" width="70%"></p>
+</div></div><p>In the information space, we see hundreds, if not thousands of charts. Between the good ones and bad compositions, you see some exceptionally delicious specimens. When we see them, they stay with us for a long time. Some of them are beautiful, and some of them saved many human lives. In the <em>Cherries</em> chapter we showcase five charts, that form the cannon of data visualization. On our way, we will meet the authors of everlasting works of art. Frank Anscombe, Otto Neurath, John Snow, Charles Minard or Florance Nightingale – anybody who is interested in statistical charts must know these names.</p>
+<!-- W przestrzeni informacyjnej spotykamy setki, jeżeli nie tysiące wykresów. Wśród lepszych i gorszych kompozycji zdarzają się też wyjątkowo smakowite egzemplarze. Takie, które gdy je zobaczymy, to zostają z nami na długo. Niektóre z nich są piękne, niektóre z nich uratowały wiele ludzkich istnień. W rozdziale *Rodzynki* pokazujemy pięć wykresów, które tworzą kanon wizualizacji danych. Przy okazji poznamy autorów tych wiekopomnych dzieł. Frank Anscombe, Otto Neurath, John Snow, Charles Minard czy Florence Nightingale -- te nazwiska musi znać każda osoba interesująca się wykresami statystycznymi. -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="illustrations/noodle_mini.png" width="70%"></p>
+</div></div><p>The tale of the charts wouldn’t be complete if it didn’t contain a warning about toxic visualizations. Poisoned information can lead to unpleasantness, indigestion and dizziness. In the <em>Beware: Mutant!</em> we will talk about several vicious poisons, that can ruin a whole dish. Mistakes in choosing the axes for the plot, erroneous choice of colors, incorrect use of pie charts, badly laid out elements of the plot, and a wrong choice of markings for key elements of the plot are defects, which can ruin any food.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="illustrations/game_mini.png" width="70%"></p>
+</div></div><p>Do you know the theory? It’s time to cook some charts yourselves. In the <em>Code It Yourself</em> chapter, we will describe the <code>ggplot2</code> package for the <code>R</code> language, which is one of the best tools for the creation of statistical charts. Step by step we will reproduce the charts from the <em>Tried and Tested Recipes</em>, and in the meantime, we will analyze the grammar of graphics – a language created for the visual communication of data. A very interesting dataset is included alongside this book, describing over 2000 food items. Based on this dataset, we will cook up some amazing visualizations together, learning some interesting facts about the foods on the way.</p>
+<p>At the end of every chapter, there is a set of tasks, which allow you to study the discussed topics. Some of them are very easy and you will be able to complete them without much effort, but there are also some, which need a bit of work. Don’t be discouraged if some prove too difficult, you can always come back to them later.</p>
+<hr>
+<p>This book could only be written with the help of many people. The most motivation for my work is constantly provided by Beta and Bit. In addition, the first chapters took a long time to mature being nourished by conversations with Łukasz Maciejewski, Kamila Łyczek and Łukasz Rajkowski – three wonderful mathematicians from the Faculty of Mathematics, Informatics and Mechanics at University of Warsaw. The illustrations for this book were created through months of conversations with two wonderful designers Anna Szałwa and Ikert Bengoetxea Arruti. They created the fantastic graphics that open the chapters. On the home stretch, I was helped a lot by the comments of Anna Kozak, Mikołaj Spytek and Hubert Ruczyński, who used to be my students, and today they teach the “Data Visualization Techniques” course at the Warsaw University of Technology themselves. With language proofreading I was helped by the reliable Katarzyna Wróbel, with composition and contact with the printing house – Agata Balak. The final touches were possible thanks to the very insightful comments and suggestions of Łukasz Rajkowski. The English translation was done entirely by Mateusz Krzyzinski and Mikołaj Spytek. This was a tremendous amount of titanic work in a situation where many word plays are very hard to translat into a foreign language. This book would certainly not have been written if not for their support. But if there are faults left in this book, it is solely my oversight.</p>
+<div style="text-align: right">
+Przemysław Biecek, Wilga, 2023
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./factory.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Factory of Taste</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

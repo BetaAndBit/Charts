@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chart Runners - 6&nbsp; Code It Yourself</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./mutant.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZWLGMSWT14"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZWLGMSWT14');
+</script>
+
+
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Code It Yourself</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Chart Runners</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./factory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Factory of Taste</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recipes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tried and Tested</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cherries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cherries</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./holes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Holes…</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mutant.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beware: Mutant!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code_it.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Code It Yourself</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup"><span class="toc-section-number">6.1</span>  Setup</a></li>
+  <li><a href="#histogram---step-by-step" id="toc-histogram---step-by-step" class="nav-link" data-scroll-target="#histogram---step-by-step"><span class="toc-section-number">6.2</span>  Histogram - step by step</a></li>
+  <li><a href="#themes-and-skins" id="toc-themes-and-skins" class="nav-link" data-scroll-target="#themes-and-skins"><span class="toc-section-number">6.3</span>  Themes and skins</a></li>
+  <li><a href="#scatterplot---step-by-step" id="toc-scatterplot---step-by-step" class="nav-link" data-scroll-target="#scatterplot---step-by-step"><span class="toc-section-number">6.4</span>  Scatterplot - step by step</a></li>
+  <li><a href="#mappings-of-the-variables" id="toc-mappings-of-the-variables" class="nav-link" data-scroll-target="#mappings-of-the-variables"><span class="toc-section-number">6.5</span>  Mappings of the variables</a></li>
+  <li><a href="#scales-for-the-mappings" id="toc-scales-for-the-mappings" class="nav-link" data-scroll-target="#scales-for-the-mappings"><span class="toc-section-number">6.6</span>  Scales for the mappings</a></li>
+  <li><a href="#boxplot---step-by-step" id="toc-boxplot---step-by-step" class="nav-link" data-scroll-target="#boxplot---step-by-step"><span class="toc-section-number">6.7</span>  Boxplot - step by step</a></li>
+  <li><a href="#layers" id="toc-layers" class="nav-link" data-scroll-target="#layers"><span class="toc-section-number">6.8</span>  Layers</a></li>
+  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility"><span class="toc-section-number">6.9</span>  Reproducibility</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks"><span class="toc-section-number">6.10</span>  Tasks</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Code It Yourself</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="grafiki/okladka_zakoduj.jpg" class="img-fluid"></p>
+<p>In this chapter we will introduce the basics of the <code>ggplot2</code> package, which is an excellent tool for creating statistical charts. Why exactly this package? After all, there are so many other easy-to-use graphing tools. Among those used by professionals presenting numbers, we can distinguish three types:</p>
+<!-- W tym rozdziale przedstawimy podstawy pakietu `ggplot2`, który jest wyśmienitym narzędziem do tworzenia wykresów statystycznych. Dlaczego akurat ten pakiet? Przecież jest tak wiele innych prostych w użyciu narzędzi do tworzenia wykresów. Wśród tych wykorzystywanych przez osoby zawodowo prezentujące liczby, możemy wyróżnić trzy rodzaje: -->
+<ul>
+<li>Advanced graphics programs like <a href="https://www.gimp.org">GIMP</a> (a free raster graphics program), Adobe Illustrator or <a href="https://inkscape.org">Inkscape</a> (a free vector graphics program) allow you to create any chart you want. The creator’s imagination is hardly limited, and one can literally create works of art in these tools. Usually, however, polishing details requires manual modifications, a lot of skill and is difficult to automate.</li>
+<li>Programs like <a href="https://www.openoffice.org">Calc</a> (a free spreadsheet), Excel or <a href="http://www.tableau.com">Tableau</a> (a dashboard building tool) allow you to quickly create charts using a set of templates. Speed is a key advantage here. The user can instantly “click” a template, indicate the columns in the data that parameterize the template. Click, click, click and yet another chart is ready.</li>
+<li>Programming languages and special graphing packages, such as <code>ggplot2</code> for <a href="https://cran.r-project.org/">R program</a>. Using such tools requires programming skills, so the entry threshold is higher than for the previously presented approaches. However, this has two advantages. First, once you have mastered the language, conveyor belt charting can be automated. If you create charts frequently, this automation is priceless. Second, often these tools are very flexible and allow us to build both simple and very advanced charts.</li>
+</ul>
+
+<!-- * Zaawansowane programy graficzne typu [GIMP](https://www.gimp.org) (bezpłatny program do grafiki rastrowej), Adobe Illustrator czy [Inkscape](https://inkscape.org) (bezpłatny program do grafiki wektorowej) pozwalają na stworzenie dowolnego wykresu. Wyobraźnia twórcy nie jest praktycznie niczym ograniczona, w tych narzędziach można tworzyć dosłownie dzieła sztuki. Zazwyczaj jednak polerowanie szczegółów wymaga ręcznych modyfikacji, dużych umiejętności i jest trudno automatyzowalne.
+* Programy typu [Calc](https://www.openoffice.org) (darmowy arkusz kalkulacyjny), Excel czy [Tableau](http://www.tableau.com) (narzędzie do budowy dashboardów) pozwalają na szybkie tworzenie wykresów za pomocą zbioru szablonów. Szybkość jest tutaj kluczowym atutem. Użytkownik może błyskawicznie ,,wyklikać'' szablon, wskazać kolumny w danych, które parametryzują szablon. Klik, klik, klik i kolejny wykres gotowy. 
+* Języki programowania i specjalne pakiety graficzne, np. takie jak `ggplot2` dla [programu R](https://cran.r-project.org/). Korzystanie z takich narzędzi wymaga umiejętności programowania, więc próg wejścia jest wyższy niż w przypadku poprzednio prezentowanych podejść. Ma to jednak dwie zalety. Po pierwsze, gdy już opanujemy ten język, to taśmowe tworzenie wykresów można automatyzować. Jeżeli często tworzymy wykresy, to ta automatyzacja jest bezcenna. Po drugie, często te narzędzia są bardzo elastyczne i pozwalają na budowę zarówno prostych, jak i bardzo zaawansowanych wykresów. -->
+<p>Of course, it’s worth knowing a few graphing tools to learn the pros and cons yourself. Since I create a lot of charts and care a lot about their readability and aesthetics, for me the <code>ggplot2</code> package is usually the tool of first choice.</p>
+<!-- Warto oczywiście znać kilka narzędzi do tworzenia wykresów, by samemu poznawać ich wady i zalety. Ponieważ tworzę dużo wykresów i bardzo zależy mi na ich czytelności i estetyce, więc dla mnie pakiet `ggplot2` jest zazwyczaj narzędziem pierwszego wyboru. -->
+<p>The name <code>ggplot2</code> comes from the term <em>grammar of graphics</em>. The first version of the package was developed by Hadley Wickham. This grammar is based on the richer grammar developed by Leland Wilkinson, described in his book <em>The Grammar of Graphics</em> <span class="citation" data-cites="wilkinson1999">(<a href="references.html#ref-wilkinson1999" role="doc-biblioref">Wilkinson 1999</a>)</span>. The grammar presented by Wilkinson, on the other hand, is based on the results of Jacques Bertin and his work . It also draws from results in a wide variety of disciplines, from cartography, perception studies and cognitive science to linguistics, mathematics and statistics.</p>
+<!-- Nazwa `ggplot2` pochodzi od angielskiego określenia *grammar of graphics*, czyli gramatyka grafiki. Pierwsza wersja pakietu została opracowana przez Hadleya Wickhama. Gramatyka ta jest oparta na bogatszej gramatyce, którą stworzył Leland Wilkinson, opisanej w książce *The Grammar of Graphics* [@wilkinson1999]. Z kolei gramatyka przedstawiona przez Wilkinsona bazuje na wynikach Jacquesa Bertina i jego pracy \textit{Sémiologie graphique}\cite{bertin1967}. Korzysta też z rezultatów osiągniętych w bardzo wielu różnych dyscyplinach, od kartografii, przez badania percepcji i kognitywistykę, po lingwistykę, matematykę i statystykę.  -->
+<div class="no-row-height column-margin column-container"><div id="ref-wilkinson1999" class="csl-entry" role="doc-biblioentry">
+Wilkinson, Leland. 1999. <em>The Grammar of Graphics</em>. New York: Springer.
+</div></div><p>Using this grammar requires some training in thinking about data and relationships. But this training pays off. Once we master this grammar, we will be better able to formulate stories about data. This training in thinking will come in handy, even if we use a different programming language or other graphing libraries in the future.</p>
+<!-- Korzystanie z tej gramatyki wymaga pewnego treningu myślenia o danych i zależności. Ale ten trening się opłaca. Gdy już opanujemy tę gramatykę, to będziemy w stanie lepiej formułować opowieści o danych.
+Ten trening myślenia przyda się, nawet jeżeli w przyszłości będziemy korzystać z innego języka programowania lub innych bibliotek do tworzenia wykresów. -->
+<section id="setup" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">6.1</span> Setup</h2>
+<p>In this chapter, we present instructions that allow you to reproduce the charts from the <em>Tested Recipes</em> chapter. In order for the commands presented below to work, you must first install the <code>R</code> program. It can be downloaded from <a href="https://cran.r-project.org/">https://cran.r-project.org/</a>. Then install the statistical package <code>ggplot2</code>, which can be done with the <code>install.packages("ggplot2")</code> instruction typed into the running R program.</p>
+<!-- W tym rozdziale przedstawiamy instrukcje pozwalające na odtworzenie wykresów z rozdziału *Sprawdzone przepisy*. Aby przedstawione poniżej polecenia zadziałały, należy wcześniej zainstalować program `R`. Można go pobrać ze strony [https://cran.r-project.org/](https://cran.r-project.org/). 
+Następnie należy zainstalować pakiet statystyczny `ggplot2`, co można zrobić instrukcją `install.packages("ggplot2")` wpisaną do uruchomionego programu R. -->
+<p>After installing the necessary components, enable this package with the <code>library()</code> command. After following these instructions, we have access to the graphical functions described below.</p>
+<!-- Po zainstalowaniu niezbędnych komponentów należy włączyć ten pakiet poleceniem `library()`. Po wykonaniu tych instrukcji mamy dostęp do funkcji graficznych opisanych poniżej. -->
+<pre><code>library("ggplot2")
+library("ggthemes")</code></pre>
+<p>Now we need data that we can represent in graphs. The <code>ggplot2</code> package (like many other tools) assumes that the data is in tabular form, where variables are included in the columns and observations are included in the rows.</p>
+<!-- Teraz potrzebujemy danych, które możemy przedstawić na wykresach. Pakiet `ggplot2` (jak i wiele innych narzędzi) zakłada, że dane znajdują się w postaci tabelarycznej, w której w kolumnach ujęte są zmienne, a w wierszach obserwacje.  -->
+<p>The examples presented in this chapter are based on the food data we have already learned about in the <em>Recipes</em> chapter. The data is contained in the <code>BetaBit</code> package and will be available in the <code>food</code> dataset after installing and loading this package. The data is available in English.</p>
+<!-- Przykłady przedstawione w tym rozdziale oparte są na danych o produktach spożywczych, które poznaliśmy już w rozdziale *Sprawdzone przepisy*.  Dane znajdują się w pakiecie `BetaBit` i po zainstalowaniu oraz wczytaniu tego pakietu będą dostępne w zbiorze danych `food`. Dane są dostępne w języku angielskim, ale poniżej dla czytelności przedstawiliśmy nazwy zmiennych przetłumaczone na język polski. -->
+<pre><code>library("BetaBit")
+head(food)</code></pre>
+<p>After loading the graphics package and data, we are ready to create charts. Below are the relevant step-by-step instructions.</p>
+<!-- Po załadowaniu pakietu graficznego i danych jesteśmy gotowi do tworzenia wykresów. Poniżej przedstawiamy odpowiednie instrukcje krok po kroku. -->
+<p>Creating a graph in the <code>ggplot2</code> package is a very interactive and iterative process. In each iteration, something is added or removed to the chart and you look for the next thing to improve. This allows for a gradual improvement of the chart and builds valuable habits of systematic data mining, which are so useful when working with data. Below, alongside the following instructions, we show what the chart looks like at a given stage.</p>
+<!-- Tworzenie wykresu w pakiecie `ggplot2` jest bardzo interaktywnym i iteracyjnym procesem. W każdej iteracji coś do wykresu się dodaje lub usuwa i szuka się kolejnej rzeczy do poprawy. 
+Pozwala to na stopniowe doskonalenie wykresu i buduje wartościowe nawyki systematycznej eksploracji danych, które tak się przydają przy pracy z danymi. Poniżej, obok kolejnych instrukcji, pokazujemy, jak wygląda wykres na danym etapie. -->
+</section>
+<section id="histogram---step-by-step" class="level2 page-columns page-full" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="histogram---step-by-step"><span class="header-section-number">6.2</span> Histogram - step by step</h2>
+<p>Our first graph will be a histogram showing the distribution of energy values for the products available in the dataset.</p>
+<!-- Pierwszy wykres, jaki przygotujemy, to będzie histogram prezentujący rozkład wartości energetycznej dla produktów dostępnych w zbiorze danych. -->
+<p><strong>Step 1 – Data and axes.</strong></p>
+
+<!-- ::: {.column-margin}
+![Szkielet wykresu -- dane i osie](grafiki/zakoduj_hist_01.png){#fig-histogram01}
+::: -->
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-histogram01" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_hist_01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Backbone of the chart - data and axes.</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>The creation of each graph begins by specifying what data it is based on and which variables from that data will be represented on the axes. In this case, we will be working on the <code>food</code> dataset and we are interested in the distribution of values of the <code>Energia</code> variable</p>
+<!-- Każdy wykres zaczyna się od wskazania, na jakich danych jest oparty i które zmienne z tych danych będą przedstawione na osiach. W tym przypadku będziemy pracować na zbiorze danych `food` i interesuje nas rozkład wartości zmiennej `Energia`.  -->
+<p>We create the backbone of the chart with the following command:</p>
+<!-- Tworzymy szkielet wykresu  następującym poleceniem: -->
+<pre><code>ggplot(data = food, aes(x = Energia))</code></pre>
+<hr>
+<p><strong>Step 2 – Histogram.</strong></p>
+
+<!-- ::: {.column-margin}
+![Dodajemy geometrię histogram, prezentującą rozkład wartości energetycznej produktów żywnościowych](grafiki/zakoduj_hist_02.png){#fig-histogram02}
+::: -->
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-histogram02" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_hist_02.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.2: We add a histogram geometry, showing the distribution of the energy value of food products</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>The types of graphical representations of data in the <code>ggplot2</code> package are called geometries. There are many of them available, corresponding to functions with names starting with the prefix <code>geom_</code>. In this case, the <code>geom_histogram()</code> geometry draws a histogram for a predefined variable.</p>
+<!-- Rodzaje graficznych prezentacji danych w pakiecie `ggplot2` nazywa się geometriami. Jest ich dostępnych bardzo wiele, odpowiadają im funkcje o nazwach zaczynających się od prefiksu `geom_`. W tym przypadku geometria `geom_histogram()` rysuje histogram dla określonej wcześniej zmiennej.  -->
+<p>The syntax of the <code>ggplot2</code> package assumes adding more elements to the skeleton of the graph. Hence, a graph with histogram geometry is constructed with the following command:</p>
+<!-- Składnia pakietu `ggplot2` zakłada dodawanie kolejnych elementów do szkieletu wykresu. Stąd wykres z geometrią histogram konstruuje się następującym poleceniem: -->
+<pre><code>ggplot(data = food, aes(x = Energia)) +
+  geom_histogram(color = "white")</code></pre>
+<hr>
+<p><strong>Step 3 – Small multiples.</strong></p>
+
+<!-- ::: {.column-margin}
+![*Small multiples* -- seria wykresów dla poszczególnych grup. Dla czytelności wykresu ograniczyliśmy się do wybranych czterech z nich](grafiki/zakoduj_hist_03.png){#fig-histogram03}
+::: -->
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-histogram03" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_hist_03.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.3: <em>Small multiples</em> – A series of graphs for each group. For readability of the graph, we have limited ourselves to a selection of four of them</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>One way to compare the distribution of a variable between groups is to use the <em>small multiples</em> technique. The data are presented on a grid of graphs with the same axes, but representing subsets of observations. This makes it easier to see the similarities and differences between the groups.</p>
+<!-- Jednym ze sposobów porównania rozkładu zmiennej pomiędzy grupami jest użycie techniki *small multiples*. Dane są prezentowane na siatce wykresów o takich samych osiach, ale przedstawiających podzbiory obserwacji. Dzięki temu łatwiej dostrzec podobieństwa i różnice pomiędzy tymi grupami. -->
+<p>In the <code>ggplot2</code> package, this effect can be achieved by adding the <code>facet_wrap</code> command and indicating which variable is used for grouping.</p>
+<!-- W pakiecie `ggplot2` ten efekt można uzyskać, dodając czynnik `facet_wrap` i wskazując, która zmienna jest użyta do grupowania.  -->
+<p>The visualization presented in the margin makes it quick to see that the energy value of fish is, on average, lower than products from the meat, sweets or nuts group.</p>
+<!-- Zaprezentowana na marginesie wizualizacja pozwala szybko dostrzec, że wartość energetyczna ryb jest średnio niższa niż produktów z grupy mięsa, słodycze lub orzechy. -->
+<pre><code>ggplot(data = food, aes(x = Energia)) +
+  geom_histogram(color = "white") +
+  facet_wrap(~Grupa)</code></pre>
+<hr>
+<p><strong>Step 4 – Graphic Theme.</strong></p>
+
+<!-- ::: {.column-margin}
+![Skórka graficzna wzorowana na wykresach z gazety ,,The Economist''](grafiki/zakoduj_hist_04.png){#fig-histogram04}
+::: -->
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-histogram04" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_hist_04.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.4: Theme based on charts from “The economist”</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>We already have the main content on the chart, it’s time for visual polishing. The <code>ggplot2</code> package is highly customizable, you can control virtually every detail of the chart. The <code>theme()</code> function is used for this.</p>
+<!-- Mamy już na wykresie główną treść, czas na polerowanie wizualne. Pakiet `ggplot2` jest bardzo konfigurowalny, można kontrolować praktycznie każdy detal wykresu. Służy do tego funkcja `theme()`. -->
+<p>However, since the world does not end with one chart, we want to generate hundreds of visually similar charts, so when working on details, one often chooses one of the predefined graphical themes, also called skins. Theme names begin with the prefix <code>theme_</code>. Below we will add a graphical theme reminiscent of charts from “The Economist” newspaper.</p>
+<!-- Ponieważ jednak świat nie kończy się na jednym wykresie, ale chcemy generować setki podobnych wizualnie wykresów, więc pracując nad detalami, często wybiera się jeden z predefiniowanych motywów graficznych nazywanych skórkami. Nazwy motywów zaczynają się od prefiksu `theme_`. Poniżej dodamy motyw graficzny przypominający wykresy z gazety ,,The Economist''. -->
+<pre><code>ggplot(data = food, aes(x = Energia)) +
+  geom_histogram(color = "white") +
+  facet_wrap(~Grupa) +
+  theme_economist()</code></pre>
+<hr>
+<p><strong>Step 5 – Title and axis labels. </strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-histogram05" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_hist_05.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.5: Title, subtitle, axis labels. Without these additions, no chart is complete</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>Every chart obligatorily needs clear descriptions of the axes, title and subtitle. Without them, we run the risk that the reader will not understand what is shown on the chart. To specify these graphical elements, we can use the <code>labs()</code> function.</p>
+<!-- Każdy wykres obowiązkowo potrzebuje czytelnych opisów osi, tytułu i podtytułu. Bez nich ryzykujemy, że czytelnik nie zrozumie, co na wykresie jest pokazywane. Aby określić te elementy graficzne, możemy wykorzystać funkcję `labs()`. -->
+<pre><code>ggplot(data = food, aes(x = Energia)) +
+  geom_histogram(color = "white") +
+  facet_wrap(~Grupa) +
+  labs(title = "Wartość energetyczna produktów", 
+    subtitle = "na 100 g produktu", 
+    x = "Wartość energetyczna", y = "Liczba") +
+  theme_economist()</code></pre>
+<!-- 
+## Motywy graficzne/skórki -->
+</section>
+<section id="themes-and-skins" class="level2 page-columns page-full" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="themes-and-skins"><span class="header-section-number">6.3</span> Themes and skins</h2>
+<p>On the chart, in addition to elements representing data, there are also very important elements unrelated to data. For example: the background, the typeface title or the size of the labels on the axes.</p>
+<!-- Na wykresie poza elementami przedstawiającymi dane występują też bardzo ważne elementy niezwiązane z danymi. Przykładowo: tło wykresu, krój tytułu wykresu czy wielkość etykiet na osiach.
+Rysunek @fig-themes9 przedstawia ten sam wykres z nałożeniem kilku różnych skórek. Jak widzimy, geometria danych się nie zmienia, ale wykres wygląda zupełnie inaczej.  -->
+<div class="column-screen-inset-right">
+<div id="fig-themes9" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_02.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.6: Example themes available in the <code>ggplot2</code> package. The theme name is in the chart title</figcaption><p></p>
+</figure>
+</div>
+</div>
+<!-- ::: {.column-screen-inset-right}
+![Example skins available in the `ggplot2` package. The skin name is the chart title](grafiki/zakoduj_02.png){#fig-themes9}
+::: -->
+</section>
+<section id="scatterplot---step-by-step" class="level2 page-columns page-full" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="scatterplot---step-by-step"><span class="header-section-number">6.4</span> Scatterplot - step by step</h2>
+<p>Let’s look at two nutrients of our products – the amount of protein and fats.</p>
+<!-- Przyjrzyjmy się dwóm składowym żywnościowym naszych produktów -- ilości białka i tłuszczów. -->
+<p><strong>Step 1 – Data and axes.</strong></p>
+
+<!-- ::: {.column-margin}
+![Szkielet wykresu -- dane i osie](grafiki/zakoduj_kropki_01.png){#fig-food01}
+::: -->
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-food01" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_kropki_01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.7: Backbone of the chart - data and axes.</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>Each graph starts with data. We again use the <code>ggplot()</code> function to build the skeleton of the graph. We again use the <code>food</code> data. We will plot the amount of protein on the X axis and the amount of fat in 100 g of product on the Y axis.</p>
+<!-- Każdy wykres zaczyna się od danych. Ponownie używamy funkcji `ggplot()`, aby zbudować szkielet wykresu. Ponownie korzystamy z danych `food`. Na osi OX zaznaczymy ilość białka, a na osi OY ilość tłuszczów w 100 g produktu. -->
+<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze)) </code></pre>
+<hr>
+<p><strong>Step 2 – Scatterplot.</strong></p>
+
+<!-- ::: {.column-margin}
+![Dodajemy geometrię prezentującą dane za pomocą kropek, idealną do szukania korelacji i zależności pomiędzy dwiema zmiennymi](grafiki/zakoduj_kropki_02.png){#fig-food02}
+::: -->
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-food02" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_kropki_02.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.8: We add a geometry that presents data using dots, ideal for looking for correlations and relationships between two variables</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>Now comes the time to choose a geometry. To draw a dot plot, we will use the <code>geom_point()</code> geometry. The coordinates of the points are determined by the first two variables indicated earlier by the <code>aes()</code> function.</p>
+<!-- Przychodzi czas na wybranie geometrii. Aby narysować wykres kropkowy, wykorzystamy geometrię `geom_point()`. Współrzędne punktów są określone przez pierwsze dwie zmienne wskazane wcześniej funkcją `aes()`. -->
+<p>Of course, the total protein and fat content cannot be more than 100%. Among the products, we see some that have very little of either component, and some that have one of these components within the range of 15-35%. The chart also allows us to see that there are several products with extremely high protein or fat content.</p>
+<!-- Oczywiście sumaryczna zawartość białka i tłuszczów nie może być większa niż 100\%. Wśród produktów widzimy takie, które mają bardzo mało jednego i drugiego składnika, i takie, które mają jednego z tych składników w granicach 15-35\%. Wykres pozwala też zauważyć, że jest kilka produktów o wyjątkowo dużej zawartości białka lub tłuszczów. -->
+<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze)) +
+    geom_point() </code></pre>
+<hr>
+<p><strong>Step 3 – Mapping of color, size and other attributes.</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-food03" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_kropki_03.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.9: The color of the point represents the variable <code>Grupa</code>, and the size of the point represents the variable <code>Energia</code></figcaption><p></p>
+</figure>
+</div>
+</div></div><p>The <code>ggplot2</code> package allows you to create charts in a declarative way. If we want the chart to color code some variable, such as a group of food products, it is enough to mark such a mapping in the mapping declaration. We don’t need to say what this mapping should look like, what and how many colors to use, this will be taken care of by the <code>ggplot2</code> package itself. All we need to do is in the mappings block in the <code>aes()</code> function to indicate which variable determines which attribute.</p>
+<!-- Pakiet `ggplot2` pozwala na tworzenie wykresów w sposób deklaratywny. Jeżeli chcemy, aby na wykresie kolor kodował jakąś zmienną, np. grupę produktów żywieniowych, to wystarczy takie mapowanie zaznaczyć w deklaracji mapowań. Nie musimy mówić, jak to mapowanie ma wyglądać, jakich i ilu kolorów użyć, o to zadba sam pakiet `ggplot2`. Jedyne, co musimy zrobić, to w bloku mapowań w funkcji `aes()` należy zaznaczyć, która zmienna określa który atrybut. -->
+<p>In the following example, we request that the <code>Grupa</code> variable be indicated on the graph by the color of the points, and the Energy variable by the size of the points. Note that a legend for these two characteristics will automatically appear on the graph.</p>
+<!-- W poniższym przykładzie żądamy, by zmienna Grupa była zaznaczona na wykresie przez kolor punktów, a zmienna Energia przez wielkość punktów. Zauważmy, że na wykresie automatycznie pojawi się legenda dla tych dwóch charakterystyk. -->
+<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze,
+            color = Grupa, size = Energia)) +
+    geom_point() </code></pre>
+<hr>
+<p><strong>Step 4 – Controling the mappings.</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-food04" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_kropki_04.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.10: Colors of the points are determined by the Dark2 palette for qualitative scales</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>But what if we don’t like the proposed mapping? We would like a different color scheme or a different range of point sizes. We have complete control over each mapping through functions that set the scales of the graph. Such functions have a name starting with the prefix <code>scale_</code>, then there is the name of the graph attribute, and the third part specifies how this attribute is to be constructed.</p>
+<!-- Ale co zrobić, jeżeli nam się nie podoba zaproponowane mapowanie? Chcielibyśmy inny schemat kolorów lub inny zakres wielkości punktów. Nad każdym mapowaniem mamy całkowitą kontrolę poprzez funkcje ustawiające skale wykresu. Takie funkcje mają nazwę rozpoczynającą się od prefiksu `scale_`, następnie jest nazwa atrybutu graficznego, a trzeci człon określa, w jaki sposób ten atrybut ma być skonstruowany.  -->
+<p>For example, if we wanted to change the way we specify the color scale so that we use ColorBrewer colors, we can use the <code>scale_color_brewer()</code> function to do so. All we need to do is specify what color palette we want to use in the chart.</p>
+<!-- Przykładowo, jeżeli chcielibyśmy zmienić sposób określana skali kolorów tak, by użyć kolorów ColorBrewer, to możemy do tego celu użyć funkcji `scale_color_brewer()`. Wystarczy określić, jaką paletę kolorów chcemy wykorzystać na wykresie. -->
+<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze,
+            color = Grupa, size = Energia)) +
+    geom_point() +
+    scale_color_brewer(type = "qual", palette = "Dark2") </code></pre>
+<hr>
+<p><strong>Step 5 – Title, axes labels and theme</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-food05" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_kropki_05.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.11: Final touches, changing the skin, adding title, subtitle and axes labels</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>We have the main content – it’s time for graphical details, chart skins, axis titles, main title and subtitle. Below we use the functions that have already appeared when discussing the histogram. However, it is important to always supplement the chart with the appropriate annotations, without this it may not be readable by the viewer.</p>
+<!-- Mamy główną treść -- czas na detale graficzne, skórki wykresu, tytuły osi, główny tytuł oraz podtytuł. Poniżej używamy funkcji, które pojawiły się już przy okazji omawiania histogramu. Ważne jest jednak, by zawsze uzupełniać wykres o odpowiednie adnotacje, bez tego może nie być on czytelny dla odbiorcy. -->
+<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze,
+            color = Grupa, size = Energia)) +
+    geom_point() +
+    scale_color_brewer(type = "qual", palette = "Dark2") +
+    labs(title = "Udział białka i tłuszczów", subtitle = "na 100 g produktu", 
+      y = "Tłuszcze [g]", x = "Białko [g]") + 
+    theme_gdocs() </code></pre>
+</section>
+<section id="mappings-of-the-variables" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="mappings-of-the-variables"><span class="header-section-number">6.5</span> Mappings of the variables</h2>
+<p>The key concept behind the philosophy of the <code>ggplot2</code> package is the declarative definition of what variables should be represented on the chart and what role they should play. These declarations appear inside the <code>aes()</code> (<em>aesthetics</em>) function.</p>
+<!-- Kluczowa koncepcja stojąca za filozofią pakietu `ggplot2` to deklaratywne określenie, jakie zmienne powinny być przedstawione na wykresie oraz jaką rolę powinny pełnić. Te deklaracje pojawiają się wewnątrz funkcji `aes()` (ang. *aesthetics*). -->
+<p>After declaring what the variable should do on the chart, the <code>ggplot2</code> package will automatically take care of converting the value of the variable into coordinates of points on the chart. The chart below illustrates the mapping concept with an example of four variables for a dot plot.</p>
+<!-- Po zadeklarowaniu, co zmienna powinna na wykresie robić, pakiet `ggplot2` zajmie się automatycznie przekształceniem wartości zmiennej na współrzędne punktów na wykresie. Poniższy wykres ilustruje koncepcję mapowania na przykładzie czterech zmiennych dla wykresu kropkowego. -->
+<div id="fig-tabAtrybuty" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_03.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.12: A scatterplot that shows for each point four different attributes of the point using coordinates in the X axis, Y axis, point size and color</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="scales-for-the-mappings" class="level2 page-columns page-full" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="scales-for-the-mappings"><span class="header-section-number">6.6</span> Scales for the mappings</h2>
+<p>Typically, scales are created automatically, but there are situations where you want to turn off autopilot and take control of how the data is transformed into your own hands. The <code>ggplot2</code> package allows you to specify the encoding of each graphical attribute. Scales are defined globally for the entire graph and are applied to all layers uniformly.</p>
+<!-- Zazwyczaj skale są tworzone automatycznie, ale istnieją sytuacje, w których chcemy wyłączyć autopilota i wziąć w swoje ręce kontrolę sposobu, w jaki dane są przekształcane. Pakiet `ggplot2` umożliwia określenie kodowania każdego graficznego atrybutu. Skale są definiowane globalnie dla całego wykresu i są stosowane do wszystkich warstw jednolicie. -->
+<p>One of the most commonly changed scales is the color scale. It is changed not because the default colors are bad, but often because we want to increase readability for people with color vision dysfunctions, or we have our own individual preferences in this regard.</p>
+<!-- Jedną z najczęściej zmienianych skal jest skala kolorów. Zmieniana jest nie dlatego, że domyślne kolory są złe, ale często dlatego, że chcemy zwiększyć czytelność dla osób z dysfunkcjami widzenia kolorów, lub mamy własne indywidualne preferencje w tym zakresie. -->
+<div id="fig-skaleKolor" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_04.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.13: When defining color scales in the <code>ggplot2</code> package, we need to specify two elements. First, how many different values we have to encode. Second, what kind of variable we are working with: whether it is an ordered scale, a scale with a neutral element, or a qualitative scale. The figure shows the colors proposed by Cynthia Brewer to represent the eight colors for qualitative variables (first column) and quantitative variables with or without a neutral element (next two columns). The palette can be selected by name (e.g., Dark2) or by number (e.g., 7)</figcaption><p></p>
+</figure>
+</div>
+<p>Another very interesting attribute besides color is the size of the dot. It allows you to encode continuous variables – the larger the value of a variable, the larger the dot.</p>
+<!-- Innym bardzo interesującym atrybutem oprócz koloru jest wielkość punktu. Pozwala ona kodować zmienne ciągłe -- im większa wartość danej zmiennej, tym większa kropka. -->
+<p>For qualitative variables, an interesting option to code their values is to use shapes. The default shape scale includes basic geometric figures, hollow and filled triangles, squares and circles. An alternative to geometric shapes is to use consecutive letters of the alphabet. An interesting discussion of the pros and cons of various shapes is posted in the article <em>Points of view: Plotting symbols</em> <span class="citation" data-cites="krzywinskipoints2013">(<a href="references.html#ref-krzywinskipoints2013" role="doc-biblioref">Krzywinski and Wong 2013</a>)</span>. We also recommend the other articles in the <em>Points of view</em> article series.</p>
+<!-- Dla zmiennych jakościowych ciekawą opcją do zakodowania ich wartości jest użycie kształtu. Domyślna skala kształtów obejmuje podstawowe figury geometryczne, puste i wypełnione trójkąty, kwadraty i koła. Alternatywą dla kształtów geometrycznych jest wykorzystanie kolejnych liter alfabetu. Interesującą dyskusję o wadach i zaletach różnych kształtów umieszczono w artykule *Points of view: Plotting symbols* [@krzywinskipoints2013]. Polecamy też pozostałe artykuły z serii artykułów *Points of view*. -->
+<div class="no-row-height column-margin column-container"><div id="ref-krzywinskipoints2013" class="csl-entry" role="doc-biblioentry">
+Krzywinski, Martin, and Bang Wong. 2013. <span>“Points of View: Plotting Symbols.”</span> <em>Nature Methods</em> 10 (6): 451–51. <a href="http://dx.doi.org/10.1038/nmeth.2490">http://dx.doi.org/10.1038/nmeth.2490</a>.
+</div></div></section>
+<section id="boxplot---step-by-step" class="level2 page-columns page-full" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="boxplot---step-by-step"><span class="header-section-number">6.7</span> Boxplot - step by step</h2>
+<p>Let’s see how to construct a boxplot. And by the way, we will also see how to enrich such a plot with several additional layers representing complementary perspectives.</p>
+<!-- Zobaczmy, jak skonstruować wykres pudełkowy. A przy okazji zobaczymy też, jak taki wykres wzbogacić o kilka dodatkowych warstw przedstawiających uzupełniające się perspektywy. -->
+<p><strong>Step 1 – Data and axes.</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-boxplot01" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_boxplot_01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.14: Backbone of the chart - data and axes</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>Following the pattern of previous plots, we also start this one by determining what data will be used to prepare the chart, here <code>food</code>, and what variables should be on the axes – here we want to show the energy content of products by food groups, both variables go to the <code>aes()</code> function.</p>
+<!-- Wzorem poprzednich wykresów także ten zaczynamy od określenia, jakie dane posłużą do przygotowania wykresu, tutaj `food`, oraz jakie zmienne powinny się znaleźć na osiach -- tutaj chcemy pokazywać zawartość energetyczną produktów w podziale na grupy produktów żywieniowych, obie zmienne trafiają do funkcji `aes()`. -->
+<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) </code></pre>
+<hr>
+<p><strong>Step 2 – Boxplot.</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-boxplot02" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_boxplot_02.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.15: We add a boxplot geometry</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>It’s time to choose a geometry. For a boxplot it is <code>geom_boxplot()</code>. Most geometries allow you to specify additional arguments. Here, we set the width of the box plot, smaller than the default (this will come in handy later), and mark which observations are to be treated as outliers. The <code>coef</code> parameter is used for this, setting it to 100 means that outliers will not be identified, and the graph whiskers will span from the minimum to the maximum value in a given group.</p>
+<!-- Czas wybrać geometrię. Dla wykresu pudełkowego jest to `geom_boxplot()`. Większość geometrii pozwala na określenie dodatkowych argumentów dla geometrii. Tutaj ustalamy szerokość wykresu pudełkowego, mniejszą niż domyślna (później się taka przyda), oraz oznaczamy, które obserwacje mają być traktowane jako odstające. Do tego służy parametr `coef`, ustawienie go na wartość 100 powoduje, że nie będą identyfikowane wartości odstające, a wąsy wykresów będą się rozpinały od minimalnej do maksymalnej wartości w danej grupie. -->
+<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+  geom_boxplot(width = 0.2, coef = 100) </code></pre>
+<hr>
+<p><strong>Step 3 – Plot rotation.</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-boxplot03" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_boxplot_03.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.16: We rotate the axes of the plot for better readability</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>By default, boxplots are drawn vertically (just like a histogram or bar plot). But this solution has several disadvantages. One is that the full names of the presented values may not fit on the x-axis of the chart. Another is that the plot has more resolution in the horizontal axis than in the vertical axis.</p>
+<p>Functions that control the plot’s axes have names that begin with the prefix <code>coord_</code>. For example, <code>coord_flip()</code> swaps the axes of the graph.</p>
+<!-- Domyślnie wykresy pudełkowe rysowane są pionowo (podobnie jak histogram czy wykres słupkowy). Ale to rozwiązanie ma kilka wad. Jedną z nich jest to, że na osi wykresu mogą się nie zmieścić pełne nazwy prezentowanych wartości. Inną jest to, że wykres ma większą rozdzielczość w osi poziomej niż pionowej.  -->
+<!-- Funkcje kontrolujące osie wykresu mają nazwy rozpoczynające się od prefiksu `coord_`. Przykładowo `coord_flip()` zamienia osie wykresu. -->
+<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+  geom_boxplot(width = 0.2, coef = 100) +
+  coord_flip()</code></pre>
+<hr>
+<p><strong>Step 4 – More layers with data.</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-boxplot04" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_boxplot_04.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.17: Wee add more complementary layers, including dashes on the axis or violin chart</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>We can have any number of layers with different geometries on the plot. Combining geometries in this way is a powerful mechanism to complement different aspects of the data.</p>
+<p>We have written before about how box plots don’t show multimodal distributions well, so we’ll add a second layer with violin plots (i.e.&nbsp;<code>geom_violin()</code>) to this chart. This will allow us to read both the quartiles and the modes of the distribution. In addition, we will add markers on the bottom axis to indicate where each observation is, using the <code>geom_rug()</code> geometry.</p>
+<!-- Na wykresie możemy mieć dowolną liczbę warstw z różnymi geometriami. Takie łączenie geometrii jest potężnym mechanizmem, pozwalającym na uzupełnianie różnych aspektów danych.  -->
+<!-- Pisaliśmy wcześniej o tym, że wykresy pudełkowe nie pokazują dobrze wielomodalnych rozkładów, więc dodamy do tego wykresu drugą warstwę z wykresami skrzypcowymi (czyli `geom_violin()`). Dzięki temu będziemy mogli odczytać i kwartyle, i mody rozkładu. Dodatkowo dodamy na dolnej osi znaczniki określające, gdzie są poszczególne obserwacje, za pomocą geometrii `geom_rug()`. -->
+<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+  geom_rug(sides = "l") +
+  geom_violin(scale = "width", fill = "grey") +
+  geom_boxplot(width = 0.2, coef = 100) +
+  coord_flip()</code></pre>
+<hr>
+<p><strong>Step 5 – Layer with descriptions.</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-boxplot05" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_boxplot_05.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.18: One more layer – with the names of the products with the highest caloric content</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>The plot already has three layers, but there is still room to add additional useful information. So let’s add the names of the products with the highest calories. We will add the names with the geometry for captions, namely <code>geom_text()</code>. Below is an example of how to use this geometry.</p>
+<p>In each geometry, you can specify local data with the <code>data=</code> argument. By default, geometries take the data indicated in the <code>ggplot</code> function, but you can also specify data for each layer separately.</p>
+<!-- Wykres ma już trzy warstwy, ale wciąż jest miejsce na dodanie dodatkowej użytecznej informacji. Dodajmy więc nazwy produktów o najwyższej kaloryczności. Nazwy dodamy geometrią dla napisów, czyli `geom_text()`. Poniżej znajduje się przykład użycia tej geometrii.  -->
+<!-- W każdej geometrii można określać lokalne dane argumentem `data=`. Domyślnie geometrie biorą dane wskazane w funkcji `ggplot`, ale można też określać osobno dane dla każdej warstwy. -->
+<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+  geom_rug(sides = "l") +
+  geom_violin(scale = "width", fill = "grey") +
+  geom_text(data = food_max, aes(label =  Nazwa), 
+     hjust = 0, vjust = 0, color = "blue4") + 
+  geom_boxplot(width = 0.2, coef = 100) +
+  coord_flip()</code></pre>
+<p>The <code>food_max</code> dataset should be prepared in advance. To shorten this example we have placed the ready-made dataset in the <code>BetaBit</code> package.</p>
+<!-- Zbiór danych `food_max` należy wcześniej przygotować. Aby skrócic ten przykład umieściliśmy gotowy zbiór w pakiecie `BetaBit`. -->
+<hr>
+<p><strong>Step 6 – Title, axes labels and theme.</strong></p>
+<p>We have the main content, it’s time to define the graphic details, the plot theme, the axis titles and the main title and subtitle. Below we use the functions that have already appeared when discussing the histogram. However, it is important to always supplement the chart with the appropriate annotations, without this it may not be readable by the viewer.</p>
+<!-- Mamy główną treść, czas na określenie detali graficznych, skórki wykresu, tytułów osi i głównego tytułu oraz podtytułu. Poniżej używamy funkcji, które pojawiły się już przy okazji omawiania histogramu. Ważne jest jednak, by zawsze uzupełniać wykres o odpowiednie adnotacje, bez tego może nie być on czytelny dla odbiorcy. -->
+<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+  geom_rug(sides = "l") +
+  geom_violin(scale = "width", aes(fill = Grupa)) +
+  geom_text(data = food_max, aes(label =  Nazwa), 
+     hjust = 0, vjust = 0, color = "blue4") + 
+  geom_boxplot(width = 0.2, coef = 100) +
+  coord_flip() + 
+  labs(title = "Rozkład wartości energetycznej", subtitle = "na 100 g") +
+  theme_gdocs() + theme(legend.position = "none")</code></pre>
+</section>
+<section id="layers" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="layers"><span class="header-section-number">6.8</span> Layers</h2>
+<p>As we have seen in the example of the boxplot, a unique capability of the <code>ggplot2</code> package is to assemble together on a single chart different layers presenting different aspects of the same data. Typically, these layers represent the data in varying detail. Each layer consists of a single geometry defined by the <code>geom_</code> function, but we can simply add geometries to each other.</p>
+<!-- Jak zobaczyliśmy na przykładzie wykresu pudełkowego,unikalną możliwością pakietu `ggplot2` jest składanie ze sobą na jednym wykresie różnych warstw prezentujących różne aspekty tych samych danych. Zazwyczaj warstwy te przedstawiają dane z różną szczegółowością. Każda warstwa składa się z jednej geometrii określonej funkcją `geom_`, ale geometrie możemy do siebie po prostu dodawać.  -->
+<div id="fig-warstwy2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/zakoduj_boxplot_06.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.19: A chart consisting of four layers. The individual components are shown below</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="reproducibility" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="reproducibility"><span class="header-section-number">6.9</span> Reproducibility</h2>
+<p>An important advantage of the <code>ggplot2</code> package is the reproducibility of the plot generation process. Plots are the result of a sequence of instructions in a programming language. If, after 10 years, we want to reproduce a plot from a given sequence, nothing simpler, just copy a given piece of code to the R program console. The plots are not “clicked” in one tool or another. We get a record of the plot, which can be reproduced or modified at any time.</p>
+<p>Reproducibility of results, and therefore of plots, is the foundation of scientific publications, but also of any decent report. If we see a graph with interesting relationships in a report or publication, isn’t it natural to expect that the chart in question can be reproduced?</p>
+<!-- Ważną zaletą pakietu `ggplot2` jest odtwarzalność procesu tworzenia wykresów. Wykresy są wynikiem sekwencji instrukcji w języku programowania. Jeżeli po 10 latach będziemy chcieli odtworzyć wykres z zadanej sekwencji, to nic prostszego, wystarczy dany fragment kodu przekopiować do konsoli programu R. Wykresy nie są ,,wyklikane'' w jednym czy drugim narzędziu. Uzyskujemy zapis wykresu, który można w każdej chwili odtworzyć lub zmodyfikować. -->
+<!-- Odtwarzalność wyników, a więc także wykresów, jest fundamentem publikacji naukowych, ale też każdego porządnego raportu. Jeżeli w raporcie lub publikacji widzimy wykres z interesującymi zależnościami, czyż nie jest naturalne oczekiwać, że dany wykres można odtworzyć? -->
+</section>
+<section id="tasks" class="level2 page-columns page-full" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="tasks"><span class="header-section-number">6.10</span> Tasks</h2>
+<p>The best way to develop programming skills in the <code>ggplot2</code> package is to ask questions to the data and then learn how to make a plot that answers the question. Below you will find suggestions for a few questions to warm up.</p>
+<!-- Najlepszy sposób rozwijania umiejętności programowania w pakiecie `ggplot2` to zadawanie pytań do danych i później uczenie się, jak zrobić wykres, który na dane pytanie odpowie. Poniżej znajdziesz sugestie kilku pytań na rozgrzewkę. -->
+<ol type="1">
+<li>Plot a histogram of the amount of water in different products. Mark a group of products with a color. Scale the bars for successive ranges to make it easier to see the proportion of a certain group in products with a given water content.<br>
+</li>
+<li>Select sweets from the data and mark them on the scatter plot, showing the sugar content and the fat content. Which products deviate most from the central point cloud? Mark the names of the few outliers on the plot.</li>
+<li>Use a boxplot to compare the sugars content, and another to compare the fats content, between different groups of products.</li>
+</ol>
+<!-- 1. Narysuj histogram ilości wody w różnych produktach. Zaznacz grupę produktów za pomocą koloru. Przeskaluj słupki dla kolejnych przedziałów, by łatwiej było zauważyć, jaki jest udział określonej grupy w produktach o danej zawartości wody.   -->
+<!-- 2. Wybierz z danych słodycze i zaznacz je na wykresie kropkowym, pokazując zawartość cukrów oraz zawartość tłuszczów. Które produkty najbardziej odstają od centralnej chmury punktów? Zaznacz na wykresie nazwy kilku najbardziej odstających. -->
+<!-- 3. Wykorzystaj wykres pudełkowy, aby porównać zawartość cukrów, oraz drugi, aby porównać zawartość tłuszczów pomiędzy różnymi grupami produktów. -->
+<p>If you would like to learn more about the grammar of data visualization, you may be interested in the essay <em>Gramatyka języka wizualizacji danych</em> from the book <em>Odkrywać! Ujawniać! Objaśniać!</em> <span class="citation" data-cites="eseje">(<a href="references.html#ref-eseje" role="doc-biblioref">Biecek 2016</a>)</span> (<strong>only available in Polish</strong>). <!-- Jeżeli chciałbyś dowiedzieć się więcej o gramatyce wizualizacji danych, to może zainteresować cię esej *Gramatyka języka wizualizacji danych* z książki *Odkrywać! Ujawniać! Objaśniać!* --></p>
+<div class="no-row-height column-margin column-container"><div id="ref-eseje" class="csl-entry" role="doc-biblioentry">
+———. 2016. <em>Odkrywać! Ujawniać! Objaśniać! Zbiór Esejów o&nbsp;Sztuce Przedstawiania Danych</em>. Fundacja Naukowa SmarterPoland.pl. <a href="http://biecek.pl/Eseje/">http://biecek.pl/Eseje/</a>.
+</div><div id="ref-ggplot2" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley. 2009. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer New York. <a href="http://had.co.nz/ggplot2/book">http://had.co.nz/ggplot2/book</a>.
+</div><div id="ref-BiecekR2011" class="csl-entry" role="doc-biblioentry">
+Biecek, Przemysław. 2014. <em><span class="nocase">Przewodnik po pakiecie R</span>, Wydanie Trzecie</em>. Oficyna Wydawnicza Gewert i Skoczylas.
+</div></div><p>Those who would like to learn more deeply about the program and the <code>ggplot2</code> package can find a lot of detailed information in the book <em>ggplot2: elegant graphics for data analysis</em> <span class="citation" data-cites="ggplot2">(<a href="references.html#ref-ggplot2" role="doc-biblioref">Wickham 2009</a>)</span>. In Polish, more information about the program and the <code>ggplot2</code> package can be found in the book <em>Przewodnik po pakiecie R</em> <span class="citation" data-cites="BiecekR2011">(<a href="references.html#ref-BiecekR2011" role="doc-biblioref">Biecek 2014</a>)</span>. Similar graphing rules for the Julia language are implemented in the <code>Gadfly</code> package, and for the Python language in the <code>matplotlib</code> package. <!-- Osoby, które chciałyby głębiej poznać program \texttt{R} i pakiet `ggplot2`, mogą znaleźć wiele szczegółowych informacji w książce *ggplot2: elegant graphics for data analysis* [@ggplot2]. W języku polskim więcej informacji o programie \texttt{R} i bibliotece `ggplot2` znajduje się w książce *Przewodnik po pakiecie R* [@BiecekR2011]. --> <!-- Podobne zasady tworzenia wykresów dla języka Julia są zaimplementowane w pakiecie `Gadfly`, a dla języka Python w pakiecie `matplotlib`. --></p>
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./mutant.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beware: Mutant!</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

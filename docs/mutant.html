@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chart Runners - 5&nbsp; Beware: Mutant!</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./code_it.html" rel="next">
+<link href="./holes.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZWLGMSWT14"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZWLGMSWT14');
+</script>
+
+
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beware: Mutant!</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Chart Runners</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./factory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Factory of Taste</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recipes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tried and Tested Recipes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cherries.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cherries</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./holes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Holes…</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mutant.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beware: Mutant!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code_it.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Code It Yourself</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code_it_julia.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Zakoduj to sam - julia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./experiments.html" class="sidebar-item-text sidebar-link">It’s Time to Start Experimenting</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#mutant-bars" id="toc-mutant-bars" class="nav-link active" data-scroll-target="#mutant-bars"><span class="toc-section-number">5.1</span>  Mutant bars</a></li>
+  <li><a href="#mutant-circles" id="toc-mutant-circles" class="nav-link" data-scroll-target="#mutant-circles"><span class="toc-section-number">5.2</span>  Mutant circles</a></li>
+  <li><a href="#mutant-axes" id="toc-mutant-axes" class="nav-link" data-scroll-target="#mutant-axes"><span class="toc-section-number">5.3</span>  Mutant axes</a></li>
+  <li><a href="#mutant-colors" id="toc-mutant-colors" class="nav-link" data-scroll-target="#mutant-colors"><span class="toc-section-number">5.4</span>  Mutant colors</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks"><span class="toc-section-number">5.5</span>  Tasks</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beware: Mutant!</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="grafiki/okladka_mutant.png" class="img-fluid"></p>
+<p>In this chapter we will introduce pseudo-charts. Creations that look like a graph, but misrepresent, distort or make it difficult to read the correct relationships present in the data. Where do such monstrosities come from? Sometimes it’s the result of a lack of understanding of the data one is presenting; sometimes it’s a lack of ability to present the data properly, even if one understands it; and sometimes it’s a deliberate act to show something in a seemingly better light. The list of bad charts is certainly very long, but this chapter is limited to presenting representatives of four classes of problems: errors on axes, misuse of pie charts, incorrect order of chart elements, and incorrect use of colors.</p>
+<!-- W tym rozdziale przedstawimy pseudowykresy. Twory, które wyglądają jak wykres, ale przeinaczają, zniekształcają lub utrudniają odczytanie poprawnych zależności obecnych w danych. Skąd się biorą takie potworki? Czasem jest to efekt braku zrozumienia danych, które się prezentuje; czasem braku umiejętności właściwego zaprezentowania danych, nawet jeżeli się je rozumie; a czasem celowego działania, by pokazać coś w pozornie lepszym świetle. Lista złych wykresów jest z pewnością bardzo długa, ale ten rozdział ogranicza się do przedstawienia reprezentantów czterech klas problemów: błędów na osiach, błędnego użycia wykresów kołowych, błędnej kolejności elementów wykresu i błędnego użycia kolorów.  -->
+<p><em>Primum non nocere</em>, which is Latin for “first, do no harm,” is one of the guiding ethical principles in medicine. Its authorship is attributed to Hippocrates. The rule has been applied for more than two thousand years in situations where human life is at stake. This universal principle can also be useful when creating statistical charts. Let’s look for new means of communicating content, but first, let’s not harm or distort it. Remember it, Dear Reader, and in your attempts to visualize data, try not to create mutants that poison minds with toxic misinformation.</p>
+<!-- *Primum non nocere*, czyli z łaciny ,,po pierwsze nie szkodzić'', to jedna z naczelnych zasad etycznych w medycynie. Jej autorstwo przypisywane jest Hipokratesowi. Reguła ta jest już stosowana ponad dwa tysiące lat w sytuacjach, gdy w grę wchodzi ludzkie życie. Ta uniwersalna zasada może być też przydatna przy tworzeniu wykresów statystycznych. Szukajmy nowych środków przekazywania treści, ale po pierwsze, nie szkodźmy i jej nie zniekształcajmy. Pamiętaj o niej, drogi Czytelniku, i w próbach wizualizacji danych staraj się nie tworzyć mutantów zatruwających umysły toksyczną dezinformacją.  -->
+<p>We’ve talked about mutant charts before, but there is a term in the literature – <em>junk chart</em> which was coined by Edward Tufte in his book <em>The Visual Display of Quantitative Information</em> <span class="citation" data-cites="Tufte2001">(<a href="references.html#ref-Tufte2001" role="doc-biblioref">Tufte 2001</a>)</span>. This is how he described charts that distort data, hide valuable information, charts that suggest something other than what the data show. Unfortunately, there are many such charts all around us. For the past 10 years, being active in the SmarterPoland Foundation, I have collected the worst copies every year, in order to make a plebiscite at the end of each year for the worst chart of the year. Over these 10 years, a sizable collection has accumulated. Below are the most toxic items from that plebiscite.</p>
+<!-- Pisaliśmy wcześniej o zmutowanych wykresach, ale w literaturze funkcjonuje określenie ,,śmieciowy wykres'' (ang. *junk chart*), które ukuł Edward Tufte w swojej książce *The Visual Display of Quantitative Information* [@Tufte2001]. W ten sposób określił wykresy zniekształcające dane, ukrywające cenne informacje, wykresy sugerujące coś innego, niż pokazują dane.
+Niestety dookoła nas takich wykresów jest bardzo dużo. Przez ostatnie 10 lat, działając w fundacji SmarterPoland, zbierałem co roku najgorsze egzemplarze, po to by pod koniec każdego roku robić plebiscyt na najgorszy wykres roku. Przez te 10 lat uzbierała się spora kolekcja. Poniżej przedstawiam najbardziej toksyczne pozycje z tego plebiscytu. -->
+<div class="no-row-height column-margin column-container"><div id="ref-Tufte2001" class="csl-entry" role="doc-biblioentry">
+Tufte, Edward. 2001. <em>The Visual Display of Quantitative Information</em>. Cheshire, Connecticut: Graphics Press.
+</div></div><p>We are about to visit the darkest corners of the basement with failed data visualization experiments. We will show junk charts that offend good taste amd logic. This is not a chapter for the faint-hearted. Further reading of this chapter is at your own risk.</p>
+<!-- Za chwilę odwiedzimy najciemniejsze kąty piwnicy z nieudanymi eksperymentami wizualizacji danych. Pokażemy wykresy śmieciowe, urągające dobremu smakowi czy logice. To nie jest rozdział dla osób o słabych nerwach. Dalszą lekturę tego rozdziału prowadzisz na własną odpowiedzialność. -->
+<section id="mutant-bars" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="mutant-bars"><span class="header-section-number">5.1</span> Mutant bars</h2>
+<p>Bar charts are a very popular and clear way to convey information. This is provided that we follow one rule: the bars must start at zero. When looking at the bars, our eye implicitly compares the ratio of their lengths, it’s simply how we interpret this kind of graphs. For this to make sense, the bars must start at zero.</p>
+<!-- Wykresy słupkowe są bardzo popularnym i czytelnym sposobem przekazywania informacji. Jest tak pod warunkiem, że przestrzegamy jednej reguły: słupki muszą zaczynać się w zerze. Patrząc na słupki, nasze oko domyślnie porównuje proporcje ich długości, po prostu tak interpretujemy tego rodzaju wykresy. Aby to miało sens, słupki muszą zaczynać się w zerze.  -->
+<p>In the article <em>Drożejąca energia podnosi koszty utrzymania mieszkań</em>, the author went to great lengths to convince the reader that energy prices are rising at a frightening rate. Looking at the chart below, one gets the impression that the cost of real estate is rising rapidly, which is consistent with the article. However, it is not consistent with the numbers shown in the chart. On a nine-month basis, the 3.4% increase was comparable to inflation, but the chart suggests a much more serious price increase, since the length of the bar, representing costs, has more than doubled.</p>
+<!-- W artykule *Drożejąca energia podnosi koszty utrzymania mieszkań*, autor bardzo się starał przekonać czytelnika, że ceny energii rosną w przerażającym tempie. Patrząc na poniższy wykres, można odnieść wrażenie, że koszt użytkowania nieruchomości szybko rośnie, co jest zgodne z treścią artykułu. Nie jest jednak zgodne z liczbami przedstawionymi na wykresie. W skali dziewięciu miesięcy wzrost o 3,4\% był porównywalny z inflacją, ale wykres sugeruje znacznie poważniejszy wzrost cen, skoro długość słupka, przedstawiająca koszty, zwiększyła się przeszło dwukrotnie. -->
+<div id="fig-Drozejaca" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.1: Chart showing average personal housing costs in different months of 2011. Read more about this chart in the article <a href="http://bit.ly/1bYBmns"><em>eden zły rysunek jest wart 1000 słów … korekty</em></a>, SmarterPoland.co.uk. Source: article <em>Drożejąca energia podnosi koszty utrzymania mieszkań</em> from <a href="business.co.uk">business.co.uk</a>.</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Wykres przedstawiający średnie osobowe koszty użytkowania nieruchomości w różnych miesiącach roku 2011. Więcej o tym wykresie przeczytać można w artykule [*Jeden zły rysunek jest wart 1000 słów ... korekty*](http://bit.ly/1bYBmns), SmarterPoland.pl. Źródło: artykuł *Drożejąca energia podnosi koszty utrzymania mieszkań* z serwisu [biznes.pl](biznes.pl).](grafiki/mutant_01.png){#fig-Drozejaca} -->
+<p>In 2021, one of the leaders in the poll for the worst chart of the year was the chart from TVP 1 <em>Health spending as % of GDP</em> shown in <a href="#fig-tvp1zdrowie">Figure&nbsp;<span>5.3</span></a>. The bars starting at 4% visually increase the growth of health spending in recent years. You have to admit, that 7% looks majestic against the pale of 4.5%–5%. The first 7 bars show a period of 7 years and give the impression that nothing has changed over the years, the last 5 bars show selected years over the next 12 years, further suggesting dynamic growth. What happened to the years 2017-2019 and 2024-2026? Half of the last bars show projections, not expenses incurred.</p>
+<!-- W roku 2021 jednym z liderów plebiscytu na najgorszy wykres roku był wykres z TVP 1 *Wydatki na ochronę zdrowia jako \%PKB* przedstawiony na rysunku @fig-tvp1zdrowie. Słupki rozpoczynające się od wartości 4\% wizualnie zwiększają wzrost wydatków na zdrowie w ostatnich latach. Przyznacie, to 7\% wygląda majestatycznie na tle bladych  4,5\%--5\%. Pierwsze 7 słupków pokazuje okres 7 lat i sprawia wrażenie, że nic się przez lata nie zmieniało, ostatnie 5 słupków pokazuje wybrane lata na przestrzeni przyszłych 12 lat, co dodatkowo sugeruje dynamiczny wzrost. Co się stało z latami 2017-2019 i 2024-2026? Połowa z ostatnich słupków pokazuje prognozy, a nie poniesione wydatki.  -->
+<div id="fig-tvp1zdrowie" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_02.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.2: A 2021 chart from TVP 1 describing the change in health care spending</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Wykres z 2021 roku z telewizji TVP 1 opisujący zmianę wydatków na służbę zdrowia](grafiki/mutant_02.png){#fig-tvp1zdrowie} -->
+<p>How much of a grotesque can we get if the bars don’t start at zero? Let the chart below showing the difference between men and women in their responses to the question of whether they have ever participated in loyalty programs be a warning. The difference between the two groups is exactly 0.3 of a percentage point. Is this actually a difference worth highlighting in this way?</p>
+<!-- Jak bardzo karykaturalny wykres możemy otrzymać, jeżeli słupki nie zaczną się w zerze? Niech ostrzeżeniem będzie poniższy wykres przedstawiający różnice pomiędzy mężczyznami a kobietami w odpowiedziach na pytanie, czy kiedykolwiek brali udział w programach lojalnościowych. Różnica pomiędzy tymi dwiema grupami wynosi dokładnie 0,3 punktu procentowego. Czy to jest faktycznie różnica, którą warto podkreślić w taki sposób? -->
+<div id="fig-tvp1zdrowie" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_03.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.3: Chart from ABC Market and Opinion report. published on the egospodarka platform</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="mutant-circles" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="mutant-circles"><span class="header-section-number">5.2</span> Mutant circles</h2>
+<p>Pie charts have their staunch opponents due to the difficulty in accurately reading the data presented. If you plan to present charts to a sophisticated audience, consider options other than a colorful cake. The only situation in which a pie chart will somehow defend itself is when presenting the components of a whole. This is virtually the only permissible use that will not result in dangerous consequences. This was forgotten by the authors of the following charts.</p>
+<!-- Wykresy kołowe mają swoich zdecydowanych przeciwników z uwagi na trudności w dokładnym odczytaniu przedstawionych danych. Jeżeli planujemy prezentację wykresów dla wyrafinowanego odbiorcy, to warto rozważyć inne opcje niż kolorowy tort. Jedyna sytuacja, w której wykres kołowy się jakoś obroni, to przedstawienie części składowych całości. Jest to praktycznie jedyne dozwolone użycie, które nie spowoduje niebezpiecznych konsekwencji. Zapomnieli o tym autorzy poniższych wykresów.  -->
+<div id="fig-plebiscyt_2017" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_04.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.4: Graph from the City of Wrocław website from 2017. The areas of the circle slices are proportional to the area of the cities shown</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Wykres ze strony internetowej miasta Wrocław z roku 2017. Pola wycinków koła są proporcjonalne do powierzchni przedstawionych miast](grafiki/mutant_04.png){#fig-plebiscyt_2017} -->
+<p>The first example comes from the official website of the city of Wroclaw. The area and population of five cities are compared against Wrocław. What kind of graph should be used for this purpose? Certainly not a pie chart. Can you see on this graph that Łódź has a slightly larger area than Wroclaw, and Gdańsk, like Poznań, has an area more than 10% smaller than Wrocław?</p>
+<!-- Pierwszy przykład pochodzi z oficjalnej strony miasta Wrocławia. Porównywana jest powierzchnia i ludność pięciu miast na tle Wrocławia. Jakiego wykresu należałoby użyć w tym celu? Z pewnością nie wykresu kołowego.  Czy widać na tym wykresie, że Łódź ma nieznacznie większą powierzchnię niż Wrocław, a Gdańsk, podobnie jak Poznań, ma powierzchnię o ponad 10\% mniejszą od Wrocławia? -->
+<p>Unfortunately, this is not the only case of using pie charts to poison susceptible minds. In the chart below, the different sections of the circle represent the prices of running a meter of pipe with different cross sections. Not only does the sum of these prices add up to nothing, but the use of perspective has the effect of expanding the cutouts at the top and bottom and narrowing the cutouts in the middle.</p>
+<!-- Niestety nie jest to jedyny przypadek stosowania wykresów kołowych do zatruwania umysłów. Na poniższym wykresie różne wycinki koła przedstawiają ceny metra bieżącego rury o różnych przekrojach. Nie dość, że suma tych cen się do niczego nie składa, to jeszcze użycie perspektywy wpływa na rozszerzanie wycinków na górze i dole oraz zwężanie wycinków w środku. -->
+<div id="fig-plebiscyt_2019" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_05.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.5: Prices for running a meter of pipe with different cross sections are shown as a section of a circle slice. The chart comes from inzynierbudownictwa.pl</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Ceny metra bieżącego rury o różnych przekrojach przedstawiono jako fragment wycinka koła. Wykres pochodzi z portalu inzynierbudownictwa.pl](grafiki/mutant_05.png){#fig-plebiscyt_2019} -->
+</section>
+<section id="mutant-axes" class="level2 page-columns page-full" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="mutant-axes"><span class="header-section-number">5.3</span> Mutant axes</h2>
+<p>Unfortunately, visual criminals harm chart axes in various ways. Although this crime is still not prosecuted by law, it is worth knowing what to look out for to avoid an unpleasant situation.</p>
+<!-- Niestety, przestępcy wizualni krzywdzą osie wykresów na różne sposoby. Pomimo iż ta zbrodnia wciąż nie jest ścigana prawem, warto wiedzieć, na co zwracać uwagę, by uniknąć nieprzyjemnej sytuacji.  -->
+<div class="column-screen-inset-right">
+<div id="fig-plebiscyt_2018" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_06.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.6: The incidence of measles in Poland. The left graph is from the tvn24.pl website. The right graph shows complete data from 2005-2017</figcaption><p></p>
+</figure>
+</div>
+</div>
+<!-- ::: {.column-screen-inset-right}
+![Zachorowania na Odrę w Polsce. Lewy wykres pochodzi ze strony tvn24.pl. Prawy wykres przedstawia kompletne dane z lat 2005-2017](grafiki/mutant_06.png){#fig-plebiscyt_2018}
+::: -->
+<p>The chart above, which comes from the pages of a major news station in Poland, shows the number of measles cases in Poland. The conclusion comes to mind, there are more and more cases of the disease. But… why are only cases in even-numbered years shown? When complete data for a period of 13 years is presented (see the right panel), the situation looks different.</p>
+<!-- Na powyższym wykresie, który pochodzi ze stron jednej z dużych stacji informacyjnych w Polsce, przedstawiono liczbę przypadków zachorowania na odrę w Polsce. Wniosek nasuwa się sam, zachorowań jest coraz więcej. Ale... dlaczego pokazywane są tylko zachorowania w latach parzystych? Gdy przedstawi się dane kompletne z okresu 13 lat (patrz prawy panel), sytuacja wygląda inaczej. -->
+<p>Some omit inconvenient years, others add something here and there. These are equally hedious crimes against information. Below is an example of a chart from the <em>Science in Poland 2013</em> report, which shows declared spending on R&amp;D (research and development).</p>
+<!-- Jedni pomijają niewygodne lata, inni dodają sobie coś i tu, i tam. Są to równie ohydne zbrodnie przeciwko informacji. Poniżej prezentujemy przykład wykresu z raportu *Nauka w Polsce 2013*, który przedstawia wydatki deklarowane na B+R (badania i rozwój). -->
+<div id="fig-pomylkiTitle" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_07.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.7: Declared spending on research and development. Source: the <em>Science in Poland 2013</em> report prepared by the Ministry of Science and Higher Education.</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Deklarowane wydatki na badania i rozwój. Źródło: raport *Nauka w Polsce 2013* opracowany przez Ministerstwo Nauki i Szkolnictwa Wyższego.](grafiki/mutant_07.png){#fig-pomylkiTitle} -->
+<p>This chart shows significant increases in declared spending, which the report says builds a backdrop of increasing innovation in companies. Unfortunately, if you take a closer look, you’ll find that the last bar shows aggregate spending over four years (or, more accurately, refers to plans for the next four years). If you divide the planned spending by four years, you get the amount of 1215 million PLN, which is a decrease of about 5% compared to 2012. This “innocent” aggregation on the horizontal axis has significantly changed the perception of the data presented.</p>
+<!-- Wykres ten pokazuje znaczne wzrosty deklarowanych wydatków, co w raporcie buduje tło dla rosnącej innowacyjności w przedsiębiorstwach. Niestety, jeżeli przyjrzeć się bliżej, to okaże się, że ostatni słupek przedstawia wydatki zagregowane z czterech lat (a dokładniej dotyczy planów na przyszłe cztery lata). Jeżeli podzieli się planowane wydatki przez cztery lata, to otrzymamy kwotę 1215 mln złotych, a to spadek o około 5\% w stosunku do roku 2012. Ta ,,niewinna'' agregacja na osi poziomej znacząco zmieniła postrzeganie prezentowanych danych. -->
+<div id="fig-twitterMEIN" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_08.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.8: <em>Consistently implementing the plan to raise teachers’ salaries</em> – this is a tweet from profile of the Ministry of Education and Science from the year 2019. <a href="https://twitter.com/MEIN_GOV_PL/status/1109050109785001985">https://twitter.com/MEIN_GOV_PL/status/1109050109785001985</a></figcaption><p></p>
+</figure>
+</div>
+<!-- ![*Konsekwentnie wdrażamy plan podwyżek pensji nauczycieli* -- to tytuł twitta z profilu Ministerstwa Edukacji i Nauki z 2019 roku [https://twitter.com/MEIN_GOV_PL/status/1109050109785001985](https://twitter.com/MEIN_GOV_PL/status/1109050109785001985)](grafiki/mutant_08.png){#fig-twitterMEIN} -->
+<p>A few years later, the Ministry of Education, under a different government, tweeted the graph shown in <a href="#fig-twitterMEIN">Figure&nbsp;<span>5.8</span></a>. The intention is quite obvious, there will be more and more money for teacher payraises. More and more by the year, and by the end it’s so much that it barely fits on the graph.</p>
+<!-- Kilka lat później Ministerstwo Edukacji Narodowej, już za czasów innego rządu, na Twitterze umieściło wykres przedstawiony na rysunku @fig-twitterMEIN. Wymowa jest dosyć oczywista, będzie coraz więcej pieniędzy na podwyżki dla nauczycieli. Co rok więcej, a już pod koniec to tak dużo, że się ledwie mieści na wykresie. -->
+<p>But keep in mind that the last bar is the sum of 2017-2020 (it could just as well be the sum of 2014-2020). When one subtracts the numbers shown in previous years from this 6.3 billion, it turns out that in 2020 there will be 1.4 billion zlotys for the raise, more than twice as much as in 2019. The numbers seem to be there, but if this decrease were shown, the trend would no longer be so consistent.</p>
+<!-- Tylko że ostatni słupek to suma lat 2017-2020 (równie dobrze mogłaby to być suma 2014-2020). Gdy się od tego 6,3 mld zł odejmie liczby przedstawione w poprzednich latach, to się okaże, że w roku 2020 na podwyżkę przeznaczone będzie 1,4 mld zł, a więc ponad dwa razy mniej niż w roku 2019. Liczby niby są, ale gdyby pokazano ten spadek, to trend już nie byłby taki konsekwentny. -->
+<p>The following chart from a major news portal shows the pension amount. The problem with this chart is the choice of ranges presented on the horizontal axis. They correspond to very different ranges of values, sometimes 100 PLN, sometimes 200 PLN, and sometimes 500 PLN. Because of this, the heights of the bars are not comparable with one another. Someone could inadvertently read it so that the most people get the highest pension, above PLN 3,500. However, if somebody else might choose other ranges on the horizontal axis to get a different story.</p>
+<!-- Poniższy wykres z dużego portalu informacyjnego przedstawia wysokość emerytury. Problem z tym wykresem polega na wyborze przedziałów prezentowanych na osi poziomej. Odpowiadają one bardzo różnym zakresom, czasem 100 zł, czasem 200 zł, a czasem 500 zł. Przez to wysokości słupków nie są ze sobą porównywalne. Ktoś mógłby go nieopatrznie odczytać tak, że najwięcej osób dostaje najwyższą emeryturę, powyżej 3,5 tys. zł. Można jednak dobierać inne przedziały na osi poziomej, by otrzymać inną historię. -->
+<div id="fig-plebiscyt_2016" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_09.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.9: Chart from wyborcza.biz showing pension distribution, from the year 2016</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Wykres z roku 2016 z portalu wyborcza.biz prezentujący rozkład wysokości emerytury](grafiki/mutant_09.png){#fig-plebiscyt_2016} -->
+<p>Graphs are often used to show changes over time. However, it is important to remember that time should always run to the right, otherwise the reader can be led astray.</p>
+<!-- Wykresy często są wykorzystywane do pokazania zmian w czasie. Należy jednak pamiętać, że czas zawsze powinien biec w prawą stronę, inaczej można zaprowadzić czytelnika na manowce. -->
+<p>The chart below from 2015 shows the results of a preference poll before the presidential election in Poland. Are the poll results for Bronisław Komorowski better than the previous month, or worse? This example vividly demonstrates the importance of the order of the bars on a graph. If one reads this chart without looking into the legend, one might get the impression that support for Bronisław Komorowski is growing. However, when you look at the legend, it turns out that the right, blue bar is the support in January, and the left – in February.</p>
+<!-- Poniższy wykres z 2015 roku przedstawia wyniki sondażu preferencji przed wyborami prezydenckimi. Czy wyniki sondaży dla Bronisława Komorowskiego są lepsze niż w poprzednim miesiącu, czy gorsze? Przykład ten w jaskrawy sposób pokazuje, jak ważną rolę odgrywa kolejność słupków na wykresie. Jeżeli czytamy ten wykres, nie zagłębiając się w legendę, można odnieść wrażenie, że poparcie dla Bronisława Komorowskiego rośnie. Jednak gdy przyjrzeć się legendzie, okazuje się, że prawy, niebieski słupek to poparcie w styczniu, a lewy -- w lutym. -->
+<div id="fig-wykres20163" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.10: Graph showing changes in political preference support. The data is distorted by several elements: added pseudo-perspective and pretended third dimension, the direction in which the bars are pointing, the height of the bar for Janusz Korwin-Mikke, which does not correspond to the number shown. Source: TVP Info.</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Wykres przedstawiający zmiany w poparciu preferencji politycznych. Dane są zniekształcone przez kilka elementów:  dodana pseudoperspektywa i udawany trzeci wymiar, kierunek  w jakim skierowane są słupki, wysokość słupka dla Janusza Korwina-Mikke, która nie odpowiada przedstawionej liczbie. Źródło: TVP Info.](grafiki/mutant_10.png){#fig-wykres20163} -->
+<p>The chart below is from 2020 from the main news edition presented on TVP Channel 1. It shows the change in unemployment, but here too the time runs to the left instead of to the right. A less attentive viewer may get the impression that unemployment has fallen, although it has actually increased by 0.9 of a percentage point.</p>
+<!-- Poniższy wykres pochodzi z roku 2020 z głównych wiadomości prezentowanych na kanale TVP 1. Prezentuje zmianę bezrobocia, ale i tutaj czas zamiast w prawo biegnie w lewą stronę. Mniej uważny odbiorca może odnieść wrażenie, że bezrobocie spadło, choć w rzeczywistości wzrosło o 0,9 punktu procentowego. -->
+<div id="fig-plebiscyt_2020" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.11: A chart from 2020 showing the unemployment rate. The chart was presented on TVP Channel 1. Unemployment has increased year-on-year, but the way it is presented may suggest that it has decreased</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Wykres z roku 2020 prezentujący stopę bezrobocia. Wykres został przedstawiony w TVP 1. Bezrobocie wzrosło w ujęciu rok do roku, jednak sposób prezentacji może sugerować, że spadło](grafiki/mutant_11.png){#fig-plebiscyt_2020} -->
+</section>
+<section id="mutant-colors" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="mutant-colors"><span class="header-section-number">5.4</span> Mutant colors</h2>
+<p>Color is a very powerful spice in the world of charts. However, it is important to use it correctly. The rule to follow is to mark similar things with similar colors, and different things with different colors.</p>
+<!-- Kolory to bardzo potężna przyprawa na wykresach. Ważne jest jednak, by ją rozsądnie wykorzystywać. Reguła, której trzeba się trzymać, to zaznaczanie podobnymi kolorami podobnych rzeczy, a różnymi kolorami różnych rzeczy.  -->
+<div id="fig-kolomutant" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/mutant_12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.12: Graph sourced from Rzeczpospolita, from the year 2021 with answers to the question of whether narrowing streets in Warsaw is a good idea</figcaption><p></p>
+</figure>
+</div>
+<p>The graph in <span class="quarto-unresolved-ref">?fig-colomutant</span> is from the Rzeczpospolita website, and may suggest that less than half (49%) of those asked think that narrowing streets in Warsaw is a good idea. Perhaps the first impression would be different if the two parts coding the number of people supporting the idea were marked in a similar color (that would be 17% + 49%), and the only opposing answer was marked in a contrasting color.</p>
+<!-- Wykres na rysunku @fig-kolomutant pochodzi z portalu Rzeczpospolita i może sugerować, że mniej niż połowa (49\%) pytanych uważa, że zwężanie ulic w Warszawie to dobry pomysł. Być może pierwsze wrażenie byłoby inne, gdyby obie części kodujące liczbę osób wspierających ten pomysł zaznaczyć podobnym kolorem (byłoby 17\% + 49\%), a jedyną odpowiedź przeciwną oznaczyć kontrastującym kolorem. -->
+<p>There you go, what a surprise – more than 4 times as many people think it’s a good idea to narrow streets than that it discriminates against drivers. But this chart doesn’t capture that proportion very well. The culprits this time are the poorly chosen colors.</p>
+<!-- Proszę, proszę, co za niespodzianka -- ponad 4 razy więcej osób uważa, że warto zwęzić ulice niż że to dyskryminacja kierowców. Ale ten wykres tej proporcji nie uchwycił najlepiej. Winne są tym razem źle dobrane kolory. -->
+</section>
+<section id="tasks" class="level2 page-columns page-full" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="tasks"><span class="header-section-number">5.5</span> Tasks</h2>
+<p>Type the word “report” into an Internet search engine and open the first few links. Usually newer documents are higher in the results, so you’ll probably find some new government report or something from the national bank or another source. It’s time to take a closer look at the content.</p>
+<!-- Wpisz w wyszukiwarce internetowej słowo ,,raport'' i otwórz kilka pierwszych linków. Zazwyczaj nowsze dokumenty są wyżej w wynikach, więc zapewne znajdzie się jakiś nowy rządowy raport lub coś z NBP lub innego źródła. Czas się przyjrzeć bliżej zawartości. -->
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="grafiki/mutant_13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://bit.ly/3WpiWsH">https://bit.ly/3WpiWsH</a></figcaption><p></p>
+</figure>
+</div>
+</div></div><ol type="1">
+<li>Try to find a bar plot in the report you found. Do the bars start at zero? Do their lengths make it easier to understand key information on the chart more quickly?</li>
+<li>Look for a pie chart in the report you found. Do the circle slices correspond to parts of the whole? When looking at the pie chart slices themselves, is it easy to see what story the chart is telling?</li>
+<li>Look at the graph in the margin, it shows the average height of women in different countries. Is the data presented correctly? What is the problem with this presentation?</li>
+</ol>
+<!-- 1. Poszukaj w znalezionym raporcie wykresu słupkowego. Czy słupki zaczynają się od zera? Czy ich długości ułatwiają szybsze zrozumienie kluczowych informacji na wykresie?
+2. Poszukaj w znalezionym raporcie wykresu kołowego. Czy wycinki koła odpowiadają częściom całości? Czy patrząc na same wycinki wykresu kołowego, łatwo jest dostrzec, jaką historię ten wykres przedstawia?
+3. Spójrz na wykres na marginesie, przedstawia on średni wzrost kobiet w różnych krajach. Czy dane przedstawione są poprawnie? Jaki jest z nimi problem? -->
+<p>If you would like to learn more about erroneous graphs distorting reality, you may be interested in the essay <em>Info-pomyłka</em> from the book <em>Odkrywać! Ujawniać! Objaśniać!</em> <span class="citation" data-cites="eseje">(<a href="references.html#ref-eseje" role="doc-biblioref">Biecek 2016</a>)</span> (<strong>only available in Polish</strong>).</p>
+<!-- Jeżeli chciałbyś dowiedzieć się więcej o błędnych wykresach zniekształcających rzeczywistość, to może zainteresować Cię esej *Info-pomyłka* z książki *Odkrywać! Ujawniać! Objaśniać!* -->
+
+
+<div class="no-row-height column-margin column-container"><div id="ref-eseje" class="csl-entry" role="doc-biblioentry">
+Biecek, Przemysław. 2016. <em>Odkrywać! Ujawniać! Objaśniać! Zbiór Esejów o&nbsp;Sztuce Przedstawiania Danych</em>. Fundacja Naukowa SmarterPoland.pl. <a href="http://biecek.pl/Eseje/">http://biecek.pl/Eseje/</a>.
+</div></div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./holes.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Holes…</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./code_it.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Code It Yourself</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

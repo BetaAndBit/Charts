@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chart Runners - 3&nbsp; Cherries</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./holes.html" rel="next">
+<link href="./recipes.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZWLGMSWT14"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZWLGMSWT14');
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cherries</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Chart Runners</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./factory.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Factory of Taste</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./recipes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tried and Tested Recipes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cherries.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cherries</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./holes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Holes…</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mutant.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beware: Mutant!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code_it.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Code It Yourself</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code_it_julia.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Zakoduj to sam - julia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./experiments.html" class="sidebar-item-text sidebar-link">It’s Time to Start Experimenting</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
+   
+  <ul>
+  <li><a href="#a-plot-as-a-way-of-fighting-an-epidemic" id="toc-a-plot-as-a-way-of-fighting-an-epidemic" class="nav-link active" data-scroll-target="#a-plot-as-a-way-of-fighting-an-epidemic"><span class="toc-section-number">3.1</span>  A plot as a way of fighting an epidemic</a></li>
+  <li><a href="#a-plot-as-a-universal-tool-of-persuasion" id="toc-a-plot-as-a-universal-tool-of-persuasion" class="nav-link" data-scroll-target="#a-plot-as-a-universal-tool-of-persuasion"><span class="toc-section-number">3.2</span>  A plot as a universal tool of persuasion</a></li>
+  <li><a href="#a-plot-as-a-summary-of-military-campaigns" id="toc-a-plot-as-a-summary-of-military-campaigns" class="nav-link" data-scroll-target="#a-plot-as-a-summary-of-military-campaigns"><span class="toc-section-number">3.3</span>  A plot as a summary of military campaigns</a></li>
+  <li><a href="#a-plot-will-demonstrate-it-better" id="toc-a-plot-will-demonstrate-it-better" class="nav-link" data-scroll-target="#a-plot-will-demonstrate-it-better"><span class="toc-section-number">3.4</span>  A plot will demonstrate it better</a></li>
+  <li><a href="#a-plot-as-a-tool-for-teaching" id="toc-a-plot-as-a-tool-for-teaching" class="nav-link" data-scroll-target="#a-plot-as-a-tool-for-teaching"><span class="toc-section-number">3.5</span>  A plot as a tool for teaching</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks"><span class="toc-section-number">3.6</span>  Tasks</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Cherries</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="grafiki/okladka_rodzynki.png" class="img-fluid"></p>
+<p>In this chapter we will look at five examples of exceptional data visualizations that have made history, often changing the fates of many people. Most of this book is devoted to proven recipes for making correct and readable graphs, but remember that graphs are not works of nature, but are invented and improved by generations of scientists eager to communicate complex relationships. The charts presented here are examples of these pioneering innovations, and behind each one is an interesting researcher who came up with it. Here are five charts that any self-respecting data enjoyer must know.</p>
+<!-- W tym rozdziale przyjrzymy się pięciu przykładom wyjątkowych wizualizacji danych, które przeszły do historii, nierzadko zmieniając losy wielu osób. Większość tej książki poświęcona jest sprawdzonym przepisom sporządzania poprawnych i czytelnych wykresów, ale pamiętajmy, że wykresy to nie dzieła natury, ale są wymyślane i usprawniane przez pokolenia naukowców, chcących komunikować złożone zależności. Przedstawione tutaj wykresy to przykłady tych pionierskich innowacji, a za każdą z nich stoi interesujący badacz lub badaczka, którzy ją wymyślili. Oto pięć wykresów, które każdy szanujący się smakosz danych musi znać. -->
+<section id="a-plot-as-a-way-of-fighting-an-epidemic" class="level2 page-columns page-full" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="a-plot-as-a-way-of-fighting-an-epidemic"><span class="header-section-number">3.1</span> A plot as a way of fighting an epidemic</h2>
+<p>Graphs can be the foundations of entirely new scientific and social discoveries. An interesting example of statistical graphics accompanying a scientific revolution is the chart developed by physician Dr.&nbsp;John Snow (1813–1858) concerning the cholera epidemic in London’s Soho in the year 1854. The significant importance of this work is evidenced, among other things, by the fact that thanks to the results of his work on this epidemic, John Snow is considered a forerunner of epidemiology.</p>
+<!-- Wykresy mogą się przysłużyć zupełnie nowym odkryciom naukowym i społecznym. Ciekawym przykładem grafiki statystycznej towarzyszącej naukowej rewolucji jest wykres opracowany przez lekarza dr. Johna Snowa (1813--1858) dotyczący epidemii cholery w londyńskim Soho w 1854 roku. O istotnej wadze tego dzieła świadczy między innymi to, że dzięki wynikom pracy nad tą epidemią John Snow jest uznawany za prekursora epidemiologii. -->
+<p>Let’s outline the context. The year is 1854. The population of London’s Soho is growing rapidly. There is no sewage system. The waste is stored in septic tanks, located in basements. Unfortunately, the septic tanks are not large enough for the needs of the rapidly growing population and overflow too quickly. London authorities are ordering them to be emptied more frequently by pouring the contents into the river Thames. A cholera epidemic breaks out in London, killing more than 120 people in the first three days, with a total of more than 600 victims. The plague has caused such a panic that a third of Soho residents have fled the city in fear for their lives.</p>
+<!-- Nakreślmy kontekst. Jest 1854 rok. Liczba mieszkańców londyńskiego Soho szybko rośnie. Nie ma kanalizacji. Nieczystości przechowywane są w szambach, mieszczących się w piwnicach. Niestety szamba nie są wystarczająco duże jak na potrzeby szybko rosnącej liczby mieszkańców i zbyt szybko się przepełniają. Władze Londynu nakazują je częściej opróżniać przez wylewanie zawartości do Tamizy. W Londynie wybucha epidemia cholery, która w ciągu pierwszych trzech dni zabija przeszło 120 osób, a łącznie ofiar jest ponad 600. Zaraza spowodowała taką panikę, że jedna trzecia mieszkańców Soho uciekła z miasta w obawie o swoje życie. -->
+<p>In those days, it was believed that cholera was spread by “murine air”. Let’s remind ourselves that the disease-causing bacteria was not discovered by Louis Pasteur until 7 years later, so both during this epidemic and earlier ones, people really had no idea what they were dealing with. Our protagonist, John Snow, while looking for the cause of the epidemic, talked to residents of the disease-ridden neighborhood. He discovered that all the cases of illness and death were somehow related to the Broad Street water pump. The deaths were mostly of people living in the neighborhood, or children attending school nearby, or people living farther away but drawing water from this pump. We can assume that he noted this by drawing dots on a map of the neighborhood to symbolize a person getting sick where they live/work/go to school.</p>
+<!-- W tamtych czasach wierzono, że cholera jest rozprzestrzeniana przez ,,morowe powietrze''. Przypomnijmy, że bakterie wywołujące choroby odkrył Louis Pasteur dopiero 7 lat później, zatem zarówno podczas tej epidemii, jak i wcześniejszych ludzie naprawdę nie mieli pojęcia, z czym mają do czynienia. Nasz bohater, John Snow, szukając przyczyny epidemii, rozmawiał z mieszkańcami opanowanej chorobą dzielnicy. Odkrył, że wszystkie przypadki zachorowań i śmierci są w jakiś sposób związane z pompą wody na Broad Street. Zgony dotyczyły głównie osób mieszkających w tej okolicy albo dzieci uczęszczających do szkoły w pobliżu, albo osób mieszkających dalej, ale pobierających wodę z tego ujęcia. Można przypuszczać, że zauważył to dzięki naniesieniu na mapę dzielnicy kropek symbolizujących zachorowanie danej osoby w miejscu jej zamieszkania/pracy/szkoły. -->
+<p>John Snow could not explain what exactly was causing the disease, but the evidence he gathered was enough to convince London authorities to close the designated water intake. By Snow’s own admission, the epidemic was in its final stages by then, and it is impossible to attribute the end of the epidemic solely to this decision. However, it certainly reduced the number of deaths and contributed to a better understanding of the causes of the epidemic. It was later determined that the germ-spreading water pump was located very close to one of the septic tanks.</p>
+<!-- John Snow nie potrafił wytłumaczyć, co dokładnie tę chorobę wywołuje, ale zebrane dowody wystarczyły, by przekonać władze Londynu do zamknięcia wskazanego ujęcia wody. Jak przyznawał sam Snow, epidemia była już wtedy w fazie końcowej i nie sposób przypisać zakończenia epidemii wyłącznie tej decyzji. Z pewnością jednak ograniczyło to liczbę przypadków śmiertelnych i przyczyniło się do lepszego zrozumienia przyczyn epidemii. Później udało się ustalić, że roznosząca zarazki pompa wody była położona bardzo blisko jednego z szamb.  -->
+<div class="column-screen-inset-right">
+<div id="fig-cholera" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/rodzynki_01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.1: Left: A chart that has gone down in history as evidence of the source of the cholera epidemic in London’s Soho. The map was designed by John Snow, but was drawn and printed by lithographer John Churchill. Right: A reconstruction of Snow’s chart. The red dots represent the locations of cholera victims, the blue triangles represent the location of water intakes</figcaption><p></p>
+</figure>
+</div>
+</div>
+<!-- ::: {.column-screen-inset-right}
+![Po lewej: Wykres, który przeszedł do historii jako dowód na źródło epidemii cholery w londyńskim Soho. Mapa została opracowana przez Johna Snowa, ale narysował ją i wydrukował litograf John Churchill.  Po prawej: Rekonstrukcja wykresu Snowa. Czerwone kropki przedstawiają miejsca zamieszkania ofiar cholery, niebieskie trójkąty przedstawiają położenie ujęć wody](grafiki/rodzynki_01.png){#fig-cholera}
+::: -->
+<p>The map shown in <a href="#fig-cholera">Figure&nbsp;<span>3.1</span></a> is a beautiful example of how data visualization makes it possible to vividly depict the relationship between various factors, in this case deaths and water intake. In Snow’s case, one can speculate that it was the process of creating the first version of the map that helped him discover the source of the epidemic <span class="citation" data-cites="SnowOnTM">(<a href="references.html#ref-SnowOnTM" role="doc-biblioref">Snow 1849</a>)</span>.</p>
+<!-- Mapa przedstawiona na rysunku @fig-cholera stanowi piękny przykład tego, jak wizualizacja danych pozwala na dobitne przedstawienie związku pomiędzy różnymi czynnikami, w tym przypadku zgonami a ujęciem wody. W przypadku Snowa można przypuszczać, że to właśnie proces tworzenia pierwszej wersji mapy pomógł mu w odkryciu źródła epidemii [@SnowOnTM]. -->
+<div class="no-row-height column-margin column-container"><div id="ref-SnowOnTM" class="csl-entry" role="doc-biblioentry">
+Snow, John. 1849. <span>“On the Mode of Communication of Cholera.”</span> <em>Edinburgh Medical Journal</em> 1: 668–70.
+</div></div></section>
+<section id="a-plot-as-a-universal-tool-of-persuasion" class="level2 page-columns page-full" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="a-plot-as-a-universal-tool-of-persuasion"><span class="header-section-number">3.2</span> A plot as a universal tool of persuasion</h2>
+<p>As we have seen with the example of the cholera epidemic, statistical graphics are very useful in making scientific discoveries and studying social phenomena. As we will see in a moment, it can also be used as a tool to influence the viewer’s opinion and, consequently, his further decisions. The best-known example of statistical graphics used to elicit a specific reaction, or even used as a means of strong persuasion, were the charts of English nurse and also statistician Florence Nightingale (1820–1910).</p>
+<!-- Jak widzieliśmy na przykładzie epidemii cholery, grafika statystyczna jest bardzo przydatna przy dokonywaniu odkryć naukowych i badaniu zjawisk społecznych. Jak się za chwilę okaże,  może być również użyta jako narzędzie do wywierania wpływu na opinię odbiorcy i w konsekwencji na jego dalsze decyzje. Najbardziej znanym przykładem grafiki statystycznej użytej w celu wywołania konkretnej reakcji, a wręcz wykorzystanej jako środek silnej perswazji, były wykresy angielskiej pielęgniarki i jednocześnie statystyczki Florence Nightingale (1820--1910). -->
+<p>Miss Nightingale’s personality plays no small role in this story, so let’s start with a brief introduction to her. A woman who came from a good home (she was an aristocrat) terrified her entire family when she declared that she wanted to become a nurse. In those days, it was absolutely not an occupation for women with high or even middle social status. Nightingale, however, was not one to give up her plans easily. Not only did she become a supervisor of nurses, but at the age of 33 she began organizing hospital care during the Crimean War.</p>
+<!-- W tej historii niemałą rolę odgrywa osobowość panny Nightingale, zacznijmy więc od jej krótkiego przedstawienia. Kobieta wywodząca się z tzw. dobrego domu (była arystokratką) przeraziła całą rodzinę, gdy oświadczyła, że chce zostać pielęgniarką. W tamtych czasach absolutnie nie było to zajęcie dla kobiet z wysokich czy choćby średnich warstw społecznych. Nightingale nie była jednak osobą, która łatwo rezygnuje ze swoich planów. Nie dosyć, że została przełożoną pielęgniarek, to jeszcze w wieku 33 lat rozpoczęła organizowanie opieki szpitalnej podczas wojny krymskiej. -->
+<p>She worked without sufficient medical supplies or food resources. She did what she could to help wounded soldiers. She was known to make systematic rounds of the hospital corridors carrying a lamp, which is why the term <em>the lady with the lamp</em> stuck to her. Was she doing this so that soldiers would not feel lonely and abandoned at night, alone with pain and suffering? Her attitude turned into a symbol. A hundred years later, a film was made under the title <em>The Lady with the Lamp</em>, and references to her appear in the poetry of Henry Longfellow and other poets. She became known as a very determined person. At the same time, her approach to her work is to be admired, as she was not just concerned with ad hoc relief, but was interested in the overall problem and was keen to create good systemic solutions so that others could also benefit from her experience.</p>
+<!-- Pracowała bez wystarczających środków medycznych, zaopatrzeniowych czy żywieniowych. Robiła, co mogła, by pomóc rannym żołnierzom. Znana była z tego, że wykonywała systematycznie obchody po korytarzach szpitala, niosąc lampę, przez co przylgnęło do niej określenie *the lady with the lamp*. Czy robiła to, by żołnierze nie czuli się samotni i opuszczeni w nocy, sam na sam z bólem i cierpieniem? Jej postawa przerodziła się w symbol. Sto lat później nakręcono film pod tytułem *The Lady with the Lamp*, a nawiązania do niej pojawiają się w poezji Henry’ego Longfellowa i innych poetów. Dała się poznać jako bardzo zdeterminowana osoba. Jednocześnie należy podziwiać jej podejście do pracy, nie zajmowała się bowiem tylko doraźną pomocą, ale interesował ją całokształt problemu i zależało jej na stworzeniu dobrych systemowych rozwiązań, tak aby z jej doświadczeń mogli korzystać również inni. -->
+<p>During her period of service in the Crimean peninsula, Nightingale discovered that most soldiers died from poor hospital care: infections, malnutrition and other causes that could be remedied by organizing better care. She estimated that of the 18,000 deaths, about 16,000 were due to infections, meaning poor hygiene and debilitation of the sick due to lack of food and inadequate equipment in field hospitals. At the same time, this discovery carried a clear message about what to do to significantly reduce the number of casualties - hospital care had to be better organized. This is obvious today, but at the time it was a revolutionary discovery.</p>
+<!-- W okresie służby na Krymie Nightingale odkryła, że większość żołnierzy ginie z powodu złej opieki szpitalnej: zakażeń, niedożywienia i innych przyczyn, którym można zaradzić, organizując lepszą opiekę. Oszacowała, że z 18 tysięcy zgonów około 16 tysięcy było spowodowanych zakażeniami, a więc niskim poziomem higieny i osłabieniem chorego spowodowanym brakiem żywności i niedostatecznym wyposażeniem szpitali polowych. To odkrycie niosło jednocześnie jasną przesłankę, co zrobić, by znacząco ograniczyć liczbę ofiar – należało lepiej zorganizować opiekę szpitalną. Dziś to oczywiste, ale w tamtych czasach było rewolucyjnym odkryciem. -->
+<p>To make her point, Nightingale developed the polar diagram (also known as the <em>Nightingale rose diagram</em>), shown in <a href="#fig-coxcomb">Figure&nbsp;<span>3.2</span></a>, referred to as the <em>coxcomb</em> diagram by the author herself.</p>
+<!-- Aby przedstawić swoje racje, Nightingale opracowała wykres polarny (nazywany też różą Nightingale, ang. *Nightingale rose diagram*), przedstawiony na rysunku @fig-coxcomb, przez samą autorkę określany wykresem grzebieniowym (ang. *coxcomb*). -->
+<div class="column-screen-inset-right">
+<div id="fig-coxcomb" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/rodzynki_02.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.2: The graph shows the number of deaths caused by treatable diseases (blue), war wounds (red) and other causes, such as frostbite (black). The number of deaths is proportional to the radius of the segment. Source: <em>Diagram of the causes of mortality in the army in the East</em>, published in <em>Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army</em>, sent to the British Queen in 1858. Public domain.</figcaption><p></p>
+</figure>
+</div>
+</div>
+<!-- ::: {.column-screen-inset-right}
+![Wykres przedstawia liczbę zgonów spowodowanych przez uleczalne choroby (niebieski), rany wojenne (czerwony) i inne przyczyny, np. odmrożenia (czarny). Liczba zgonów jest proporcjonalna do promienia segmentu.  Źródło: *Diagram of the causes of mortality in the army in the East*, opublikowany w *Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army*, wysłany do królowej brytyjskiej w 1858 roku. Domena publiczna.](grafiki/rodzynki_02.png){#fig-coxcomb}
+::: -->
+<p>From the chart developed by Nightingale, it is easy to read how many deaths were due to treatable diseases, i.e.&nbsp;hospital infections, the effects of malnutrition or poor hospital care. These cases correspond to the color blue. The spacing of the bars makes this color dominate the graph. The numbers of deaths are proportional to the radii of the corresponding segments, but what is more striking is their area – and this is proportional to the square of the radius. This is obviously a manipulation of the way the data is presented, so that the proportion of curable diseases appears even higher than in reality.</p>
+<!-- Z opracowanego przez Nightingale wykresu łatwo odczytać jak wiele śmierci spowodowanych było uleczalnymi chorobami, czyli zakażeniami szpitalnymi, efektami niedożywienia lub słabej opieki szpitalnej. Przypadkom tym odpowiada kolor niebieski. Rozstawienie słupków powoduje, że kolor ten dominuje wykres. Liczby zgonów odpowiadają promieniom odpowiednich segmentów, jednak bardziej rzuca się w oczy ich powierzchnia -- a ta jest proporcjonalna do kwadratu promienia. Jest to oczywiście manipulacja sposobem przedstawiania danych, tak by udział chorób uleczalnych wydawał się jeszcze większy niż w rzeczywistosci. -->
+<p>This chart not only showed what was wrong with the hospital care system on the battlefield, but was coupled with the author’s clear suggestion that improving hospital care would lead to a significant reduction in war casualties. With its simple form, emphatically stating the facts, it was sufficiently comprehensible to everyone. The chart fulfilled its role very well, it was educational and informative (it presented new facts), and in addition, it was opinionated (thanks to the weight of the information presented), so it led to changes along Nightingale’s lines. Conditions in hospital care improved significantly. In this case, it can be said without any abuse that it was the statistical graphics, the clear and purposeful presentation of data, that led to the saving of thousands of lives and to significant changes in the system of care for the sick.</p>
+<!-- Wykres ten nie tylko pokazywał, co jest złego w systemie opieki szpitalnej na polu bitwy, ale połączony był z jasną sugestią autorki, że poprawa opieki szpitalnej doprowadzi do znacznego ograniczenia liczby ofiar wojennych. Dzięki prostej formie, dobitnie przestawiającej fakty, był dla wszystkich wystarczająco zrozumiały. Wykres spełnił swoją rolę bardzo dobrze, był edukacyjny i informacyjny (przedstawił nowe fakty), a dodatkowo był opiniotwórczy (dzięki wadze przedstawianych informacji), dlatego doprowadził do zmian po myśli Nightingale. Warunki w opiece szpitalnej znacznie się poprawiły. W tym przypadku bez żadnego nadużycia można stwierdzić, że to grafika statystyczna, czytelne i celowe przedstawienie danych, doprowadziła do uratowania tysięcy ludzkich istnień i do znaczących zmian w systemie opieki nad chorymi. -->
+<div class="page-columns page-full"><p>In 1907, Florence Nightingale became the first woman in history to receive the British Order of Merit. </p><div class="no-row-height column-margin column-container"><span class="">Since 1920, the highest international nursing decoration has been the Florence Nightingale Medal. By 2014, one hundred and two Polish nurses had received this decoration.</span></div></div>
+<!-- W roku 1907 Florence Nightingale, jako pierwsza kobieta w historii, otrzymała Brytyjski Order Zasługi. [Od roku 1920 najwyższym międzynarodowym pielęgniarskim odznaczeniem jest medal Florence Nightingale. Do roku 2014 sto dwie polskie pielęgniarki otrzymały to odznaczenie.]{.aside} -->
+</section>
+<section id="a-plot-as-a-summary-of-military-campaigns" class="level2 page-columns page-full" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="a-plot-as-a-summary-of-military-campaigns"><span class="header-section-number">3.3</span> A plot as a summary of military campaigns</h2>
+<p>%William Playfair’s charts are beautiful examples of visualizing data on the economy of a country. John Snow’s chart shows how the common denominator of dozens of deaths can be found through data visualization. Florence Nightingale’s charts demonstrate the persuasive power of a well-designed graphic. Now let’s take a look at a graph about which Edward Tufte (whom we will still meet on one of the next stops of the journey through the history of visualization) wrote: “perhaps the best statistical graphic ever created”.</p>
+<!-- %Wykresy Williama Playfaira są pięknymi przykładami wizualizacji danych o ekonomii państwa.  -->
+<!-- Wykres Johna Snowa pokazuje, jak dzięki wizualizacji danych można odnaleźć wspólny mianownik dziesiątek zgonów. Wykresy Florence Nightingale prezentują moc perswazji dobrze zaprojektowanej grafiki. Przyjrzyjmy się teraz wykresowi, o którym Edward Tufte (którego jeszcze spotkamy na jednym z kolejnych przystanków  wędrówki przez dzieje wizualizacji) napisał: ,,być może najlepsza grafika statystyczna, jaka kiedykolwiek powstała''. -->
+<p>Let’s start by introducing the author. Charles Minard (1781–1870) was a French civil engineer, and a pioneer when it came to the applications of graphics in engineering and statistics. In 1869 he published a map depicting the history of Napoleon’s invasion of Russia in 1812–13. The beauty of this graphic comes from the simplicity and elegance of presenting complex and multidimensional data.</p>
+<!-- Zacznijmy od przedstawienia autora. Charles Minard (1781--1870) był francuskim inżynierem lądowym, a także pionierem, jeżeli chodzi o zastosowania grafiki w inżynierii i statystyce. W 1869 roku opublikował mapę przedstawiającą historię napoleońskiej inwazji na Rosję w latach 1812--13. Piękno tej grafiki bierze się z prostoty i elegancji zaprezentowania złożonych i wielowymiarowych danych. -->
+<p>Dozens of battles and skirmishes, the movements of huge masses of troops, the results of clashes with enemy armies – all this can be read from a single map. The number of men in the armies at each stage of the invasion is shown by the thickness of the sections connecting the various important points of the campaign. Near Kaunas the Napoleonic army consisted of 420,000 soldiers. On the way to Moscow, two smaller divisions separated from the main army, and further east there were a number of battles, as a result of which the the army was dwindling, as shown by the narrowing width of the brown ribbon. Only about 100,000 soldiers reached Moscow. However, these were soldiers without sufficient supplies, as the retreating Russian army left no food supplies.</p>
+<!-- Dziesiątki bitw i potyczek, ruchy olbrzymich mas wojsk, wyniki starć z wrogimi wojskami – to wszystko można odczytać z jednej mapy. Liczebność armii na poszczególnych etapach inwazji przedstawiono za pomocą grubości odcinków łączących poszczególne istotne punkty kampanii.
+Na linii Kowna armia napoleońska liczyła 420 tysięcy żołnierzy. Po drodze do Moskwy od głównej armii oddzieliły się dwie mniejsze dywizje, a dalej na wschód doszło do szeregu bitew, w wyniku których wielkość armii topniała, co pokazuje zwężająca się szerokość brązowej wstęgi. Do Moskwy dotarło jedynie około 100 tysięcy żołnierzy. Byli to jednak żołnierze bez wystarczającego zaopatrzenia, ponieważ wycofująca się armia rosyjska nie pozostawiła żadnych zapasów żywności. -->
+<div class="column-screen-inset-right">
+<div id="fig-Minard" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/rodzynki_03.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.3: The map shows the fate of Napoleon’s army at various stages of the invasion of Russia. Source: Charles Minard <em>Figurative Map of the successive losses in men of the French Army in the Russian campaign 1812–1813</em>, 1869.</figcaption><p></p>
+</figure>
+</div>
+</div>
+<!-- ::: {.column-screen-inset-right}
+![Mapa przedstawia losy armii napoleońskiej na różnych etapach inwazji na Rosję. Źródło: Charles Minard *Figurative Map of the successive losses in men of the French Army in the Russian campaign 1812--1813*, rok 1869.](grafiki/rodzynki_03.png){#fig-Minard}
+::: -->
+<p>The retreat began on October 18th due to food shortages and the approaching winter. In the graph, the retreat is marked by a black band, which is simultaneously accompanied by a presentation of the falling temperature (at the bottom of the graphic). The soldiers did not manage to escape the winter and cold. During the retreat the temperature dropped to <span class="math inline">\(-30\)</span> degrees. Temperature, lack of food, skirmishes with the enemy caused the army to shrink down to 30,000 soldiers on the way back to Kaunas. This was a small fraction of the initial army.</p>
+<!-- Odwrót  rozpoczął się 18 października z powodu braku żywności i zbliżającej się zimy. Na wykresie odwrót zaznaczony jest czarną wstęgą, której jednocześnie towarzyszy prezentacja spadającej temperatury (w dolnej części grafiki). Żołnierzom nie udało się uciec przed zimą i zimnem, podczas odwrotu temperatura spadła do $-30$ stopni. Temperatura, brak żywności, potyczki z wrogiem spowodowały, że w drodze powrotnej do Kowna armia stopniała do 30 tysięcy żołnierzy. Był to niewielki ułamek początkowej armii. -->
+<p>When marking the location of the troops, not only the geographic location was taken into account, but also the dates when the army reached a given position. This makes it possible to track in time the movement of the imperial army, as well as the course of battles (a narrowing ribbon indicates fewer and fewer soldiers after successive bloody skirmishes). The marked falling temperature during the retreat (the invasion took place during reportedly one of the harshest winters in history) makes it easier to understand what other obstacles the soldiers, many of whom came from southern Europe, had to face.</p>
+<!-- Zaznaczając położenie wojsk, uwzględniono nie tylko położenie geograficzne, ale również daty osiągnięcia przez armię danej pozycji. Umożliwia to śledzenie w czasie przemieszczania się cesarskiego wojska, jak i przebiegu bitew (zwężająca się wstęga oznacza coraz to mniejszą liczbę żołnierzy po kolejnych krwawych potyczkach). Zaznaczona spadająca temperatura podczas odwrotu (a inwazja miała miejsce podczas ponoć jednej z najsroższych zim w historii) ułatwia zrozumienie, z jakimi innymi przeszkodami musieli się zmierzyć żołnierze, w dużej części pochodzący z południa Europy. -->
+<p>Minard’s map challenges the claim that any good visualization must be simple and immediately readable. It exemplifies that a graphic rich in a variety of information need not at all be a <em>dashboard</em> composed of many simple diagrams.</p>
+<!-- Mapa Minarda podważa twierdzenie, że każda dobra wizualizacja musi być prosta i natychmiast czytelna. Jest przykładem, że bogata w różnorodne informacje grafika wcale nie musi być tablicą rozdzielczą (ang. *dashboard*) złożoną z wielu prostych wykresów. -->
+<p>Minard’s work is not at all simple graphics. It contains many details that can be gradually uncovered, some of which are noticed only after some time. All these details add up to one rich picture of the Napoleonic campaign. Is this what an ideal statistical graphic is? Is it about presenting all the complexity of the phenomenon being described, everything that is important about it, in the form of one multi-layered picture? Certainly, this is a great example of a clear, aesthetically pleasing and informative visualization.</p>
+<!-- Dzieło Minarda wcale nie jest prostą grafiką. Zawiera wiele szczegółów, które można stopniowo odkrywać, część z nich dostrzega się dopiero po pewnym czasie. Wszystkie te detale składają się w jeden bogaty obraz kampanii napoleońskiej. Czy tym właśnie jest idealna grafika statystyczna? Czy chodzi o zaprezentowanie całej złożoności opisywanego zjawiska, wszystkiego, co jest w nim ważne, w formie jednego wielowarstwowego obrazu?
+Z pewnością jest to świetny przykład czytelnej, estetycznej i bogatej w informacje wizualizacji. -->
+</section>
+<section id="a-plot-will-demonstrate-it-better" class="level2 page-columns page-full" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="a-plot-will-demonstrate-it-better"><span class="header-section-number">3.4</span> A plot will demonstrate it better</h2>
+<div class="page-columns page-full"><p>One of the best-known statistical charts is Anscombe’s quartet, shown below. Frank Anscombe  made history in statistical graphics when, in 1973, he constructed and presented four data sets with very interesting properties. Each dataset consists of two variables: x and y. In each dataset, the mean value of the variable x is 9. The variance of this variable in each dataset is 11. The mean of the variable shown on the vertical axis in each dataset is 7.5, and their variances are equal to 4.12. For each of these four datasets, the correlations of the variables on both axes are 0.816, and from the point of view of linear relationships, all these data are best described by the same linear regression model <span class="math inline">\(y=3+x/2\)</span>.</p><div class="no-row-height column-margin column-container"><span class="">Frank Anscombe is the brother-in-law of John Tukey, one of the most famous maverick statisticians of the time.</span></div></div>
+<!-- Jednym z najbardziej znanych wykresów statystycznych jest przedstawiony poniżej kwartet Anscombe'a. Frank Anscombe [Frank Anscombe to szwagier Johna Tukeya, jednego z najbardziej znanych zbuntowanych statystyków tamtego okresu.]{.aside} zapisał się w historii grafiki statystycznej, kiedy w 1973 roku skonstruował i przedstawił cztery zbiory danych o bardzo ciekawych właściwościach. Każdy zbiór danych składa się z dwóch zmiennych: x i y. W każdym zbiorze danych średnia wartość zmiennej x wynosi 9. Wariancja tej zmiennej w każdym zestawie danych wynosi 11. Średnie zmiennej pokazanej na osi pionowej w każdym z zestawów danych wynoszą 7,5, a ich wariancje są równe 4,12. Dla każdego z tych czterech zbiorów danych korelacje zmiennych na obu osiach wynoszą 0,816, a z punktu widzenia liniowych zależności wszystkie te dane najlepiej opisuje ten sam model regresji liniowej $y=3+x/2$.  -->
+<p>One might get the impression that these are very similar datasets, since they have such a very similar description. But only by drawing the data a very different story hidden in each dataset is revealed.</p>
+<!-- Można odnieść wrażenie, że to są bardzo podobne zbiory danych, skoro mają tak bardzo podobny opis. Ale dopiero narysowanie danych pokazuje nam, że w każdym zbiorze danych kryje się zupełnie inna historia.  -->
+<div id="fig-anscombe" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/rodzynki_04.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.4: Anscombe’s quartet reconstructed using the <code>ggplot2</code> package.</figcaption><p></p>
+</figure>
+</div>
+<!-- ![Kwartet Anscombe'a odtworzony za pomocą pakietu `ggplot2`](grafiki/rodzynki_04.png){#fig-anscombe} -->
+<p>For more than 50 years, researchers have been swayed by correlations that are easily represented by a simple formula, such as using linear regression. Anscombe prepared four datasets so that the basic numerical statistics are identical for them <span class="citation" data-cites="Anscombe1973">(<a href="references.html#ref-Anscombe1973" role="doc-biblioref">Anscombe 1973</a>)</span>. In each of these four datasets, we have the same means, variances, correlation coefficients, linear regression coefficients, and significance test values for coefficients in linear regression models. From a linear regression point of view, these four data sets are indistinguishable, and in each of these four cases we have the same relationship between a pair of variables.</p>
+<!-- Od ponad 50 lat badacze są zachłyśnięci zależnościami, które łatwo przedstawić prostym wzorem, np. z użyciem regresji liniowej. Anscombe przygotował cztery zestawy danych tak dobrane, by podstawowe statystyki liczbowe były dla nich identyczne [@Anscombe1973]. W każdym z tych czterech zbiorów danych mamy te same średnie, wariancje, współczynniki korelacji, regresji liniowej i wartości testów istotności dla współczynników w modelach regresji liniowej. Z punktu widzenia regresji liniowej te cztery zbiory danych są nierozróżnialne i w każdym z tych czterech przypadków mamy do czynienia z taką samą zależnością pomiędzy parą zmiennych. -->
+<div class="no-row-height column-margin column-container"><div id="ref-Anscombe1973" class="csl-entry" role="doc-biblioentry">
+Anscombe, Frank. 1973. <span>“Graphs in Statistical Analysis.”</span> <em>The American Statistician</em> 27: 17–21.
+</div></div><p>However, a simple graphical representation of these four data sets illustrates the obvious differences between them. This is a great example of the value of data visualization, which can sometimes tell you more about the data than even a sophisticated statistical model.</p>
+<!-- Jednak proste przedstawienie graficzne tych czterech zestawów danych ilustruje oczywiste różnice pomiędzy nimi. Jest to wspaniały przykład wartości wizualizacji danych, która czasem potrafi opowiedzieć o danych więcej niż nawet zaawansowany model statystyczny. -->
+</section>
+<section id="a-plot-as-a-tool-for-teaching" class="level2 page-columns page-full" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="a-plot-as-a-tool-for-teaching"><span class="header-section-number">3.5</span> A plot as a tool for teaching</h2>
+<p>In addition to literacy and numeracy, education related to statistical inference is needed. This will enable society to better understand the world around us and the changes that are taking place in this world.</p>
+<!-- Obok umiejętności czytania, pisania i liczenia potrzebna jest edukacja związana z wnioskowaniem statystycznym. Umożliwi to społeczeństwu lepsze zrozumienie otaczającego nas świata i zmian, jakie w tym świecie zachodzą. -->
+
+<!-- 
+::: {.column-margin}
+![Światowe imperia w różnych okresach historii. Źródło: *Modern Man in the Making*, Otto Neurath.](grafiki/rodzynki_05.png){#fig-iso4c}
+::: -->
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-iso4c" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/rodzynki_05.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.5: World empires in different periods of history. Source: <em>Modern Man in the Making</em>, Otto Neurath.</figcaption><p></p>
+</figure>
+</div>
+</div></div><p>However, as it turns out, this is not such a new trend at all. Over a century ago, sociologist Otto Neurath argued that statistical graphics should play an educational role for society. To make this possible, it must be understandable and interesting, easy to remember and precise. To this end, Neurath in the 1930s developed the ISOTYPE language, designed to make graphs easy to understand, so that “visual education” of the public is possible based on them.</p>
+<!-- Jak się jednak okazuje, nie jest to wcale taki nowy trend. Już sto lat temu socjolog Otto Neurath twierdził, że grafika statystyczna powinna pełnić rolę edukacyjną dla społeczeństwa. Aby to stało się możliwe, musi być zrozumiała i interesująca, łatwa do zapamiętania i precyzyjna. W tym celu Neurath w latach trzydziestych XX wieku opracował język ISOTYPE, zaprojektowany do łatwego zrozumienia wykresów, tak by na ich podstawie możliwa była ,,edukacja wizualna'' społeczeństwa. -->
+<div class="column-screen-inset-right">
+<div id="fig-magda" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="grafiki/rodzynki_06.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.6: Fraction of underweight or overweight people in different age groups. Data are presented according to ISOTYPE language rules. The use of bold icons in red to indicate obese people may visually magnify the share of this group. Source: Magda Malczynska-Umeda for the SmarterPoland Foundation.</figcaption><p></p>
+</figure>
+</div>
+</div>
+<!-- ::: {.column-screen-inset-right}
+![Frakcja osób z niedowagą lub nadwagą w różnych grupach wiekowych. Dane przedstawiono zgodnie z regułami języka ISOTYPE. Użycie pogrubionych ikon w czerwonym kolorze do oznaczenia osób otyłych może spowodować optyczne powiększenie udziału tej grupy. Źródło: Magda Małczyńska-Umeda dla Fundacji SmarterPoland.](grafiki/rodzynki_06.png){#fig-magda}
+::: -->
+<p>The <a href="http://bit.ly/1J23Cs9">ISOTYPE</a> language is a set of symbols and rules, guidelines on how to graphically present information in a way that can be understood by a wide audience. It contains lists of precisely designed signs/pictograms with universal meanings and rules for clear and accurate use of these pictograms to present information. One of the most distinctive rules is the principle of using repetition of a sign to represent magnitude. When comparing two values, one of which is 50% greater than the other, a bar chart would use two bars, one of which would be 50% longer than the other. In certain situations, using the number of repetitions of a pictogram instead of length allows for a clearer and more interesting presentation of a particular value.</p>
+<!-- 
+Język [ISOTYPE](http://bit.ly/1J23Cs9) to zestaw symboli i reguł, wskazówek, jak prezentować graficznie informacje w sposób zrozumiały dla szerokiego odbiorcy. Zawiera listy precyzyjnie zaprojektowanych znaków/piktogramów o uniwersalnych znaczeniach oraz reguły czytelnego i dokładnego używania tych piktogramów w celu prezentowania informacji. Jedną z najbardziej charakterystycznych reguł jest zasada używania powtórzeń znaku do przedstawiania wielkości. 
+Porównując dwie wartości, z których jedna jest o 50\% większa od drugiej, na wykresie paskowym użylibyśmy dwóch pasków, z których jeden byłby o 50\% dłuższy niż drugi. W pewnych sytuacjach wykorzystanie liczby powtórzeń piktogramu zamiast długości pozwala na czytelniejsze i ciekawsze zaprezentowanie określonej wartości.  -->
+<p>This “visual language” was constructed to facilitate the understanding of numerical data describing the modern world. One of the major works created using this language is <a href="http://bit.ly/207glBb">Modern man in the making</a> (1939) <span class="citation" data-cites="Neurath">(<a href="references.html#ref-Neurath" role="doc-biblioref">Neurath 1940</a>)</span>, by Otto Neurath. This book presents a collection of interesting statistics about society, showing what the world was like at the time. Today, Otto Neurath’s works are available in the public domain. The drawing by <a href="#fig-iso4c">Figure&nbsp;<span>3.5</span></a> is from the latter and shows the size of various empires throughout history.</p>
+<!-- Ten ,,język wizualny'' został tak skonstruowany, by ułatwić zrozumienie danych liczbowych opisujących współczesny świat. Jedno z większych dzieł stworzonych z użyciem tego języka to [Modern man in the making](http://bit.ly/207glBb) (1939) [@Neurath], autorstwa Otto Neuratha. Książka ta przedstawia zbiór ciekawych statystyk dotyczących społeczeństwa, pokazujących, jak wyglądał ówczesny świat. Dzisiaj dzieła Ottona Neuratha są dostępne w domenie publicznej. Rysunek @fig-iso4c pochodzi z tej drugiej i przedstawia wielkość różnych imperiów na przestrzeni dziejów. -->
+<div class="no-row-height column-margin column-container"><div id="ref-Neurath" class="csl-entry" role="doc-biblioentry">
+Neurath, Otto. 1940. <span>“Modern Man in the Making.”</span> <em>Philosophy of Science</em> 7 (1): 133–34. <a href="https://isotyperevisited.org/">https://isotyperevisited.org/</a>.
+</div></div><p>For more on ISOTYPE language, see the article <a href="http://smarterpoland.pl/index.php/2012/11/mlodzi-xxl-eurostat-a-problem-nadwagi-i-otylosci-odpowiedz-grafika/"><em>Młodzi XXL, Eurostat a problem nadwagi i otyłości</em></a> by Magda Malczynska-Umeda (<strong>only available in Polish</strong>).</p>
+<!-- Więcej o języku ISOTYPE można przeczytać w artykule [*Młodzi XXL, Eurostat a problem nadwagi i otyłości*](http://smarterpoland.pl/index.php/2012/11/mlodzi-xxl-eurostat-a-problem-nadwagi-i-otylosci-odpowiedz-grafika/) przygotowanym przez Magdę Małczyńską-Umeda. -->
+</section>
+<section id="tasks" class="level2 page-columns page-full" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="tasks"><span class="header-section-number">3.6</span> Tasks</h2>
+<p>Would you like to learn more epic graphs creating data visualization stories? You just need to do the following tasks.</p>
+<ol type="1">
+<li>One of the founding fathers of graphical data visualization was William Playfair. He invented many ingenious ways of presenting data. Playfair’s work containing these graphs was a real bestseller in his time. Check out the list of various graphs presented on his page at <a href="https://en.wikipedia.org/wiki/William_Playfair">Wikipedia</a>. Which of these charts would you consider the most interesting/breakthrough?</li>
+<li>One of the most interesting charts of all time is the box plot proposed by John Tukey. In the article <a href="https://vita.had.co.nz/papers/boxplots.pdf">40 years of boxplots</a> there is an interesting discussion of various modifications of this chart. Which one do you think is the most informative?</li>
+<li>A very original and ingenious way of presenting data is the stem-and-leaf diagram. You can read more about it on the relevant page in <a href="https://en.wikipedia.org/wiki/Stem-and-leaf_display">Wikipedia</a>. Can you tell where it is most often used today?</li>
+</ol>
+<!-- 1. Jednym z ojców graficznej wizualizacji danych był William Playfair. Wynalazł on wiele pomysłowych sposobów prezentacji danych. Dzieło Playfaira zawierające te wykresy było prawdziwym bestsellerem w jego czasach. Zapoznaj się z listą różnych wykresów przedstawionych na jego stronie w [Wikipedii](https://en.wikipedia.org/wiki/William_Playfair). Który z tych wykresów uznasz za najbardziej ciekawy/przełomowy? 
+2. Jednym z najciekawszych wykresów wszech czasów jest wykres pudełkowy zaproponowany przez Johna Tukeya. W artykule [40 years of boxplots](https://vita.had.co.nz/papers/boxplots.pdf) znajduje się ciekawe omówienie różnych modyfikacji tego wykresu. Która z nich jest Twoim zdaniem najbardziej informatywna? 
+3. Bardzo oryginalnym i pomysłowym sposobem prezentacji danych jest wykres łodyga-liście. Możesz o nim przeczytać więcej na odpowiedniej stronie w [Wikipedii](https://en.wikipedia.org/wiki/Stem-and-leaf_display). Czy potrafisz powiedzieć, gdzie najczęściej jest on dzisiaj stosowany? -->
+<p>If you would like to learn more about these and other charts that have played a significant role, you may be interested in the essay <em>Perełki z historii</em> from the book <em>Odkrywać! Ujawniać! Objaśniać!</em> <span class="citation" data-cites="eseje">(<a href="references.html#ref-eseje" role="doc-biblioref">Biecek 2016</a>)</span> (<strong>only available in Polish</strong>).</p>
+<!-- Jeżeli chciałbyś dowiedzieć się więcej o tych i innych wykresach, które odegrały znaczącą rolę, to może zainteresować Cię esej *Perełki z historii* z książki *Odkrywać! Ujawniać! Objaśniać!* -->
+
+
+<div class="no-row-height column-margin column-container"><div id="ref-eseje" class="csl-entry" role="doc-biblioentry">
+Biecek, Przemysław. 2016. <em>Odkrywać! Ujawniać! Objaśniać! Zbiór Esejów o&nbsp;Sztuce Przedstawiania Danych</em>. Fundacja Naukowa SmarterPoland.pl. <a href="http://biecek.pl/Eseje/">http://biecek.pl/Eseje/</a>.
+</div></div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./recipes.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tried and Tested Recipes</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./holes.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Holes…</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
