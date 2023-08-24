@@ -235,10 +235,10 @@ Następnie należy zainstalować pakiet statystyczny `ggplot2`, co można zrobi�
 library("ggthemes")</code></pre>
 <p>Now we need data that we can represent in graphs. The <code>ggplot2</code> package (like many other tools) assumes that the data is in tabular form, where variables are included in the columns and observations are included in the rows.</p>
 <!-- Teraz potrzebujemy danych, które możemy przedstawić na wykresach. Pakiet `ggplot2` (jak i wiele innych narzędzi) zakłada, że dane znajdują się w postaci tabelarycznej, w której w kolumnach ujęte są zmienne, a w wierszach obserwacje.  -->
-<p>The examples presented in this chapter are based on the food data we have already learned about in the <em>Recipes</em> chapter. The data is contained in the <code>BetaBit</code> package and will be available in the <code>food</code> dataset after installing and loading this package. The data is available in English.</p>
+<p>The examples presented in this chapter are based on the food data we have already learned about in the <em>Recipes</em> chapter. The data is contained in the <code>BetaBit</code> package and will be available in the <code>food</code> dataset after installing and loading this package. Note that <code>food_mini</code> is a smaller subset of the original data.</p>
 <!-- Przykłady przedstawione w tym rozdziale oparte są na danych o produktach spożywczych, które poznaliśmy już w rozdziale *Sprawdzone przepisy*.  Dane znajdują się w pakiecie `BetaBit` i po zainstalowaniu oraz wczytaniu tego pakietu będą dostępne w zbiorze danych `food`. Dane są dostępne w języku angielskim, ale poniżej dla czytelności przedstawiliśmy nazwy zmiennych przetłumaczone na język polski. -->
 <pre><code>library("BetaBit")
-head(food)</code></pre>
+head(food_mini)</code></pre>
 <p>After loading the graphics package and data, we are ready to create charts. Below are the relevant step-by-step instructions.</p>
 <!-- Po załadowaniu pakietu graficznego i danych jesteśmy gotowi do tworzenia wykresów. Poniżej przedstawiamy odpowiednie instrukcje krok po kroku. -->
 <p>Creating a graph in the <code>ggplot2</code> package is a very interactive and iterative process. In each iteration, something is added or removed to the chart and you look for the next thing to improve. This allows for a gradual improvement of the chart and builds valuable habits of systematic data mining, which are so useful when working with data. Below, alongside the following instructions, we show what the chart looks like at a given stage.</p>
@@ -265,7 +265,7 @@ Pozwala to na stopniowe doskonalenie wykresu i buduje wartościowe nawyki system
 <!-- Każdy wykres zaczyna się od wskazania, na jakich danych jest oparty i które zmienne z tych danych będą przedstawione na osiach. W tym przypadku będziemy pracować na zbiorze danych `food` i interesuje nas rozkład wartości zmiennej `Energia`.  -->
 <p>We create the backbone of the chart with the following command:</p>
 <!-- Tworzymy szkielet wykresu  następującym poleceniem: -->
-<pre><code>ggplot(data = food, aes(x = Energia))</code></pre>
+<pre><code>ggplot(data = food_mini, aes(x = Energy))</code></pre>
 <hr>
 <p><strong>Step 2 – Histogram.</strong></p>
 
@@ -283,7 +283,7 @@ Pozwala to na stopniowe doskonalenie wykresu i buduje wartościowe nawyki system
 <!-- Rodzaje graficznych prezentacji danych w pakiecie `ggplot2` nazywa się geometriami. Jest ich dostępnych bardzo wiele, odpowiadają im funkcje o nazwach zaczynających się od prefiksu `geom_`. W tym przypadku geometria `geom_histogram()` rysuje histogram dla określonej wcześniej zmiennej.  -->
 <p>The syntax of the <code>ggplot2</code> package assumes adding more elements to the skeleton of the graph. Hence, a graph with histogram geometry is constructed with the following command:</p>
 <!-- Składnia pakietu `ggplot2` zakłada dodawanie kolejnych elementów do szkieletu wykresu. Stąd wykres z geometrią histogram konstruuje się następującym poleceniem: -->
-<pre><code>ggplot(data = food, aes(x = Energia)) +
+<pre><code>ggplot(data = food_mini, aes(x = Energy)) +
   geom_histogram(color = "white")</code></pre>
 <hr>
 <p><strong>Step 3 – Small multiples.</strong></p>
@@ -304,9 +304,9 @@ Pozwala to na stopniowe doskonalenie wykresu i buduje wartościowe nawyki system
 <!-- W pakiecie `ggplot2` ten efekt można uzyskać, dodając czynnik `facet_wrap` i wskazując, która zmienna jest użyta do grupowania.  -->
 <p>The visualization presented in the margin makes it quick to see that the energy value of fish is, on average, lower than products from the meat, sweets or nuts group.</p>
 <!-- Zaprezentowana na marginesie wizualizacja pozwala szybko dostrzec, że wartość energetyczna ryb jest średnio niższa niż produktów z grupy mięsa, słodycze lub orzechy. -->
-<pre><code>ggplot(data = food, aes(x = Energia)) +
+<pre><code>ggplot(data = food_mini, aes(x = Energy)) +
   geom_histogram(color = "white") +
-  facet_wrap(~Grupa)</code></pre>
+  facet_wrap(~Group)</code></pre>
 <hr>
 <p><strong>Step 4 – Graphic Theme.</strong></p>
 
@@ -324,9 +324,9 @@ Pozwala to na stopniowe doskonalenie wykresu i buduje wartościowe nawyki system
 <!-- Mamy już na wykresie główną treść, czas na polerowanie wizualne. Pakiet `ggplot2` jest bardzo konfigurowalny, można kontrolować praktycznie każdy detal wykresu. Służy do tego funkcja `theme()`. -->
 <p>However, since the world does not end with one chart, we want to generate hundreds of visually similar charts, so when working on details, one often chooses one of the predefined graphical themes, also called skins. Theme names begin with the prefix <code>theme_</code>. Below we will add a graphical theme reminiscent of charts from “The Economist” newspaper.</p>
 <!-- Ponieważ jednak świat nie kończy się na jednym wykresie, ale chcemy generować setki podobnych wizualnie wykresów, więc pracując nad detalami, często wybiera się jeden z predefiniowanych motywów graficznych nazywanych skórkami. Nazwy motywów zaczynają się od prefiksu `theme_`. Poniżej dodamy motyw graficzny przypominający wykresy z gazety ,,The Economist''. -->
-<pre><code>ggplot(data = food, aes(x = Energia)) +
+<pre><code>ggplot(data = food_mini, aes(x = Energy)) +
   geom_histogram(color = "white") +
-  facet_wrap(~Grupa) +
+  facet_wrap(~Group) +
   theme_economist()</code></pre>
 <hr>
 <p><strong>Step 5 – Title and axis labels. </strong></p>
@@ -340,12 +340,12 @@ Pozwala to na stopniowe doskonalenie wykresu i buduje wartościowe nawyki system
 </div>
 </div></div><p>Every chart obligatorily needs clear descriptions of the axes, title and subtitle. Without them, we run the risk that the reader will not understand what is shown on the chart. To specify these graphical elements, we can use the <code>labs()</code> function.</p>
 <!-- Każdy wykres obowiązkowo potrzebuje czytelnych opisów osi, tytułu i podtytułu. Bez nich ryzykujemy, że czytelnik nie zrozumie, co na wykresie jest pokazywane. Aby określić te elementy graficzne, możemy wykorzystać funkcję `labs()`. -->
-<pre><code>ggplot(data = food, aes(x = Energia)) +
+<pre><code>ggplot(data = food_mini, aes(x = Energy)) +
   geom_histogram(color = "white") +
-  facet_wrap(~Grupa) +
-  labs(title = "Wartość energetyczna produktów", 
-    subtitle = "na 100 g produktu", 
-    x = "Wartość energetyczna", y = "Liczba") +
+  facet_wrap(~Group) +
+  labs(title = "Energy value of the products", 
+    subtitle = "per 100 g of product", 
+    x = "Energy value", y = "The number of") +
   theme_economist()</code></pre>
 <!-- 
 ## Motywy graficzne/skórki -->
@@ -385,7 +385,7 @@ Rysunek @fig-themes9 przedstawia ten sam wykres z nałożeniem kilku różnych s
 </div>
 </div></div><p>Each graph starts with data. We again use the <code>ggplot()</code> function to build the skeleton of the graph. We again use the <code>food</code> data. We will plot the amount of protein on the X axis and the amount of fat in 100 g of product on the Y axis.</p>
 <!-- Każdy wykres zaczyna się od danych. Ponownie używamy funkcji `ggplot()`, aby zbudować szkielet wykresu. Ponownie korzystamy z danych `food`. Na osi OX zaznaczymy ilość białka, a na osi OY ilość tłuszczów w 100 g produktu. -->
-<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze)) </code></pre>
+<pre><code>ggplot(data = food, aes(x = Protein, y = Fats)) </code></pre>
 <hr>
 <p><strong>Step 2 – Scatterplot.</strong></p>
 
@@ -403,7 +403,7 @@ Rysunek @fig-themes9 przedstawia ten sam wykres z nałożeniem kilku różnych s
 <!-- Przychodzi czas na wybranie geometrii. Aby narysować wykres kropkowy, wykorzystamy geometrię `geom_point()`. Współrzędne punktów są określone przez pierwsze dwie zmienne wskazane wcześniej funkcją `aes()`. -->
 <p>Of course, the total protein and fat content cannot be more than 100%. Among the products, we see some that have very little of either component, and some that have one of these components within the range of 15-35%. The chart also allows us to see that there are several products with extremely high protein or fat content.</p>
 <!-- Oczywiście sumaryczna zawartość białka i tłuszczów nie może być większa niż 100\%. Wśród produktów widzimy takie, które mają bardzo mało jednego i drugiego składnika, i takie, które mają jednego z tych składników w granicach 15-35\%. Wykres pozwala też zauważyć, że jest kilka produktów o wyjątkowo dużej zawartości białka lub tłuszczów. -->
-<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze)) +
+<pre><code>ggplot(data = food, aes(x = Protein, y = Fats)) +
     geom_point() </code></pre>
 <hr>
 <p><strong>Step 3 – Mapping of color, size and other attributes.</strong></p>
@@ -419,8 +419,8 @@ Rysunek @fig-themes9 przedstawia ten sam wykres z nałożeniem kilku różnych s
 <!-- Pakiet `ggplot2` pozwala na tworzenie wykresów w sposób deklaratywny. Jeżeli chcemy, aby na wykresie kolor kodował jakąś zmienną, np. grupę produktów żywieniowych, to wystarczy takie mapowanie zaznaczyć w deklaracji mapowań. Nie musimy mówić, jak to mapowanie ma wyglądać, jakich i ilu kolorów użyć, o to zadba sam pakiet `ggplot2`. Jedyne, co musimy zrobić, to w bloku mapowań w funkcji `aes()` należy zaznaczyć, która zmienna określa który atrybut. -->
 <p>In the following example, we request that the <code>Grupa</code> variable be indicated on the graph by the color of the points, and the Energy variable by the size of the points. Note that a legend for these two characteristics will automatically appear on the graph.</p>
 <!-- W poniższym przykładzie żądamy, by zmienna Grupa była zaznaczona na wykresie przez kolor punktów, a zmienna Energia przez wielkość punktów. Zauważmy, że na wykresie automatycznie pojawi się legenda dla tych dwóch charakterystyk. -->
-<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze,
-            color = Grupa, size = Energia)) +
+<pre><code>ggplot(data = food, aes(x = Protein, y = Fats,
+            color = Group, size = Energy)) +
     geom_point() </code></pre>
 <hr>
 <p><strong>Step 4 – Controling the mappings.</strong></p>
@@ -436,8 +436,8 @@ Rysunek @fig-themes9 przedstawia ten sam wykres z nałożeniem kilku różnych s
 <!-- Ale co zrobić, jeżeli nam się nie podoba zaproponowane mapowanie? Chcielibyśmy inny schemat kolorów lub inny zakres wielkości punktów. Nad każdym mapowaniem mamy całkowitą kontrolę poprzez funkcje ustawiające skale wykresu. Takie funkcje mają nazwę rozpoczynającą się od prefiksu `scale_`, następnie jest nazwa atrybutu graficznego, a trzeci człon określa, w jaki sposób ten atrybut ma być skonstruowany.  -->
 <p>For example, if we wanted to change the way we specify the color scale so that we use ColorBrewer colors, we can use the <code>scale_color_brewer()</code> function to do so. All we need to do is specify what color palette we want to use in the chart.</p>
 <!-- Przykładowo, jeżeli chcielibyśmy zmienić sposób określana skali kolorów tak, by użyć kolorów ColorBrewer, to możemy do tego celu użyć funkcji `scale_color_brewer()`. Wystarczy określić, jaką paletę kolorów chcemy wykorzystać na wykresie. -->
-<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze,
-            color = Grupa, size = Energia)) +
+<pre><code>ggplot(data = food, aes(x = Protein, y = Fats,
+            color = Group, size = Energy)) +
     geom_point() +
     scale_color_brewer(type = "qual", palette = "Dark2") </code></pre>
 <hr>
@@ -452,12 +452,12 @@ Rysunek @fig-themes9 przedstawia ten sam wykres z nałożeniem kilku różnych s
 </div>
 </div></div><p>We have the main content – it’s time for graphical details, chart skins, axis titles, main title and subtitle. Below we use the functions that have already appeared when discussing the histogram. However, it is important to always supplement the chart with the appropriate annotations, without this it may not be readable by the viewer.</p>
 <!-- Mamy główną treść -- czas na detale graficzne, skórki wykresu, tytuły osi, główny tytuł oraz podtytuł. Poniżej używamy funkcji, które pojawiły się już przy okazji omawiania histogramu. Ważne jest jednak, by zawsze uzupełniać wykres o odpowiednie adnotacje, bez tego może nie być on czytelny dla odbiorcy. -->
-<pre><code>ggplot(data = food, aes(x = Białko, y = Tłuszcze,
-            color = Grupa, size = Energia)) +
+<pre><code>ggplot(data = food, aes(x = Protein, y = Fats,
+            color = Group, size = Energy)) +
     geom_point() +
     scale_color_brewer(type = "qual", palette = "Dark2") +
-    labs(title = "Udział białka i tłuszczów", subtitle = "na 100 g produktu", 
-      y = "Tłuszcze [g]", x = "Białko [g]") + 
+    labs(title = "Share of protein and fats", subtitle = "per 100 g of product", 
+      y = "Fats [g]", x = "Protein [g]") + 
     theme_gdocs() </code></pre>
 </section>
 <section id="mappings-of-the-variables" class="level2" data-number="6.5">
@@ -507,7 +507,7 @@ Krzywinski, Martin, and Bang Wong. 2013. <span>“Points of View: Plotting Symbo
 </div>
 </div></div><p>Following the pattern of previous plots, we also start this one by determining what data will be used to prepare the chart, here <code>food</code>, and what variables should be on the axes – here we want to show the energy content of products by food groups, both variables go to the <code>aes()</code> function.</p>
 <!-- Wzorem poprzednich wykresów także ten zaczynamy od określenia, jakie dane posłużą do przygotowania wykresu, tutaj `food`, oraz jakie zmienne powinny się znaleźć na osiach -- tutaj chcemy pokazywać zawartość energetyczną produktów w podziale na grupy produktów żywieniowych, obie zmienne trafiają do funkcji `aes()`. -->
-<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) </code></pre>
+<pre><code>ggplot(data = food, aes(x = Group, y = Energy)) </code></pre>
 <hr>
 <p><strong>Step 2 – Boxplot.</strong></p>
 
@@ -520,7 +520,7 @@ Krzywinski, Martin, and Bang Wong. 2013. <span>“Points of View: Plotting Symbo
 </div>
 </div></div><p>It’s time to choose a geometry. For a boxplot it is <code>geom_boxplot()</code>. Most geometries allow you to specify additional arguments. Here, we set the width of the box plot, smaller than the default (this will come in handy later), and mark which observations are to be treated as outliers. The <code>coef</code> parameter is used for this, setting it to 100 means that outliers will not be identified, and the graph whiskers will span from the minimum to the maximum value in a given group.</p>
 <!-- Czas wybrać geometrię. Dla wykresu pudełkowego jest to `geom_boxplot()`. Większość geometrii pozwala na określenie dodatkowych argumentów dla geometrii. Tutaj ustalamy szerokość wykresu pudełkowego, mniejszą niż domyślna (później się taka przyda), oraz oznaczamy, które obserwacje mają być traktowane jako odstające. Do tego służy parametr `coef`, ustawienie go na wartość 100 powoduje, że nie będą identyfikowane wartości odstające, a wąsy wykresów będą się rozpinały od minimalnej do maksymalnej wartości w danej grupie. -->
-<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+<pre><code>ggplot(data = food, aes(x = Group, y = Energy)) +
   geom_boxplot(width = 0.2, coef = 100) </code></pre>
 <hr>
 <p><strong>Step 3 – Plot rotation.</strong></p>
@@ -536,7 +536,7 @@ Krzywinski, Martin, and Bang Wong. 2013. <span>“Points of View: Plotting Symbo
 <p>Functions that control the plot’s axes have names that begin with the prefix <code>coord_</code>. For example, <code>coord_flip()</code> swaps the axes of the graph.</p>
 <!-- Domyślnie wykresy pudełkowe rysowane są pionowo (podobnie jak histogram czy wykres słupkowy). Ale to rozwiązanie ma kilka wad. Jedną z nich jest to, że na osi wykresu mogą się nie zmieścić pełne nazwy prezentowanych wartości. Inną jest to, że wykres ma większą rozdzielczość w osi poziomej niż pionowej.  -->
 <!-- Funkcje kontrolujące osie wykresu mają nazwy rozpoczynające się od prefiksu `coord_`. Przykładowo `coord_flip()` zamienia osie wykresu. -->
-<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+<pre><code>ggplot(data = food, aes(x = Group, y = Energy)) +
   geom_boxplot(width = 0.2, coef = 100) +
   coord_flip()</code></pre>
 <hr>
@@ -553,7 +553,7 @@ Krzywinski, Martin, and Bang Wong. 2013. <span>“Points of View: Plotting Symbo
 <p>We have written before about how box plots don’t show multimodal distributions well, so we’ll add a second layer with violin plots (i.e.&nbsp;<code>geom_violin()</code>) to this chart. This will allow us to read both the quartiles and the modes of the distribution. In addition, we will add markers on the bottom axis to indicate where each observation is, using the <code>geom_rug()</code> geometry.</p>
 <!-- Na wykresie możemy mieć dowolną liczbę warstw z różnymi geometriami. Takie łączenie geometrii jest potężnym mechanizmem, pozwalającym na uzupełnianie różnych aspektów danych.  -->
 <!-- Pisaliśmy wcześniej o tym, że wykresy pudełkowe nie pokazują dobrze wielomodalnych rozkładów, więc dodamy do tego wykresu drugą warstwę z wykresami skrzypcowymi (czyli `geom_violin()`). Dzięki temu będziemy mogli odczytać i kwartyle, i mody rozkładu. Dodatkowo dodamy na dolnej osi znaczniki określające, gdzie są poszczególne obserwacje, za pomocą geometrii `geom_rug()`. -->
-<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+<pre><code>ggplot(data = food, aes(x = Group, y = Energy)) +
   geom_rug(sides = "l") +
   geom_violin(scale = "width", fill = "grey") +
   geom_boxplot(width = 0.2, coef = 100) +
@@ -572,10 +572,10 @@ Krzywinski, Martin, and Bang Wong. 2013. <span>“Points of View: Plotting Symbo
 <p>In each geometry, you can specify local data with the <code>data=</code> argument. By default, geometries take the data indicated in the <code>ggplot</code> function, but you can also specify data for each layer separately.</p>
 <!-- Wykres ma już trzy warstwy, ale wciąż jest miejsce na dodanie dodatkowej użytecznej informacji. Dodajmy więc nazwy produktów o najwyższej kaloryczności. Nazwy dodamy geometrią dla napisów, czyli `geom_text()`. Poniżej znajduje się przykład użycia tej geometrii.  -->
 <!-- W każdej geometrii można określać lokalne dane argumentem `data=`. Domyślnie geometrie biorą dane wskazane w funkcji `ggplot`, ale można też określać osobno dane dla każdej warstwy. -->
-<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+<pre><code>ggplot(data = food, aes(x = Group, y = Energy)) +
   geom_rug(sides = "l") +
   geom_violin(scale = "width", fill = "grey") +
-  geom_text(data = food_max, aes(label =  Nazwa), 
+  geom_text(data = food_max, aes(label =  Name), 
      hjust = 0, vjust = 0, color = "blue4") + 
   geom_boxplot(width = 0.2, coef = 100) +
   coord_flip()</code></pre>
@@ -585,14 +585,14 @@ Krzywinski, Martin, and Bang Wong. 2013. <span>“Points of View: Plotting Symbo
 <p><strong>Step 6 – Title, axes labels and theme.</strong></p>
 <p>We have the main content, it’s time to define the graphic details, the plot theme, the axis titles and the main title and subtitle. Below we use the functions that have already appeared when discussing the histogram. However, it is important to always supplement the chart with the appropriate annotations, without this it may not be readable by the viewer.</p>
 <!-- Mamy główną treść, czas na określenie detali graficznych, skórki wykresu, tytułów osi i głównego tytułu oraz podtytułu. Poniżej używamy funkcji, które pojawiły się już przy okazji omawiania histogramu. Ważne jest jednak, by zawsze uzupełniać wykres o odpowiednie adnotacje, bez tego może nie być on czytelny dla odbiorcy. -->
-<pre><code>ggplot(data = food, aes(x = Grupa, y = Energia)) +
+<pre><code>ggplot(data = food, aes(x = Group, y = Energy)) +
   geom_rug(sides = "l") +
-  geom_violin(scale = "width", aes(fill = Grupa)) +
-  geom_text(data = food_max, aes(label =  Nazwa), 
+  geom_violin(scale = "width", aes(fill = Group)) +
+  geom_text(data = food_max, aes(label =  Name), 
      hjust = 0, vjust = 0, color = "blue4") + 
   geom_boxplot(width = 0.2, coef = 100) +
   coord_flip() + 
-  labs(title = "Rozkład wartości energetycznej", subtitle = "na 100 g") +
+  labs(title = "Distribution of energy value", subtitle = "per 100 g") +
   theme_gdocs() + theme(legend.position = "none")</code></pre>
 </section>
 <section id="layers" class="level2" data-number="6.8">
@@ -626,16 +626,13 @@ Krzywinski, Martin, and Bang Wong. 2013. <span>“Points of View: Plotting Symbo
 <!-- 1. Narysuj histogram ilości wody w różnych produktach. Zaznacz grupę produktów za pomocą koloru. Przeskaluj słupki dla kolejnych przedziałów, by łatwiej było zauważyć, jaki jest udział określonej grupy w produktach o danej zawartości wody.   -->
 <!-- 2. Wybierz z danych słodycze i zaznacz je na wykresie kropkowym, pokazując zawartość cukrów oraz zawartość tłuszczów. Które produkty najbardziej odstają od centralnej chmury punktów? Zaznacz na wykresie nazwy kilku najbardziej odstających. -->
 <!-- 3. Wykorzystaj wykres pudełkowy, aby porównać zawartość cukrów, oraz drugi, aby porównać zawartość tłuszczów pomiędzy różnymi grupami produktów. -->
-<p>If you would like to learn more about the grammar of data visualization, you may be interested in the essay <em>Gramatyka języka wizualizacji danych</em> from the book <em>Odkrywać! Ujawniać! Objaśniać!</em> <span class="citation" data-cites="eseje">(<a href="references.html#ref-eseje" role="doc-biblioref">Biecek 2016</a>)</span> (<strong>only available in Polish</strong>). <!-- Jeżeli chciałbyś dowiedzieć się więcej o gramatyce wizualizacji danych, to może zainteresować cię esej *Gramatyka języka wizualizacji danych* z książki *Odkrywać! Ujawniać! Objaśniać!* --></p>
-<div class="no-row-height column-margin column-container"><div id="ref-eseje" class="csl-entry" role="doc-biblioentry">
-Biecek, Przemysław. 2016. <em>Odkrywać! Ujawniać! Objaśniać! Zbiór Esejów o&nbsp;Sztuce Przedstawiania Danych</em>. Fundacja Naukowa SmarterPoland.pl. <a href="http://biecek.pl/Eseje/">http://biecek.pl/Eseje/</a>.
-</div><div id="ref-ggplot2" class="csl-entry" role="doc-biblioentry">
-Wickham, Hadley. 2009. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer New York. <a href="http://had.co.nz/ggplot2/book">http://had.co.nz/ggplot2/book</a>.
-</div></div><p>Those who would like to learn more deeply about the program and the <code>ggplot2</code> package can find a lot of detailed information in the book <em>ggplot2: elegant graphics for data analysis</em> <span class="citation" data-cites="ggplot2">(<a href="references.html#ref-ggplot2" role="doc-biblioref">Wickham 2009</a>)</span>.<br>
+<p>Those who would like to learn more deeply about the program and the <code>ggplot2</code> package can find a lot of detailed information in the book <em>ggplot2: elegant graphics for data analysis</em> <span class="citation" data-cites="ggplot2">(<a href="references.html#ref-ggplot2" role="doc-biblioref">Wickham 2009</a>)</span>.<br>
 Similar graphing rules for the Julia language are implemented in the <code>Gadfly</code> package, and for the Python language in the <code>matplotlib</code> package. <!-- Osoby, które chciałyby głębiej poznać program \texttt{R} i pakiet `ggplot2`, mogą znaleźć wiele szczegółowych informacji w książce *ggplot2: elegant graphics for data analysis* [@ggplot2]. W języku polskim więcej informacji o programie \texttt{R} i bibliotece `ggplot2` znajduje się w książce *Przewodnik po pakiecie R* [@BiecekR2011]. --> <!-- Podobne zasady tworzenia wykresów dla języka Julia są zaimplementowane w pakiecie `Gadfly`, a dla języka Python w pakiecie `matplotlib`. --></p>
 
 
-
+<div class="no-row-height column-margin column-container"><div id="ref-ggplot2" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley. 2009. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer New York. <a href="http://had.co.nz/ggplot2/book">http://had.co.nz/ggplot2/book</a>.
+</div></div>
 </section>
 
 </main> <!-- /main -->
